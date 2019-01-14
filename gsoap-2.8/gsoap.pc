@@ -1,0 +1,12 @@
+prefix=/mingw64
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: GSoap
+Description: SOAP C Web Services
+Version: 2.8
+Requires:
+Libs: -L${libdir} -lgsoap
+Libs.private: -lws2_32 -lkernel32 -luser32 -lgdi32 -lm
+Cflags:  -DWITH_DOM -I${includedir}
