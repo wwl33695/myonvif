@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="referrer" content="origin" />
+    <title>onvif 协议 - Endv - 博客园</title>
+<meta property="og:description" content="1、ONVIF 协议解读 https://www.onvif.org 一、什么是ONVIF？ 1.1形成 2008年5月，由安讯士（AXIS）联合博世（BOSCH）及索尼（SONY）公司三方宣布携手共" />
+    <link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=-duj5vpGTntb85GJoM3iRI972XwWcI-j8zmqDzyfu2w1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip.css?v=EjExWsdi8Ql8RA7Wdq4_YaeuMVhIAL6d2BSGbilapWY1"/>
+<link type="text/css" rel="stylesheet" href="/blog/customcss/199267.css?v=BM5MMl4C0ytu2WoWDn76%2fOkdX5A%3d"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip-mobile.css?v=Dfw5MePNdGswf8x-qHCqRsfite-3_KzH_jEKNHyFCfo1"/>
+    <link title="RSS" type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/endv/rss"/>
+    <link title="RSD" type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/endv/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/endv/wlwmanifest.xml"/>
+    <script src="//common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script>var currentBlogId=199267;var currentBlogApp='endv',cb_enable_mathjax=true;var isLogined=false;</script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: { 
+            equationNumbers: { autoNumber: ['AMS'], useLabelIds: true }, extensions: ['extpfeil.js'] 
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script><script src="//mathjax.cnblogs.com/2_7_2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="/bundles/blog-common.js?v=VgX4QebNYVEriZB17QNjNixx9Ri_FqQR-f_OpLQwxxg1" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--PageBeginHtml Block Begin-->
+<img alt src="https://files.cnblogs.com/endv/Endv.gif" id="img" width="100%">
+<div class="sky">
+	<div class="clouds_one"></div>
+	<div class="clouds_two"></div>
+	<div class="clouds_three"></div>
+</div>
+
+<!---  表格  -->                                              
+<table width="100%" border="0" cellpadding="3" cellspacing="0">
+<tbody><tr>
+ 
+<!--- - - - - - - - - - - - - - -《图片》- - - - - - - - - - - - - - -->  
+<td align="center"> 
+<a href="http://www.cnblogs.com/endv/p/6477158.html" target="_blank"><img src="https://files.cnblogs.com/files/endv/c.gif" width="85" height="55" border="0" alt="XXXXX">
+<br><span style="line-height: 15pt">C/C++</span>
+</a></td>
+
+<!--- - - - - - - - - - - - - - -《图片》- - - - - - - - - - - - - - -->  
+<td align="center"> 
+<a href="http://www.cnblogs.com/endv/p/6217734.html" target="_blank"><img src="https://files.cnblogs.com/files/endv/C31.gif" width="85" height="55" border="0" alt="XXXXX">
+<br><span style="line-height: 15pt">C#/.net</span>
+</a></td> 
+<!--- - - - - - - - - - - - - - -《图片》- - - - - - - - - - - - - - -->  
+<td align="center"> 
+<a href="http://www.cnblogs.com/endv/p/6477157.html" target="_blank"><img src="https://files.cnblogs.com/files/endv/js.gif" width="85" height="55" border="0" alt="XXXXX">
+<br><span style="line-height: 15pt">js</span>
+</a></td>
+  <!--- - - - - - - - - - - - - - -《图片》- - - - - - - - - - - - - - -->  
+<td align="center"> 
+<a href="http://www.cnblogs.com/endv/p/6477157.html" target="_blank"><img src="https://files.cnblogs.com/files/endv/java.gif" width="85" height="55" border="0" alt="java">
+<br><span style="line-height: 15pt">java</span>
+</a></td>
+  
+<td align="center"> 
+	<a href="https://code.endv.cn/product/" target="_blank"><img src="https://images.cnblogs.com/cnblogs_com/endv/615386/o_Download.png" width="100" height="27" border="0" alt="下载源码">
+<span style="line-height: 15pt">代码下载</span>
+</a></td>	
+	     
+ <!--- - - - - - - - - - - - - - -《图片》- - - - - - - - - - - - - - -->  
+<td align="center"> 
+<a href="http://www.endv.cn/" target="_blank"><img src="https://files.cnblogs.com/files/endv/logo-108.bmp" width="85" height="55" border="0" alt="www.endv.cn">
+<br><span style="line-height: 15pt">天云</span>
+</a></td>
+ 
+</tr>
+</tbody>
+</table>  
+ 
+<!--- - - - - - - - - - -工具列表- - - - - - - - - - - - -->														
+   
+ 
+<div id="endvmenu" width="100%" border="0" cellpadding="3" cellspacing="0">
+		
+
+<!--- - |
+		<a target="_blank" href="http://www.ajerp.com">android</a> |
+	<a target="_blank" href="http://www.ajerp.com">java</a> |
+	<a target="_blank" href="http://www.ajerp.com">.net/C#</a> | 
+	<a target="_blank" href="http://www.ajerp.com">C++</a> |
+	<a target="_blank" href="http://www.ajerp.com">Html/js/php/asp.net</a> | 
+		<a target="_blank" href="http://www.ajerp.com">【环境】</a> |
+		<a target="_blank" href="http://www.ajerp.com">Linux</a> |   
+		<a target="_blank" href="http://www.ajerp.com">As/Vs/win</a> | 
+		<a target="_blank" href="http://www.ajerp.com">IIS/Lamp</a> |  
+		<a target="_blank" href="http://www.ajerp.com">【数据库】</a> |   
+		<a target="_blank" href="http://www.ajerp.com">MsSql/MySql/oracle</a> |  
+		<a target="_blank" href="http://www.ajerp.com">【性能/并发】</a> | 
+ <a target="_blank" href="http://www.ajerp.com">Openfire</a> 
+
+- -->	
+ 
+</div>
+<!--PageBeginHtml Block End-->
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="https://www.cnblogs.com/endv/"><img id="blogLogo" src="/Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="https://www.cnblogs.com/endv/">C# 开源通信  2017</a></h1>
+<h2>---- 专注管理 宿迁资深 HR</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li></li>
+<li><a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/endv/">首页</a></li>
+<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li></li>
+<li>
+<!----></li>
+<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<span id="stats_post_count">随笔 - 655&nbsp; </span>
+<span id="stats_article_count">文章 - 20&nbsp; </span>
+<span id="stats-comment_count">评论 - 33</span>
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+        <div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/endv/p/6828718.html">onvif 协议</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><dl class="lemmaWgt-lemmaTitle lemmaWgt-lemmaTitle-"><dd class="lemmaWgt-lemmaTitle-title">
+<p align="left"><strong>1</strong><strong>、ONVIF 协议解读</strong></p>
+<p>&nbsp;</p>
+<p>https://www.onvif.org</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>一、什么是ONVIF？</h2>
+<h3>1.1形成</h3>
+<p>2008年5月，由安讯士（AXIS）联合博世（BOSCH）及<a href="http://baike.baidu.com/view/86370.htm" target="_blank">索尼（SONY）公司</a>三方宣布携手共同成立一个国际开放型<a href="http://baike.baidu.com/view/94301.htm" target="_blank">网络视频</a>产品标准网络接口开发论坛，取名为ONVIF（Open Network Video Interface Forum，开放型网络视频接口论坛），并以公开、开放的原则共同制定开放性行业标准。ONVIF标准将为<a href="http://baike.baidu.com/view/94301.htm" target="_blank">网络视频</a>设备之间的信息交换定义通用协议，包括装置搜寻、实时视频、音频、元数据和控制信息等。截止到2011年3月，已有279个公司加入ONVIF成为会员。</p>
+<p>2008年11月，论坛正式发布了ONVIF第一版规范。</p>
+<p>2010年11月，论坛发布了ONVIF第二版规范。规范涉及设备发现、实时音视频、摄像头PTZ控制、录像控制、视频分析等方面。</p>
+<h2>1.2规范作用</h2>
+<p>ONVIF规范描述了网络视频的模型、接口、数据类型以及数据交互的模式。并复用了一些现有的标准，如WS系列标准等。ONVIF规范的目标是实现一个网络视频框架协议，使不同厂商所生产的网络视频产品（包括摄录前端、录像设备等）完全互通。</p>
+<p>ONVIF规范中设备管理和控制部分所定义的接口均以<a href="http://baike.baidu.com/view/1086510.htm" target="_blank">Web Services</a>的形式提供，设备作为服务提供者为服务端。ONVIF规范涵盖了完全的<a href="http://baike.baidu.com/view/63.htm" target="_blank">XML</a>及<a href="http://baike.baidu.com/view/160660.htm" target="_blank">WSDL</a>的定义。每一个支持ONVIF规范的终端设备均须提供与功能相应的Web Service。服务端与客户端的数据交互采用SOAP协议。ONVIF中的其他部分比如音视频流则通过RTP/RTSP进行&nbsp;。</p>
+<h3>1.3规范优势</h3>
+<p>协同性：不同厂商所提供的产品，均可以通过一个统一的&ldquo;语言&rdquo;来进行交流。方便了系统的集成。</p>
+<p>灵活性：终端用户和集成用户不需要被某些设备的固有解决方案所束缚。大大降低了开发成本。</p>
+<p>质量保证：不断扩展的规范将由市场来导向，遵循规范的同时也满足主流的用户需求。</p>
+<p>由于采用WSDL+XML模式，使ONVIF规范的后续扩展不会遇到太多的麻烦。XML极强的扩展性与SOAP协议开发的便捷性将吸引更多的人来关注和使用ONVIF规范。</p>
+<p>ONVIF组织日益扩大，与同领域的PSIA，HDCCTV相比，占据了绝对的人员优势。会员企业不乏国内外著名的设备制造商与集成商。一套规范、协议的生命周期，与市场占有率是息息相关的。而ONVIF规范的发展则正是由市场来导向，由用户来充实的。每一个成员企业都拥有加强、扩充ONVIF规范的权利。ONVIF规范所涵盖的领域将不断增大。目前门禁系统的相关内容也即将被纳入ONVIF规范之中。在安防、监控系统急速发展的今天，效率和质量的领先所带来的价值不言而喻。ONVIF协议提供了这样的潜质。</p>
+<h2>二、ONVIF规范的实现机制</h2>
+<h3>2.1 Web Service</h3>
+<p>Web Service是基于网络的、分布式的模块化组件，执行特定的任务。Web Service&nbsp;主要利用HTTP&nbsp;和SOAP&nbsp;协议使数据在Web&nbsp;上传输。Web&nbsp;用户能够使用&nbsp;SOAP&nbsp;和&nbsp;HTTP通过&nbsp;Web&nbsp;调用的方法来调用远程对象。&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web Service是基于XML和HTTPS的一种服务，其通信协议主要基于SOAP。服务端、客户端以传递符合XML的SOAP消息实现服务的请求与回应。</p>
+<p>&nbsp;</p>
+<p>客户端根据&nbsp;WSDL&nbsp;描述文档，会生成一个&nbsp;SOAP&nbsp;请求消息，该请求会被嵌入在一个HTTP POST请求中，发送到&nbsp;Web Services&nbsp;所在的Web&nbsp;服务器。Web Services&nbsp;请求处理器解析收到的SOAP&nbsp;请求，调用相应的&nbsp;Web Services。然后再生成相应的&nbsp;SOAP&nbsp;应答。Web&nbsp;服务器得到SOAP&nbsp;应答后，会再通过&nbsp;HTTP应答的方式把信息送回到客户端。</p>
+<p align="center">&nbsp;</p>
+<h3>2.2 WSDL</h3>
+<p>WSDL是Web services&nbsp;描述语言（Web Service Description Language）的缩写。是一个用来描述Web服务和说明如何与Web服务通信的XML语言，为用户提供详细的接口说明书。</p>
+<h3>2.3 SOAP</h3>
+<p>SOAP是Simple Object Access Protocol的缩写。是基于XML的一种协议。一条&nbsp;SOAP&nbsp;消息就是一个普通的&nbsp;XML&nbsp;文档，包含下列元素：</p>
+<p>必需的&nbsp;Envelope&nbsp;元素，可把此&nbsp;XML&nbsp;文档标识为一条&nbsp;SOAP&nbsp;消息</p>
+<p>可选的&nbsp;Header&nbsp;元素，包含头部信息</p>
+<p>必需的&nbsp;Body&nbsp;元素，包含所有的调用和响应信息</p>
+<p>可选的&nbsp;Fault&nbsp;元素，提供有关在处理此消息所发生错误的信息</p>
+<p>在向Web Service发送的SOAP请求中，Body元素中的字段需与WSDL中数据类型的相符合。在构建SOAP的过程中，必须从WSDL文件中获取并映射这一种对应关系。然而这样一个对应过程将是充满了重复性和机械性的，为了避免不必要的人工差错以及节约开发时间，一个名为gSOAP的编译工具应运而生。</p>
+<p>gSOAP利用编译器技术提供了一组透明化的SOAP API，并将与开发无关的SOAP实现细节相关的内容对用户隐藏起来。通过将WSDL文件解析序列化为C/C++文件，最小化了Web Service的开发过程。</p>
+<p>&nbsp;</p>
+<p align="center">SOAP协议位置</p>
+<h3>2.4 ONVIF规范</h3>
+<p>ONVIF规范向视频监控引入了Web Service的概念。设备的实际功能均被抽象为了Web Service的服务，视频监控系统的控制单元以客户端的身份出现，通过Web请求的形式完成控制操作。</p>
+<p align="center">&nbsp;</p>
+<h4>2.4.1 Web Service能为视频监控什么？</h4>
+<p>a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设备的无关性，任何一个设备接入系统，不会对其他系统造成影响。</p>
+<p>b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设备的独立性，每一个设备只负责对接收到的请求做出反馈，甚至不需要知晓控制端的存在。</p>
+<p>c)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;管理的集中性，所有的控制由客户端来发起。</p>
+<p align="center">&nbsp;</p>
+<h4>2.4.2 ONVIF规范能为视频监控带来什么？</h4>
+<p>a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;抽象了功能的接口。统一了对设备的配置以及操作的方式。</p>
+<p>b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;控制端关心的不是设备的型号，而是设备所提供的Web Service。</p>
+<p>c)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;规范了视频系统中Web Service范围之外的行为。</p>
+<p>d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ONVIF提供了各个模块的WSDL，拥有效率非常高的开发方式。</p>
+<p align="center">&nbsp;</p>
+<h2>3、ONVIF规范的内容</h2>
+<p>a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设备发现</p>
+<p>b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设备管理</p>
+<p>c)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设备输入输出服务</p>
+<p>d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图像配置</p>
+<p>e)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;媒体配置</p>
+<p>f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实时流媒体</p>
+<p>g)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接收端配置</p>
+<p>h)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;显示服务</p>
+<p>i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;事件处理</p>
+<p>j)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PTZ控制</p>
+<p>k)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其他</p>
+<h2>4、ONVIF的应用</h2>
+<h3>4.1&nbsp;名词说明</h3>
+<p>CMU（Center Manager Unit），即中心管理单位。</p>
+<p>PU（Prefocus Unit），即监控前端单元，负责在CMU的控制下使用摄像机采集视频流、使用麦克风采集音频流、使用控制口采集报警信息、对摄像机云台镜头进行控制。</p>
+<p>CU（Client Unit），监控系统的监控客户端单元，负责将PU采集到的视频流、音频流、报警信息提交给监控用户，并根据用户要求操作PU设备，如云台、镜头等。</p>
+<h3>4.2&nbsp;传统视频监控系统的一个局域网应用场景</h3>
+<p>a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PU设备上线后，向CMU注册，建立连接。</p>
+<p>b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CMU与PU进行信令交互，请求能力集，获取配置。</p>
+<p>c)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CU上线，向CMU注册，建立连接。</p>
+<p>d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CMU与CU进行信令交互，传输设备列表。</p>
+<p>e)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CU向PU请求码流。</p>
+<p align="center">&nbsp;</p>
+<h3>4.3&nbsp;应用ONVIF规范后对应的场景</h3>
+<p>a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PU设备上线后，向CMU发送HELLO消息。</p>
+<p>b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CMU需要搜寻设备时，向PU发送PROBE消息。</p>
+<p>c)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CMU与PU进行信令交互，请求能力集，获取配置。</p>
+<p>d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CU上线，向CMU注册，建立连接。</p>
+<p>e)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CMU与CU进行信令交互，传输设备列表。</p>
+<p>f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在CMU的协调下，CU同PU建立连接传输码流。</p>
+<p align="center">&nbsp;</p>
+<p>上述场景中，ONVIF带来了什么变化？</p>
+<p>a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PU与CMU的交互方式发生了改变，CMU不再与PU保持长连接。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;遵循ONVIF规范，信令以及消息内容有了统一的标准。</p>
+<h1>2</h1>
+<p>非常重要的部分就是视频流的对接，即能够在符合onvif标准的监控客户端软件里接收到设备端NVT发来的RTSP视频流。这里，我所用的客户端软件是Onvif Device Manager v2.2。</p>
+<p>ONVIF&nbsp;Profile S Specification文档描述了Device或者说DVT和Client可以使用的一种Profile，Profile这个词在计算机领域非常常见，我们可以理解成一种方案、配置、框架等。</p>
+<p>文档里描述了如果实现VideoStream，device和client应该具备的条件，当然如果实现文档的所有条件，就可以说该设备符合Profile S</p>
+<p><strong>如果单纯实现</strong><strong>VideoStream</strong><strong>，只需完成下列命令。</strong></p>
+<p>&nbsp;</p>
+<div><ol>
+<li>1、GetProfiles&nbsp;&nbsp;</li>
+<li>2、GetStreamUri&nbsp;&nbsp;&nbsp;</li>
+<li>填充rtsp路径，例如：rtsp://192.168.1.201/petrov.m4e&nbsp;&nbsp;</li>
+<li>3、Media&nbsp;Streaming&nbsp;using&nbsp;RTSP&nbsp;&nbsp;</li>
+<li>这里使用开源的live555，完成rtsp功能&nbsp;&nbsp;</li>
+<li>4、GetVideoEncoderConfiguration&nbsp;&nbsp;</li>
+<li>5、GetVideoEncoderConfigurationOptions&nbsp;&nbsp;</li>
+<li>6、GetCapabilities&nbsp;&nbsp;</li>
+<li>NVC为了获取DVT所支持的功能的命令&nbsp;&nbsp;</li>
+</ol></div>
+<p>&nbsp;</p>
+<p><strong>参考文档：</strong></p>
+<p>&nbsp;</p>
+<div><ol>
+<li>1、ONVIF&nbsp;Profile&nbsp;S&nbsp;Specification&nbsp;&nbsp;</li>
+<li>描述ProfileS是什么样的一个东西，如何实现&nbsp;&nbsp;</li>
+<li>2、Reference_of_ONVIF_Development_v1.01.02&nbsp;&nbsp;</li>
+<li>Onvif&nbsp;DVT设计参考，指明了一条道路，但没有具体内容&nbsp;&nbsp;</li>
+<li>3、ONVIF-Media-Service-Spec-v220&nbsp;&nbsp;</li>
+<li>Onvif&nbsp;Media的说明介绍&nbsp;&nbsp;</li>
+<li>4、http://www.onvif.org/onvif/ver20/util/operationIndex.html&nbsp;&nbsp;</li>
+<li>onvif几乎全部命令的详细说明，非常重要。该文档告诉我们结构体成员的意义和如何填充。Onvif开发其实就是各种结构体的填充。&nbsp;&nbsp;</li>
+</ol></div>
+<p>&nbsp;</p>
+<h2>一、产生onvif源码框架</h2>
+<h3>1、从wsdl生成C头文件</h3>
+<p>&nbsp;</p>
+<div><ol>
+<li>wsdl2h&nbsp;-o&nbsp;onvif.h&nbsp;-c&nbsp;-s&nbsp;-t&nbsp;.\typemap.dat&nbsp;http://www.onvif.org/onvif/ver10/device/wsdl/devicemgmt.wsdl&nbsp;http://www.onvif.org/onvif/ver10/event/wsdl/event.wsdl&nbsp;http://www.onvif.org/onvif/ver10/display.wsdl&nbsp;http://www.onvif.org/onvif/ver10/deviceio.wsdl&nbsp;http://www.onvif.org/onvif/ver20/imaging/wsdl/imaging.wsdl&nbsp;http://www.onvif.org/onvif/ver10/media/wsdl/media.wsdl&nbsp;http://www.onvif.org/onvif/ver20/ptz/wsdl/ptz.wsdl&nbsp;&nbsp;http://www.onvif.org/onvif/ver10/receiver.wsdl&nbsp;http://www.onvif.org/onvif/ver10/recording.wsdl&nbsp;&nbsp;http://www.onvif.org/onvif/ver10/search.wsdl&nbsp;http://www.onvif.org/onvif/ver10/network/wsdl/remotediscovery.wsdl&nbsp;http://www.onvif.org/onvif/ver10/replay.wsdl&nbsp;http://www.onvif.org/onvif/ver20/analytics/wsdl/analytics.wsdl&nbsp;http://www.onvif.org/onvif/ver10/analyticsdevice.wsdl&nbsp;&nbsp;http://www.onvif.org/onvif/ver10/schema/onvif.xsd&nbsp;&nbsp;http://www.onvif.org/ver10/actionengine.wsdl&nbsp;&nbsp;</li>
+</ol></div>
+<p>跟前一篇discovery唯一不同的是，这里多了很多wsdl文件，这次创建完整的onvif代码框架</p>
+<p>&nbsp;</p>
+<h3>2、从头文件生成源码框架</h3>
+<p>&nbsp;</p>
+<div><ol>
+<li>soapcpp2&nbsp;-c&nbsp;onvif.h&nbsp;-x&nbsp;-I&nbsp;/root/onvif/gsoap-2.8/gsoap/import&nbsp;-I&nbsp;/root/onvif/gsoap-2.8/gsoap/&nbsp;&nbsp;</li>
+</ol></div>
+<p>产生的C文件比较庞大，最大的有十几兆，大部分的内容没有复用导致。</p>
+<p>&nbsp;</p>
+<h2><strong>二、创建</strong><strong>soap</strong><strong>运行环境</strong></h2>
+<p>&nbsp;</p>
+<div><ol>
+<li>int&nbsp;main(int&nbsp;argc,&nbsp;char&nbsp;**argv)&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>{&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;m,&nbsp;s;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<strong>struct&nbsp;soap&nbsp;add_soap;&nbsp;&nbsp;&nbsp;&nbsp;</strong></li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;server_udp;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;server_udp&nbsp;=&nbsp;create_server_socket_udp();&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;//bind_server_udp1(server_udp);&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;pthread_t&nbsp;thrHello;&nbsp;&nbsp;</li>
+<li>10. &nbsp;&nbsp;&nbsp;&nbsp;pthread_t&nbsp;thrProbe;&nbsp;&nbsp;</li>
+<li>11. &nbsp;&nbsp;&nbsp;&nbsp;//pthread_create(&amp;thrHello,NULL,main_Hello,server_udp);&nbsp;&nbsp;</li>
+<li>12. &nbsp;&nbsp;&nbsp;&nbsp;//sleep(2);&nbsp;&nbsp;</li>
+<li>13. &nbsp;&nbsp;&nbsp;&nbsp;pthread_create(&amp;thrProbe,NULL,main_Probe,server_udp);&nbsp;&nbsp;</li>
+<li>14. &nbsp;&nbsp;</li>
+<li>15. &nbsp;&nbsp;&nbsp;&nbsp;soap_init(&amp;add_soap);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>16. &nbsp;&nbsp;&nbsp;&nbsp;soap_set_namespaces(&amp;add_soap,&nbsp;namespaces);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>17. &nbsp;&nbsp;</li>
+<li>18. &nbsp;&nbsp;</li>
+<li>19. &nbsp;&nbsp;&nbsp;&nbsp;<strong>if&nbsp;(argc&nbsp;&lt;&nbsp;0)&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</strong></li>
+<li>20. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("usage:&nbsp;%s&nbsp;&lt;server_port&gt;&nbsp;\n",&nbsp;argv[0]);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>21. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(1);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>22. &nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<strong>else&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</strong></li>
+<li>23. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m&nbsp;=&nbsp;soap_bind(&amp;add_soap,&nbsp;NULL,&nbsp;80,&nbsp;100);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>24. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>if&nbsp;(m&nbsp;&lt;&nbsp;0)&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</strong></li>
+<li>25. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;soap_print_fault(&amp;add_soap,&nbsp;stderr);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>26. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(-1);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>27. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>28. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr,&nbsp;"Socket&nbsp;connection&nbsp;successful:&nbsp;master&nbsp;socket&nbsp;=&nbsp;%d\n",&nbsp;m);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>29. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>for&nbsp;(;;)&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</strong></li>
+<li>30. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s&nbsp;=&nbsp;soap_accept(&amp;add_soap);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>31. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>if&nbsp;(s&nbsp;&lt;&nbsp;0)&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;</strong></li>
+<li>32. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;soap_print_fault(&amp;add_soap,&nbsp;stderr);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>33. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(-1);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>34. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>35. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr,&nbsp;"Socket&nbsp;connection&nbsp;successful:&nbsp;slave&nbsp;socket&nbsp;=&nbsp;%d\n",&nbsp;s);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>36. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;soap_serve(&amp;add_soap);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>37. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;soap_end(&amp;add_soap);&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>38. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>39. &nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>40. &nbsp;&nbsp;&nbsp;&nbsp;<strong>return&nbsp;0;&nbsp;&nbsp;&nbsp;&nbsp;</strong></li>
+</ol>
+<p align="left">41. }&nbsp;&nbsp;&nbsp;</p>
+</div>
+<p>注意，这里绑定了80端口，onvif使用的是http请求，然后附带xml，其实正常的是将onvif集成到web服务器中，普通的http请求有web服务器处理，onvif的http请求则有soap处理。我们这里的做法也可行，只不过onvif的访问web服务器的功能是无法使用的。</p>
+<p>&nbsp;</p>
+<h2>三、RTSP视频对接</h2>
+<h3>1、实现GetCapabilities命令</h3>
+<p>客户端发送GetCapabilities命令来得到设备端的能力，然后依据GetCapabilities返回的结果再来进行下一步操作</p>
+<p>在__tds__GetCapabilities函数中我们只需要填充Media部分和一些必要的即可</p>
+<p>&nbsp;</p>
+<div><ol>
+<li>//想要对接RTSP视频，必须设置Media&nbsp;&nbsp;</li>
+<li>tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media&nbsp;=&nbsp;(<strong>struct&nbsp;tt__MediaCapabilities*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tt__MediaCapabilities));&nbsp;&nbsp;</strong></li>
+<li>tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;XAddr&nbsp;=&nbsp;(char&nbsp;*)&nbsp;soap_malloc(soap,&nbsp;<strong>sizeof(</strong><strong>char)&nbsp;*&nbsp;LARGE_INFO_LENGTH);&nbsp;&nbsp;</strong></li>
+<li>strcpy(tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;XAddr,&nbsp;_IPv4Address);&nbsp;&nbsp;</li>
+<li>tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;StreamingCapabilities&nbsp;=&nbsp;(<strong>struct&nbsp;tt__RealTimeStreamingCapabilities*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tt__RealTimeStreamingCapabilities));&nbsp;&nbsp;</strong></li>
+<li>tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;StreamingCapabilities-&gt;RTPMulticast&nbsp;=&nbsp;(int&nbsp;*)soap_malloc(soap,&nbsp;<strong>sizeof(</strong><strong>int));&nbsp;&nbsp;&nbsp;</strong></li>
+<li>*tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;StreamingCapabilities-&gt;RTPMulticast&nbsp;=&nbsp;_false;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;StreamingCapabilities-&gt;RTP_USCORETCP&nbsp;=&nbsp;(int&nbsp;*)soap_malloc(soap,&nbsp;<strong>sizeof(</strong><strong>int));&nbsp;&nbsp;</strong></li>
+<li>*tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;StreamingCapabilities-&gt;RTP_USCORETCP&nbsp;=&nbsp;_true;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+</ol>
+<p align="left">10. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;StreamingCapabilities-&gt;RTP_USCORERTSP_USCORETCP&nbsp;=&nbsp;(int&nbsp;*)soap_malloc(soap,&nbsp;<strong>sizeof(</strong><strong>int));&nbsp;&nbsp;</strong></p>
+<p align="left">11. *tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;StreamingCapabilities-&gt;RTP_USCORERTSP_USCORETCP&nbsp;=&nbsp;_true;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p align="left">12. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;StreamingCapabilities-&gt;Extension&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</p>
+<p align="left">13. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;Extension&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</p>
+<p align="left">14. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;__size&nbsp;=&nbsp;0;&nbsp;&nbsp;</p>
+<p align="left">15. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Media-&gt;__any&nbsp;=&nbsp;0;&nbsp;&nbsp;</p>
+</div>
+<p>另外必要填充的还有</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div><ol>
+<li>//下面的重要，这里只实现视频流，需要设置VideoSources&nbsp;&nbsp;</li>
+<li>tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;DeviceIO-&gt;VideoSources&nbsp;=&nbsp;TRUE;&nbsp;&nbsp;</li>
+<li>tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;DeviceIO-&gt;VideoOutputs&nbsp;=&nbsp;FALSE;&nbsp;&nbsp;</li>
+<li>tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;DeviceIO-&gt;AudioSources&nbsp;=&nbsp;FALSE;&nbsp;&nbsp;</li>
+<li>tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;DeviceIO-&gt;AudioOutputs&nbsp;=&nbsp;FALSE;&nbsp;&nbsp;</li>
+<li>tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;DeviceIO-&gt;RelayOutputs&nbsp;=&nbsp;FALSE;&nbsp;&nbsp;</li>
+<li>tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;DeviceIO-&gt;__size&nbsp;=&nbsp;0;&nbsp;&nbsp;</li>
+<li>tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;DeviceIO-&gt;__any&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;</li>
+</ol>
+<p align="left">10. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;Display&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</p>
+<p align="left">11. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;Recording&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</p>
+<p align="left">12. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;Search&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</p>
+<p align="left">13. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;Replay&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</p>
+<p align="left">14. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;Receiver&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</p>
+<p align="left">15. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;AnalyticsDevice&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</p>
+<p align="left">16. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;Extensions&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</p>
+<p align="left">17. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;__size&nbsp;=&nbsp;0;&nbsp;&nbsp;</p>
+<p align="left">18. tds__GetCapabilitiesResponse-&gt;Capabilities-&gt;Extension-&gt;__any&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</p>
+</div>
+<h3>2、实现GetServices命令</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div><ol>
+<li>int&nbsp;&nbsp;__tds__GetServices(<strong>struct&nbsp;soap*&nbsp;soap,&nbsp;struct&nbsp;_tds__GetServices&nbsp;*tds__GetServices,&nbsp;struct&nbsp;_tds__GetServicesResponse&nbsp;*tds__GetServicesResponse)&nbsp;&nbsp;</strong></li>
+<li>{&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;DBG("__tds__GetServices\n");&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;/*该函数很必要*/&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;_IPAddr[INFO_LENGTH];&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;i&nbsp;=&nbsp;0;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;sprintf(_IPAddr,&nbsp;"http://%03d.%03d.%03d.%03d/onvif/services",&nbsp;192,&nbsp;168,&nbsp;1,&nbsp;233);&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;__sizeService&nbsp;=&nbsp;1;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;</li>
+<li>10. &nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;Service&nbsp;=&nbsp;(<strong>struct&nbsp;tds__Service&nbsp;*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tds__Service));&nbsp;&nbsp;</strong></li>
+<li>11. &nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;Service[0].XAddr&nbsp;=&nbsp;(char&nbsp;*)soap_malloc(soap,&nbsp;<strong>sizeof(</strong><strong>char)&nbsp;*&nbsp;INFO_LENGTH);&nbsp;&nbsp;</strong></li>
+<li>12. &nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;Service[0].Namespace&nbsp;=&nbsp;(char&nbsp;*)soap_malloc(soap,&nbsp;<strong>sizeof(</strong><strong>char)&nbsp;*&nbsp;INFO_LENGTH);&nbsp;&nbsp;</strong></li>
+<li>13. &nbsp;&nbsp;&nbsp;&nbsp;strcpy(tds__GetServicesResponse-&gt;Service[0].Namespace,&nbsp;"http://www.onvif.org/ver10/events/wsdl");&nbsp;&nbsp;</li>
+<li>14. &nbsp;&nbsp;&nbsp;&nbsp;strcpy(tds__GetServicesResponse[0].Service-&gt;XAddr,&nbsp;_IPAddr);&nbsp;&nbsp;</li>
+<li>15. &nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;Service[0].Capabilities&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</li>
+<li>16. &nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;Service[0].Version&nbsp;=&nbsp;(<strong>struct&nbsp;tt__OnvifVersion&nbsp;*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tt__OnvifVersion));&nbsp;&nbsp;</strong></li>
+<li>17. &nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;Service[0].Version-&gt;Major&nbsp;=&nbsp;0;&nbsp;&nbsp;</li>
+<li>18. &nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;Service[0].Version-&gt;Minor&nbsp;=&nbsp;3;&nbsp;&nbsp;</li>
+<li>19. &nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;Service[0].__any&nbsp;=&nbsp;(char&nbsp;**)soap_malloc(soap,&nbsp;<strong>sizeof(</strong><strong>char&nbsp;*));&nbsp;&nbsp;</strong></li>
+<li>20. &nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;Service[0].__any[0]&nbsp;=&nbsp;(char&nbsp;*)soap_malloc(soap,&nbsp;<strong>sizeof(</strong><strong>char)&nbsp;*&nbsp;INFO_LENGTH);&nbsp;&nbsp;</strong></li>
+<li>21. &nbsp;&nbsp;&nbsp;&nbsp;strcpy(tds__GetServicesResponse-&gt;Service[0].__any[0],"why1");&nbsp;&nbsp;</li>
+<li>22. &nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;Service[0].__any[1]&nbsp;=&nbsp;(char&nbsp;*)soap_malloc(soap,<strong>sizeof(</strong><strong>char)&nbsp;*&nbsp;INFO_LENGTH);&nbsp;&nbsp;</strong></li>
+<li>23. &nbsp;&nbsp;&nbsp;&nbsp;strcpy(tds__GetServicesResponse-&gt;Service[0].__any[1],"why2");&nbsp;&nbsp;</li>
+<li>24. &nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;Service[0].__size&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</li>
+<li>25. &nbsp;&nbsp;&nbsp;&nbsp;tds__GetServicesResponse-&gt;Service[0].__anyAttribute&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</li>
+<li>26. &nbsp;&nbsp;&nbsp;&nbsp;<strong>return&nbsp;SOAP_OK;&nbsp;&nbsp;</strong></li>
+</ol>
+<p align="left">27. }&nbsp;&nbsp;</p>
+</div>
+<h3>3、实现GetVideoSources命令</h3>
+<div><ol>
+<li>int&nbsp;&nbsp;__tmd__GetVideoSources(struct&nbsp;soap*&nbsp;soap,&nbsp;struct&nbsp;_trt__GetVideoSources&nbsp;*trt__GetVideoSources,&nbsp;struct&nbsp;_trt__GetVideoSourcesResponse&nbsp;*trt__GetVideoSourcesResponse)&nbsp;&nbsp;</li>
+<li>{&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;DBG("__tmd__GetVideoSources\n");&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;size1;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;size1&nbsp;=&nbsp;1;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;__sizeVideoSources&nbsp;=&nbsp;size1;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources&nbsp;=&nbsp;(struct&nbsp;tt__VideoSource&nbsp;*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tt__VideoSource)&nbsp;*&nbsp;size1);&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Framerate&nbsp;=&nbsp;30;&nbsp;&nbsp;</li>
+<li>10. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Resolution&nbsp;=&nbsp;(struct&nbsp;tt__VideoResolution&nbsp;*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tt__VideoResolution));&nbsp;&nbsp;</li>
+<li>11. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Resolution-&gt;Height&nbsp;=&nbsp;720;&nbsp;&nbsp;</li>
+<li>12. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Resolution-&gt;Width&nbsp;=&nbsp;1280;&nbsp;&nbsp;</li>
+<li>13. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].token&nbsp;=&nbsp;(char&nbsp;*)soap_malloc(soap,&nbsp;sizeof(char)*INFO_LENGTH);&nbsp;&nbsp;</li>
+<li>14. &nbsp;&nbsp;&nbsp;&nbsp;strcpy(trt__GetVideoSourcesResponse-&gt;VideoSources[0].token,"GhostyuSource_token");&nbsp;//注意这里需要和GetProfile中的sourcetoken相同&nbsp;&nbsp;</li>
+<li>15. &nbsp;&nbsp;</li>
+<li>16. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging&nbsp;=(struct&nbsp;tt__ImagingSettings*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tt__ImagingSettings));&nbsp;&nbsp;</li>
+<li>17. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;Brightness&nbsp;=&nbsp;(float*)soap_malloc(soap,sizeof(float));&nbsp;&nbsp;</li>
+<li>18. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;Brightness[0]&nbsp;=&nbsp;128;&nbsp;&nbsp;</li>
+<li>19. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;ColorSaturation&nbsp;=&nbsp;(float*)soap_malloc(soap,sizeof(float));&nbsp;&nbsp;</li>
+<li>20. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;ColorSaturation[0]&nbsp;=&nbsp;128;&nbsp;&nbsp;</li>
+<li>21. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;Contrast&nbsp;=&nbsp;(float*)soap_malloc(soap,sizeof(float));&nbsp;&nbsp;</li>
+<li>22. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;Contrast[0]&nbsp;=&nbsp;128;&nbsp;&nbsp;</li>
+<li>23. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;IrCutFilter&nbsp;=&nbsp;(int&nbsp;*)soap_malloc(soap,sizeof(int));&nbsp;&nbsp;</li>
+<li>24. &nbsp;&nbsp;&nbsp;&nbsp;*trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;IrCutFilter&nbsp;=&nbsp;0;&nbsp;&nbsp;&nbsp;</li>
+<li>25. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;Sharpness&nbsp;=&nbsp;(float*)soap_malloc(soap,sizeof(float));&nbsp;&nbsp;</li>
+<li>26. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;Sharpness[0]&nbsp;=&nbsp;128;&nbsp;&nbsp;</li>
+<li>27. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;BacklightCompensation&nbsp;=&nbsp;(struct&nbsp;tt__BacklightCompensation*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tt__BacklightCompensation));&nbsp;&nbsp;</li>
+<li>28. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;BacklightCompensation-&gt;Mode&nbsp;=&nbsp;0;&nbsp;&nbsp;</li>
+<li>29. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;BacklightCompensation-&gt;Level&nbsp;=&nbsp;20;&nbsp;&nbsp;</li>
+<li>30. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;Exposure&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</li>
+<li>31. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;Focus&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</li>
+<li>32. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;WideDynamicRange&nbsp;=&nbsp;(struct&nbsp;tt__WideDynamicRange*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tt__WideDynamicRange));&nbsp;&nbsp;</li>
+<li>33. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;WideDynamicRange-&gt;Mode&nbsp;=&nbsp;0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>34. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;WideDynamicRange-&gt;Level&nbsp;=&nbsp;20;&nbsp;&nbsp;</li>
+<li>35. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;WhiteBalance&nbsp;=&nbsp;(struct&nbsp;tt__WhiteBalance*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tt__WhiteBalance));&nbsp;&nbsp;</li>
+<li>36. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;WhiteBalance-&gt;Mode&nbsp;=&nbsp;0;&nbsp;&nbsp;&nbsp;</li>
+<li>37. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;WhiteBalance-&gt;CrGain&nbsp;=&nbsp;0;&nbsp;&nbsp;&nbsp;</li>
+<li>38. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;WhiteBalance-&gt;CbGain&nbsp;=&nbsp;0;&nbsp;&nbsp;&nbsp;</li>
+<li>39. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Imaging-&gt;Extension&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</li>
+<li>40. &nbsp;&nbsp;&nbsp;&nbsp;trt__GetVideoSourcesResponse-&gt;VideoSources[0].Extension&nbsp;=&nbsp;NULL;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>41. &nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;SOAP_OK;&nbsp;&nbsp;</li>
+</ol>
+<p align="left">42. }&nbsp;&nbsp;</p>
+</div>
+<p>__tmd__GetVideoSources最重要的是token的填充，必须要和下面profile中的sourcetoken相同，需要匹配到这个视频源<br />
+<br />
+</p>
+<p>&nbsp;</p>
+<h3>4、实现GetProfiles命令</h3>
+<p>&nbsp;</p>
+<div><ol>
+<li>size&nbsp;=&nbsp;1;&nbsp;&nbsp;</li>
+<li>trt__GetProfilesResponse-&gt;Profiles&nbsp;=(<strong>struct&nbsp;tt__Profile&nbsp;*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tt__Profile)&nbsp;*&nbsp;size);&nbsp;&nbsp;</strong></li>
+<li>trt__GetProfilesResponse-&gt;__sizeProfiles&nbsp;=&nbsp;size;&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;</li>
+<li>i=0;&nbsp;&nbsp;</li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].Name&nbsp;=&nbsp;(char&nbsp;*)soap_malloc(soap,<strong>sizeof(</strong><strong>char)*MAX_PROF_TOKEN);&nbsp;&nbsp;</strong></li>
+<li>strcpy(trt__GetProfilesResponse-&gt;Profiles[i].Name,"my_profile");&nbsp;&nbsp;</li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].token=&nbsp;(char&nbsp;*)soap_malloc(soap,<strong>sizeof(</strong><strong>char)*MAX_PROF_TOKEN);&nbsp;&nbsp;</strong></li>
+<li>strcpy(trt__GetProfilesResponse-&gt;Profiles[i].token,"token_profile");&nbsp;&nbsp;</li>
+
+</ol>
+<p align="left">10. trt__GetProfilesResponse-&gt;Profiles[i].fixed&nbsp;=&nbsp;_false;&nbsp;&nbsp;</p>
+<p align="left">11. trt__GetProfilesResponse-&gt;Profiles[i].__anyAttribute&nbsp;=&nbsp;NULL;&nbsp;&nbsp;</p>
+
+
+
+</div>
+<p>除了上面的基本信息，还需要填充两大项：VideoSourceConfiguration和VideoEncoderConfiguration，一个用于描述视频源的信息，另外一个描述视频的编码信息</p>
+<p>&nbsp;</p>
+<p>先给VideoSourceConfiguration分配空间</p>
+<div><ol>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration&nbsp;=&nbsp;(<strong>struct&nbsp;tt__VideoSourceConfiguration&nbsp;*)soap_malloc(soap,sizeof(struct&nbsp;tt__VideoSourceConfiguration&nbsp;));&nbsp;&nbsp;</strong></li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration-&gt;Name&nbsp;=&nbsp;(char&nbsp;*)soap_malloc(soap,<strong>sizeof(</strong><strong>char)*MAX_PROF_TOKEN);&nbsp;&nbsp;</strong></li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration-&gt;token&nbsp;=&nbsp;(char&nbsp;*)soap_malloc(soap,<strong>sizeof(</strong><strong>char)*MAX_PROF_TOKEN);&nbsp;&nbsp;</strong></li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration-&gt;SourceToken&nbsp;=&nbsp;(char&nbsp;*)soap_malloc(soap,<strong>sizeof(</strong><strong>char)*MAX_PROF_TOKEN);&nbsp;&nbsp;</strong></li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration-&gt;Bounds&nbsp;=&nbsp;(<strong>struct&nbsp;tt__IntRectangle&nbsp;*)soap_malloc(soap,sizeof(struct&nbsp;tt__IntRectangle));&nbsp;&nbsp;</strong></li>
+
+</ol>
+
+
+
+
+
+
+
+
+
+</div>
+<p>然后在填充它</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div><ol>
+<li>/*注意SourceToken*/&nbsp;&nbsp;</li>
+<li>strcpy(trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration-&gt;Name,"VS_Name");&nbsp;&nbsp;</li>
+<li>strcpy(trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration-&gt;token,"VS_Token");&nbsp;&nbsp;</li>
+<li>strcpy(trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration-&gt;SourceToken,"GhostyuSource_token");&nbsp;/*必须与__tmd__GetVideoSources中的token相同*/&nbsp;&nbsp;</li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration-&gt;UseCount&nbsp;=&nbsp;1;&nbsp;&nbsp;</li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration-&gt;Bounds-&gt;x&nbsp;=&nbsp;1;&nbsp;&nbsp;</li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration-&gt;Bounds-&gt;y&nbsp;=&nbsp;1;&nbsp;&nbsp;</li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration-&gt;Bounds-&gt;height&nbsp;=&nbsp;720;&nbsp;&nbsp;</li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoSourceConfiguration-&gt;Bounds-&gt;width&nbsp;=&nbsp;1280;&nbsp;&nbsp;</li>
+
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<p>如果是指针必须先用soap_malloc分配内存，然后才能赋值</p>
+<p>&nbsp;</p>
+<p>下面是VideoEncoderConfiguration</p>
+<p>&nbsp;</p>
+<div><ol>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration&nbsp;=&nbsp;(<strong>struct&nbsp;tt__VideoEncoderConfiguration&nbsp;*)soap_malloc(soap,sizeof(struct&nbsp;tt__VideoEncoderConfiguration));&nbsp;&nbsp;</strong></li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;Name&nbsp;=&nbsp;(char&nbsp;*)soap_malloc(soap,<strong>sizeof(</strong><strong>char)*MAX_PROF_TOKEN);&nbsp;&nbsp;</strong></li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;token=&nbsp;(char&nbsp;*)soap_malloc(soap,<strong>sizeof(</strong><strong>char)*MAX_PROF_TOKEN);&nbsp;&nbsp;</strong></li>
+<li>strcpy(trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;Name,"VE_Name1");&nbsp;&nbsp;</li>
+<li>strcpy(trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;token,"VE_token1");&nbsp;&nbsp;</li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;UseCount&nbsp;=&nbsp;1;&nbsp;&nbsp;</li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;Quality&nbsp;=&nbsp;10;&nbsp;&nbsp;</li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;Encoding&nbsp;=&nbsp;1;//JPEG&nbsp;=&nbsp;0,&nbsp;MPEG4&nbsp;=&nbsp;1,&nbsp;H264&nbsp;=&nbsp;2;&nbsp;&nbsp;</li>
+<li>trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;Resolution&nbsp;=&nbsp;(<strong>struct&nbsp;tt__VideoResolution&nbsp;*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tt__VideoResolution));&nbsp;&nbsp;</strong></li>
+
+</ol>
+<p align="left">10. trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;Resolution-&gt;Height&nbsp;=&nbsp;720;&nbsp;&nbsp;</p>
+<p align="left">11. trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;Resolution-&gt;Width&nbsp;=&nbsp;1280;&nbsp;&nbsp;</p>
+<p align="left">12. trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;RateControl&nbsp;=&nbsp;(<strong>struct&nbsp;tt__VideoRateControl&nbsp;*)soap_malloc(soap,&nbsp;sizeof(struct&nbsp;tt__VideoRateControl));&nbsp;&nbsp;</strong></p>
+<p align="left">13. trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;RateControl-&gt;FrameRateLimit&nbsp;=&nbsp;30;&nbsp;&nbsp;</p>
+<p align="left">14. trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;RateControl-&gt;EncodingInterval&nbsp;=&nbsp;1;&nbsp;&nbsp;</p>
+<p align="left">15. trt__GetProfilesResponse-&gt;Profiles[i].VideoEncoderConfiguration-&gt;RateControl-&gt;BitrateLimit&nbsp;=&nbsp;500;&nbsp;&nbsp;</p>
+
+
+
+</div>
+<h3>5、GetVideoSourceConfiguration和GetVideoEncoderConfiguration</h3>
+<p>&nbsp;</p>
+<div><ol>
+<li>int&nbsp;&nbsp;__trt__GetVideoSourceConfiguration(<strong>struct&nbsp;soap*&nbsp;soap,&nbsp;struct&nbsp;_trt__GetVideoSourceConfiguration&nbsp;*trt__GetVideoSourceConfiguration,&nbsp;struct&nbsp;_trt__GetVideoSourceConfigurationResponse&nbsp;*trt__GetVideoSourceConfigurationResponse)&nbsp;&nbsp;</strong></li>
+<li>{&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;DBG("__trt__GetVideoSourceConfiguration\n");&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;//该函数必要，live&nbsp;video需要&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return&nbsp;SOAP_OK;&nbsp;&nbsp;</strong></li>
+<li>}&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;</li>
+<li>int&nbsp;&nbsp;__trt__GetVideoEncoderConfiguration(<strong>struct&nbsp;soap*&nbsp;soap,&nbsp;struct&nbsp;_trt__GetVideoEncoderConfiguration&nbsp;*trt__GetVideoEncoderConfiguration,&nbsp;struct&nbsp;_trt__GetVideoEncoderConfigurationResponse&nbsp;*trt__GetVideoEncoderConfigurationResponse)&nbsp;&nbsp;</strong></li>
+<li>{&nbsp;&nbsp;</li>
+<li>10. &nbsp;&nbsp;&nbsp;&nbsp;DBG("__trt__GetVideoEncoderConfiguration\n");&nbsp;&nbsp;</li>
+<li>11. &nbsp;&nbsp;&nbsp;&nbsp;<strong>return&nbsp;SOAP_OK;&nbsp;&nbsp;</strong></li>
+
+</ol>
+<p align="left">12. }&nbsp;&nbsp;</p>
+
+
+
+</div>
+<p>&nbsp;</p>
+<h3>6、GetVideoEncoderConfigurationOptions</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div><ol>
+<li>int&nbsp;&nbsp;__trt__GetVideoEncoderConfigurationOptions(<strong>struct&nbsp;soap*&nbsp;soap,&nbsp;struct&nbsp;_trt__GetVideoEncoderConfigurationOptions&nbsp;*trt__GetVideoEncoderConfigurationOptions,&nbsp;struct&nbsp;_trt__GetVideoEncoderConfigurationOptionsResponse&nbsp;*trt__GetVideoEncoderConfigurationOptionsResponse)&nbsp;&nbsp;</strong></li>
+<li>{&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;DBG("__trt__GetVideoEncoderConfigurationOptions\n");&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;//该函数必要，video&nbsp;streaming需要&nbsp;&nbsp;</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return&nbsp;SOAP_OK;&nbsp;&nbsp;</strong></li>
+<li>}&nbsp;&nbsp;</li>
+
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<p>以上5、6不分的代码直接返回SOAP_OK即可，正常来说是应该填充的，这里不影响RTSP
+Video Stream，暂时就不去动它</p>
+<p>&nbsp;</p>
+<h2>四、运行live555MediaServer服务器</h2>
+<p>&nbsp;</p>
+<p>live555官网有很多<a title="软件测试知识库" href="http://lib.csdn.net/base/softwaretest" target="_blank">测试</a>文件，我这里用的是MPEG4的测试文件路劲为rtsp://192.168.1.201/petrov.m4e</p>
+<h2>五、启动Onvif
+Device Manager测试</h2>
+<p>有一个问题，OnvifDeviceManager的并不能自动发现设备（OnvifTestTool可以），还好它提供了手动添加功能</p>
+<p>单击add，添加如下内容：http://192.168.1.233/onvif/device_service</p>
+<p>注意，我在程序中固定了两个IP：linux192.168.1.233，windows：192.168.1.201，这里需看情况修改</p>
+<p>测试截图：</p>
+<h3>1、Live video</h3>
+<p>&nbsp;</p>
+<h3>2、Video streaming</h3>
+<p>&nbsp;</p>
+<h3>3、Profiles</h3>
+<p>&nbsp;</p>
+<h3>最后是运行的live555 rtsp服务器</h3>
+<p>&nbsp;</p>
+<p>终端打印的DEBUG信息</p>
+<p>&nbsp;</p>
+<p>源代码下载地址：http://download.csdn.Net/detail/ghostyu/4796093</p>
+<p>onvif规范的实现：成功实现ONVIF协议RTSP-Video-Stream与OnvifDeviceManager的视频对接 &nbsp;&nbsp;<span style="font-size: 14px;">http://blog.csdn.net/ghostyu/article/details/8208428</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</dd></dl>
+<div class="lemma-summary">&nbsp;</div></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2017-05-09 01:59</span> <a href='https://www.cnblogs.com/endv/'>Endv</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=6828718" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(6828718);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=199267,cb_entryId=6828718,cb_blogApp=currentBlogApp,cb_blogUserGuid='1d1a4484-2642-e411-b908-9dcfd8948a71',cb_entryCreatedDate='2017/5/9 1:59:00';loadViewCount(cb_entryId);var cb_postType=1;var isMarkdown=false;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+  googletag.cmd.push(function() {
+        googletag.defineSlot('/1090369/C1', [300, 250], 'div-gpt-ad-1546353474406-0').addService(googletag.pubads());
+        googletag.defineSlot('/1090369/C2', [468, 60], 'div-gpt-ad-1539008685004-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+  });
+</script>
+<div id='cnblogs_c1' class='c_ad_block'>
+<div id='div-gpt-ad-1546353474406-0' style='height:250px; width:300px;'>
+<script>
+if(canShowAdsense()) {
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1546353474406-0'); });
+}
+</script>
+</div>
+</div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'>
+    <div id='div-gpt-ad-1539008685004-0' style='height:60px; width:468px;'>
+    <script>
+    if(canShowAdsense()) {
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1539008685004-0'); });
+    }
+    </script>
+    </div>
+</div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+ if(enablePostBottom()) {
+    codeHighlight();
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);  
+}
+</script>
+</div>
+
+    
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2019 Endv
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+<!--PageEndHtml Block Begin-->
+<div class="sky">
+	<div class="clouds_one"></div>
+	<div class="clouds_two"></div>
+	<div class="clouds_three"></div>
+</div>
+
+<img alt src="https://files.cnblogs.com/endv/Endv.gif" id="img" width="100%">
+<!--PageEndHtml Block End-->
+</body>
+</html>
