@@ -22,6 +22,11 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
 #include "Base64.hh"
 #include "VorbisAudioRTPSource.hh" // for parseVorbisOrTheoraConfigStr()
 
+
+#if _MSC_VER
+#define snprintf _snprintf
+#endif
+
 VorbisAudioRTPSink* VorbisAudioRTPSink
 ::createNew(UsageEnvironment& env, Groupsock* RTPgs,
 	    u_int8_t rtpPayloadFormat, u_int32_t rtpTimestampFrequency, unsigned numChannels,

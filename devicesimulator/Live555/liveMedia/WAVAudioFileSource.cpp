@@ -22,6 +22,11 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
 #include "InputFile.hh"
 #include "GroupsockHelper.hh"
 
+
+#if _MSC_VER
+#define snprintf _snprintf
+#endif
+
 ////////// WAVAudioFileSource //////////
 
 WAVAudioFileSource*

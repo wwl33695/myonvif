@@ -23,6 +23,11 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
 #include "VorbisAudioRTPSource.hh" // for parseVorbisOrTheoraConfigStr()
 #include "VorbisAudioRTPSink.hh" // for generateVorbisOrTheoraConfigStr()
 
+
+#if _MSC_VER
+#define snprintf _snprintf
+#endif
+
 TheoraVideoRTPSink* TheoraVideoRTPSink
 ::createNew(UsageEnvironment& env, Groupsock* RTPgs, u_int8_t rtpPayloadFormat,
 	    u_int8_t* identificationHeader, unsigned identificationHeaderSize,

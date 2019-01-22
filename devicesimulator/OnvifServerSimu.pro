@@ -20,11 +20,13 @@ INCLUDEPATH +=./Live555/groupsock/include/
 
 
 #LIBS += -lws2_32 libwsock32 libntdll libpowrprof
-LIBS += -lpthread libwsock32 libws2_32 libntdll libpowrprof libwinmm
+#LIBS += libwsock32 libws2_32 libntdll libpowrprof libwinmm
 
 #this path need modify
-LIBS += D:/git/OnvifServerSimu/lib/libx264.lib
-LIBS += -LD:/git/OnvifServerSimu/lib/ffmpeg/lib/ -lavdevice -lavcodec -lavformat -lavutil -lswscale -lpostproc -lavfilter
+#LIBS += -lwsock32.lib -lws2_32.lib
+LIBS += E:/nonsys/code/myonvif/devicesimulator/lib/libx264.lib
+LIBS += E:/nonsys/code/myonvif/devicesimulator/lib/pthreadVC2.lib
+LIBS += -L E:/nonsys/code/myonvif/devicesimulator/lib/ffmpeg/lib/ -lavdevice -lavcodec -lavformat -lavutil -lswscale -lpostproc -lavfilter
 
 
 

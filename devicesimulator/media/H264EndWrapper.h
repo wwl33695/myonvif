@@ -1,7 +1,7 @@
 #ifndef _X264WRAPPER_H_
 #define _X264WRAPPER_H_
 
-//#include "stdint.h"
+#include <stdio.h>
 #include "x264.h"
 
 struct TNAL
