@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="referrer" content="never" />
+    <title>ONVIFclient搜索设备获取rtsp地址开发笔记(精华篇) - jhcelue - 博客园</title>
+<meta property="og:description" content="概要： 眼下ONVIF协议家族设备已占领数字监控行业半壁江山以上，亲，作为开发人员的你还在犹豫是否了解下吗？本文介绍了ONVIFclient从设备搜索。鉴权，能力获取，媒体信息获取。URI地址获取的整" />
+    <link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=-duj5vpGTntb85GJoM3iRI972XwWcI-j8zmqDzyfu2w1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/red_autumnal_leaves/bundle-red_autumnal_leaves.css?v=EDEp2d1uMe8iyN6qDoW8MQgYb-JCFIeiYP0oX3XiiRM1"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/red_autumnal_leaves/bundle-red_autumnal_leaves-mobile.css?v=Go8Bj0ZU9gZXuPSKWcSQabps3E1njgJKYz4DiOq6-N41"/>
+    <link title="RSS" type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/jhcelue/rss"/>
+    <link title="RSD" type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/jhcelue/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/jhcelue/wlwmanifest.xml"/>
+    <script src="//common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script>var currentBlogId=348874;var currentBlogApp='jhcelue',cb_enable_mathjax=false;var isLogined=false;</script>
+    <script src="/bundles/blog-common.js?v=75GlRjvNr9aYgWttsJIxQDp4deiGqNQyDe6Io4CHSa81" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="https://www.cnblogs.com/jhcelue/"><img id="blogLogo" src="/Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="https://www.cnblogs.com/jhcelue/">jhcelue</a></h1>
+<h2></h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">博客园</a></li>
+<li><a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/jhcelue/">首页</a></li>
+<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/jhcelue">联系</a></li>
+<li><a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/jhcelue/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="https://www.cnblogs.com/jhcelue/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+        <div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/jhcelue/p/6970149.html">ONVIFclient搜索设备获取rtsp地址开发笔记(精华篇)</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><div id="article_content" class="article_content tracking-ad" data-mod=popu_307  data-dsm = "post" >
+
+<p><br>
+</p>
+<h2>概要：</h2>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 眼下ONVIF协议家族设备已占领数字监控行业半壁江山以上，亲，作为开发人员的你还在犹豫是否了解下吗？本文介绍了ONVIFclient从设备搜索。鉴权，能力获取，媒体信息获取。URI地址获取的整套流程。文章仅仅讲述了比較重要或其它博文没有讲述的开发点，具体能够參考文末參考文章。</p><p>最后，能获得rtsp地址之后。然后去做其它功能比方录像，ptz这些就很得心应手了。本文出自CSDN-固本培元 ，转载注明出自：leolupy@gmail.com。</p><p></div>
+<div><br>
+</div>
+<h2>前言及鸣谢：</h2>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;感谢guog先生，快活林高先生，onvif全国交流群的的酷夏先生在开发过程中给予的巨大支持。没有你们的帮助开发过程将异常艰难啊。</p><p>谢谢了！</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+<h2>ONVIF介绍：</h2>
+<div><span style="color:rgb(51,51,51); font-family:arial,宋体,sans-serif; font-size:14px; line-height:24px; text-indent:28px">&nbsp; &nbsp; &nbsp; &nbsp;ONVIF致力于通过全球性的开放接口标准来推进</span><a target="_blank" target="_blank" href="http://baike.baidu.com/view/94301.htm" style="text-decoration:none; color:rgb(19,110,194); font-family:arial,宋体,sans-serif; font-size:14px; line-height:24px; text-indent:28px">网络视频</a><span style="color:rgb(51,51,51); font-family:arial,宋体,sans-serif; font-size:14px; line-height:24px; text-indent:28px">在安防市场的应用，这一接口标准将确保不同厂商生产的网络视频产品具有互通性。2008年11月，论坛正式公布了ONVIF第一版规范——ONVIF核心规范1.0。随着</span><a target="_blank" target="_blank" href="http://baike.baidu.com/view/1242856.htm" style="text-decoration:none; color:rgb(19,110,194); font-family:arial,宋体,sans-serif; font-size:14px; line-height:24px; text-indent:28px">视频监控</a><span style="color:rgb(51,51,51); font-family:arial,宋体,sans-serif; font-size:14px; line-height:24px; text-indent:28px">的网络化应用，产业链的分工将越来越细。有些厂商专门做摄像头，有些厂商专门做DVS，有些厂商则可能专门做平台等，然后通过</span><a target="_blank" target="_blank" href="http://baike.baidu.com/view/2082785.htm" style="text-decoration:none; color:rgb(19,110,194); font-family:arial,宋体,sans-serif; font-size:14px; line-height:24px; text-indent:28px">集成商</a><span style="color:rgb(51,51,51); font-family:arial,宋体,sans-serif; font-size:14px; line-height:24px; text-indent:28px">进行集成，提供给终于客户。这样的产业合作模式，已经迫切的须要行业提供越来越标准化的接口平台。</p><p></span><br>
+</div>
+<div><br>
+</div>
+<div>
+<h2>流程总览：</h2>
+</div>
+<div>本文开发环境：Centos6.4 &nbsp;Gsoap:2.8.16 &nbsp;soap:1.2 onvif:2.4 。 <strong><span style="color:#ff6666">注： 本文提供的參考代码事实上网上都能够找到。这里做一个整理，供大家交流学习，共同提高。</p><p></span></strong></div>
+<div><br>
+</div>
+<div>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+<span style="color:black">搜索：Probe</span><span style="color:black">： 发现网络摄像头，获取</span><span style="color:black">webserver</span><span style="color:black">地址</span></p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+<span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;</span>http://192.168.15.240/onvif/device_service</p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+<span style="color:black">能力获取：GetCapabilities</span><span style="color:black">：获取设备能力文件，从中识别出媒体信息地址</span><span style="color:black">URI：</span><span style="color:black">&nbsp;&nbsp;</span><span style="color:black"><a target="_blank" target="_blank" href="http://192.168.15.240/onvif/Media" rel="nofollow" style="color:rgb(51,102,153); text-decoration:none">http://192.168.15.240/onvif/Media</a></span></p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+<span style="color:black">媒体信息获取：GetProfiles</span><span style="color:black">： 获取媒体信息文件，识别主通道、子通道的视频编码分辨率</span></p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+<span style="color:black">RTSP地址获取：GetStreamUri</span><span style="color:black">：获取指定通道的流媒体地址</span><span style="color:black">&nbsp;&nbsp;</span>rtsp://192.168.15.240:554/Streaming/Channels/2?transportmode=unicast</p>
+<br>
+</div>
+<h2>Gsoap及开发框架生成：</h2>
+<div><br>
+</div>
+<div>1.下载Gsoap：地址：<a target="_blank" target="_blank" href="http://sourceforge.net/projects/gsoap2/files/gSOAP/">http://sourceforge.net/projects/gsoap2/files/gSOAP/</a></div>
+<div>2.安装： &nbsp;./configure &amp;&amp; make &amp;&amp; make install</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 期间可能会有一些报错。自己解决哦。</p><p></div>
+<div>3.离线或者在线生成onvif.h。假设不须要最新的版本号推荐离线方式。笔者使用的是这样的方式。</div>
+<div>&nbsp; &nbsp; &nbsp;离线文件下载地址：感谢guog先生的共享：
+<p>命令：</p>
+<p></p>
+<pre code_snippet_id="362114" snippet_file_name="blog_20140525_3_3993263" name="code" class="plain">wsdl2h -o onvif.h -c -s -t ./typemap.dat devicemgmt.wsdl media.wsdl event.wsdl display.wsdl deviceio.wsdl imaging.wsdl ptz.wsdl receiver.wsdl recording.wsdl search.wsdl remotediscovery.wsdl replay.wsdl analytics.wsdl analyticsdevice.wsdl actionengine.wsdl accesscontrol.wsdl doorcontrol.wsdl </pre>
+<p><br>
+</p>
+<p>离线文件在：</p>
+<a target="_blank" target="_blank" href="http://download.csdn.net/detail/u011597695/5875143" style="color:rgb(34,0,0); text-decoration:none; font-family:Arial; font-size:14px; line-height:26px">http://download.csdn.net/detail/u011597695/5875143</a></div>
+<div><br>
+</div>
+<div>&nbsp; &nbsp; 在线命令：</div>
+<div><pre code_snippet_id="362114" snippet_file_name="blog_20140525_2_8595069" name="code" class="plain">wsdl2h -o onvif.h -c -s -t ./typemap.dat http://www.onvif.org/onvif/ver10/device/wsdl/devicemgmt.wsdl http://www.onvif.org/onvif/ver10/media/wsdl/media.wsdl http://www.onvif.org/onvif/ver10/event/wsdl/event.wsdl http://www.onvif.org/onvif/ver10/display.wsdl http://www.onvif.org/onvif/ver10/deviceio.wsdl http://www.onvif.org/onvif/ver20/imaging/wsdl/imaging.wsdl http://www.onvif.org/onvif/ver20/ptz/wsdl/ptz.wsdl http://www.onvif.org/onvif/ver10/receiver.wsdl  http://www.onvif.org/onvif/ver10/recording.wsdl http://www.onvif.org/onvif/ver10/search.wsdl http://www.onvif.org/onvif/ver10/network/wsdl/remotediscovery.wsdl http://www.onvif.org/onvif/ver10/replay.wsdl http://www.onvif.org/onvif/ver20/analytics/wsdl/analytics.wsdl http://www.onvif.org/onvif/ver10/analyticsdevice.wsdl http://www.onvif.org/ver10/actionengine.wsdl http://www.onvif.org/ver10/pacs/accesscontrol.wsdl http://www.onvif.org/ver10/pacs/doorcontrol.wsdl </pre><br>
+&nbsp; &nbsp; &nbsp;（记得拷贝gsoap的typemap文件至生成文件夹下，wsdl2h命令须要这个。</p><p>）</div>
+<div><br>
+</div>
+<div>&nbsp; &nbsp; &nbsp;离线命令：</div>
+<div>
+<p></p>
+<pre code_snippet_id="362114" snippet_file_name="blog_20140525_3_3993263" name="code" class="plain">wsdl2h -o onvif.h -c -s -t ./typemap.dat devicemgmt.wsdl media.wsdl event.wsdl display.wsdl deviceio.wsdl imaging.wsdl ptz.wsdl receiver.wsdl recording.wsdl search.wsdl remotediscovery.wsdl replay.wsdl analytics.wsdl analyticsdevice.wsdl actionengine.wsdl accesscontrol.wsdl doorcontrol.wsdl </pre><br>
+如今能够開始生成了：例如以下：</div>
+<div>
+<p><br>
+</p>
+<p><img src="http://img.blog.csdn.net/20140513160136343?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ3ViZW5wZWl5dWFu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>
+</p>
+<p><br>
+</p>
+<p></p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:13.63636302947998px; line-height:26px">
+假设直接生成相应C的库文件会发生反复定义错误，能够改动该文件。</p><p></p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:13.63636302947998px; line-height:26px">
+wsa5.h(288): **ERROR**: remote method name clash: struct/class 'SOAP_ENV__Fault' already declared at line 274</p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:13.63636302947998px; line-height:26px">
+打开文件gsoap_2.8.16/gsoap-2.8/gsoap/import/&nbsp;wsa5.h</p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:13.63636302947998px; line-height:26px">
+</p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:13.63636302947998px; line-height:26px">
+将277行int&nbsp;SOAP_ENV__Fault改动为int&nbsp;SOAP_ENV__Fault_alex</p>
+笔者没有使用这样的方法，是将这个结构体直接凝视的方式，最后的结果是。都能够使用。<br>
+<p></p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:13.63636302947998px; line-height:26px">
+同一时候上一步生成的onvif.h文件里没有打开wsse.h， 导致最后生成代码中SOAP_ENV__Header 结构体中缺少定义 wsse__Security数据段，无法进行鉴权命令。</p>
+<p><span style="font-family:Arial; font-size:13.63636302947998px; line-height:26px">即：加入对openssl的支持，在上一步生成的onvif.h中加入（可选）</span><br style="font-family:Arial; font-size:13.63636302947998px; line-height:26px">
+</p>
+<div class="dp-highlighter bg_cpp" style="font-family:Consolas,'Courier New',Courier,mono,serif; background-color:rgb(231,229,220); width:936.71875px; overflow:auto; padding-top:1px; line-height:26px; margin:18px 0px!important">
+<div class="bar" style="padding-left:45px">
+<div class="tools" style="padding:3px 8px 10px 10px; font-size:9px; line-height:normal; font-family:Verdana,Geneva,Arial,Helvetica,sans-serif; color:silver; background-color:rgb(248,248,248); border-left-width:3px; border-left-style:solid; border-left-color:rgb(108,226,108)">
+<strong>[cpp]</strong>&nbsp;<a target="_blank" target="_blank" href="http://blog.csdn.net/stelalala/article/details/9182443#" class="ViewSource" title="view plain" style="color:rgb(160,160,160); text-decoration:none; background-color:inherit; border:none; padding:1px; margin:0px 10px 0px 0px; font-size:9px; display:inline-block; width:16px; height:16px; text-indent:-2000px">view
+ plain</a><a target="_blank" target="_blank" href="http://blog.csdn.net/stelalala/article/details/9182443#" class="CopyToClipboard" title="copy" style="color:rgb(160,160,160); text-decoration:none; background-color:inherit; border:none; padding:1px; margin:0px 10px 0px 0px; font-size:9px; display:inline-block; width:16px; height:16px; text-indent:-2000px">copy</a><a target="_blank" target="_blank" href="https://code.csdn.net/snippets/225640" title="在CODE上查看代码片" style="color:rgb(160,160,160); text-decoration:none; background-color:inherit; border:none; padding:1px; margin:0px 10px 0px 0px; font-size:9px; display:inline-block; width:16px; height:16px"><img src="https://code.csdn.net/assets/CODE_ico.png" width="12" height="12" alt="在CODE上查看代码片" style="max-width:100%; border:none; position:relative; top:1px; left:2px"></a><a target="_blank" target="_blank" href="https://code.csdn.net/snippets/225640/fork" title="派生到我的代码片" style="color:rgb(160,160,160); text-decoration:none; background-color:inherit; border:none; padding:1px; margin:0px 10px 0px 0px; font-size:9px; display:inline-block; width:16px; height:16px"><img src="https://code.csdn.net/assets/ico_fork.svg" width="12" height="12" alt="派生到我的代码片" style="max-width:100%; border:none; position:relative; top:2px; left:2px"></a>
+<div style="position:absolute; left:618px; top:1038px; width:18px; height:18px; z-index:99">
+</div>
+</div>
+</div>
+<ol start="1" class="dp-cpp" style="padding:0px; border:none; list-style-position:initial; background-color:rgb(255,255,255); color:rgb(92,92,92); margin:0px 0px 1px 45px!important">
+<li class="alt" style="border-style:none none none solid; border-left-width:3px; border-left-color:rgb(108,226,108); list-style:decimal-leading-zero outside; color:inherit; line-height:18px; margin:0px!important; padding:0px 3px 0px 10px!important">
+<span style="margin:0px; padding:0px; border:none; color:black; background-color:inherit"><span class="preprocessor" style="margin:0px; padding:0px; border:none; color:gray; background-color:inherit">#import&nbsp;&quot;wsse.h&quot;</span><span style="margin:0px; padding:0px; border:none; background-color:inherit">&nbsp;&nbsp;</span></span></li></ol>
+</div>
+<p></p>
+<p><br>
+</p>
+<p>随后使用命令生成：</p>
+<p></p>
+<pre code_snippet_id="362114" snippet_file_name="blog_20140525_4_4167204" name="code" class="plain">soapcpp2  -c onvif.h -x -I/root/Tools/Gsoap/gsoap-2.8/gsoap/import -I/root/Tools/Gsoap/gsoap-2.8/gsoap/ -I/root/Tools/Gsoap/gsoap-2.8/gsoap/custom -I/root/Tools/Gsoap/gsoap-2.8/gsoap/extras -I/root/Tools/Gsoap/gsoap-2.8/gsoap/plugin </pre><br>
+<p></p>
+<p><br>
+</p>
+<img src="http://img.blog.csdn.net/20140513161549171?</p><p>watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ3ViZW5wZWl5dWFu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>
+<br>
+到此为止。基于 C 的client和server的Onvif开发框架及已经搭建完毕。</div>
+<div><br>
+</div>
+<h2>设备搜索原理及编程技巧：</h2>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; 搜索发现的基本原理是：设备上server监听239.255.255.250的3702port。所以，假设要实现跨网段搜索onvif设备须要路由的支持。仅仅要组播数据包能收到，设备就能被搜到。</p><p>原理是这样。參考代码：</div>
+<div><br>
+</div>
+<div><pre code_snippet_id="362114" snippet_file_name="blog_20140525_5_6533755" name="code" class="plain">struct soap* NewSoap(struct SOAP_ENV__Header *header,struct soap* soap,
+		wsdd__ProbeType *req_,
+		wsdd__ScopesType *sScope_)
+{
+	soap = soap_new();
+	if(NULL == soap )
+	{
+		printf(&quot;sopa new error\r\n&quot;);
+		return NULL;
+	}
+
+
+	soap-&gt;recv_timeout = 5;
+	soap_set_namespaces(soap, namespaces);
+
+
+	soap_default_SOAP_ENV__Header(soap, header);
+
+	uuid_t uuid;
+	char guid_string[100];
+	uuid_generate(uuid);
+	uuid_unparse(uuid, guid_string);
+
+	header-&gt;wsa__MessageID = guid_string;
+	header-&gt;wsa__To = &quot;urn:schemas-xmlsoap-org:ws:2005:04:discovery&quot;;
+	header-&gt;wsa__Action = &quot;http://schemas.xmlsoap.org/ws/2005/04/discovery/Probe&quot;;
+	soap-&gt;header = header;
+
+	soap_default_wsdd__ScopesType(soap, sScope_);
+	sScope_-&gt;__item = &quot;&quot;;
+	soap_default_wsdd__ProbeType(soap, req_);
+	req_-&gt;Scopes = sScope_;
+	req_-&gt;Types = &quot;&quot;; //&quot;dn:NetworkVideoTransmitter&quot;;
+
+	return soap ;
+}</pre><br>
+<pre code_snippet_id="362114" snippet_file_name="blog_20140525_6_7471846" name="code" class="plain">int i = 0;  	
+	result = soap_send___wsdd__Probe(soap, MULTICAST_ADDRESS, NULL, &amp;req);
+
+	while(result == SOAP_OK)
+	{
+		result = soap_recv___wsdd__ProbeMatches(soap, &amp;resp);
+		if(result == SOAP_OK)
+		{
+			if(soap-&gt;error)  
+			{
+				printf(&quot;soap error 1: %d, %s, %s\n&quot;, soap-&gt;error, *soap_faultcode(soap), *soap_faultstring(soap));
+				result = soap-&gt;error;
+			}
+			else
+			{
+				printf(&quot;Onvif Device detected *********************************************\r\n&quot;);
+				for(i = 0; i &lt; resp.wsdd__ProbeMatches-&gt;__sizeProbeMatch; i++)
+				{
+					printf(&quot;__sizeProbeMatch        : %d\r\n&quot;, resp.wsdd__ProbeMatches-&gt;__sizeProbeMatch);  
+					printf(&quot;wsa__EndpointReference       : %p\r\n&quot;, resp.wsdd__ProbeMatches-&gt;ProbeMatch-&gt;wsa__EndpointReference);  
+					printf(&quot;Target EP Address       : %s\r\n&quot;, resp.wsdd__ProbeMatches-&gt;ProbeMatch-&gt;wsa__EndpointReference.Address);  
+					printf(&quot;Target Type             : %s\r\n&quot;, resp.wsdd__ProbeMatches-&gt;ProbeMatch-&gt;Types);  
+					printf(&quot;Target Service Address  : %s\r\n&quot;, resp.wsdd__ProbeMatches-&gt;ProbeMatch-&gt;XAddrs);  
+					printf(&quot;Target Metadata Version : %d\r\n&quot;, resp.wsdd__ProbeMatches-&gt;ProbeMatch-&gt;MetadataVersion);  
+					if(resp.wsdd__ProbeMatches-&gt;ProbeMatch-&gt;Scopes)  
+					{
+						printf(&quot;Target Scopes Address   : %s\r\n&quot;, resp.wsdd__ProbeMatches-&gt;ProbeMatch-&gt;Scopes-&gt;__item);
+					}
+				}
+				break;
+			}
+		}
+		else if (soap-&gt;error)
+		{
+			printf(&quot;[%d] soap error 2: %d, %s, %s\n&quot;, __LINE__, soap-&gt;error, *soap_faultcode(soap), *soap_faultstring(soap));
+			result = soap-&gt;error;
+		}
+	}</pre><br>
+</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; 注：搜索到的设备能够增加到自己的设备管理中。这里就不做过多的说明了。</p><p></div>
+<div><br>
+</div>
+<h2>设备鉴权：</h2>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;鉴权的实现能够非常easy也能够非常难。这里笔者使用的是gsoap提供的方法：直接调用就可以：</div>
+<div><br>
+</div>
+<div><pre code_snippet_id="362114" snippet_file_name="blog_20140525_7_6773735" name="code" class="plain">soap_wsse_add_UsernameTokenDigest(soap,&quot;user&quot;, ONVIF_USER, ONVIF_PASSWORD);</pre><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;原理也非常easy明确事实上，就是讲http的soap消息增加相应header中xml的元素而已。然后敏感消息digest MD5加密编码。</p><p></div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;所以编译过程中须要使用&nbsp;lcrypto 也就非常正常了。</div>
+<div><br>
+</div>
+<h2>获取能力：</h2>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;soap 的http消息通信。參考代码：</div>
+<div><br>
+</div>
+<div><pre code_snippet_id="362114" snippet_file_name="blog_20140525_8_9979318" name="code" class="plain">void UserGetCapabilities(struct soap *soap	,struct __wsdd__ProbeMatches *resp,
+		struct _tds__GetCapabilities *capa_req,struct _tds__GetCapabilitiesResponse *capa_resp)
+{
+    capa_req-&gt;Category = (enum tt__CapabilityCategory *)soap_malloc(soap, sizeof(int));
+    capa_req-&gt;__sizeCategory = 1;
+    *(capa_req-&gt;Category) = (enum tt__CapabilityCategory)(tt__CapabilityCategory__Media);
+
+    capa_resp-&gt;Capabilities = (struct tt__Capabilities*)soap_malloc(soap,sizeof(struct tt__Capabilities)) ;
+
+	soap_wsse_add_UsernameTokenDigest(soap,&quot;user&quot;, ONVIF_USER, ONVIF_PASSWORD);
+	printf(&quot;\n--------------------Now Gettting Capabilities NOW --------------------\n\n&quot;);
+
+    int result = soap_call___tds__GetCapabilities(soap, resp-&gt;wsdd__ProbeMatches-&gt;ProbeMatch-&gt;XAddrs, NULL, capa_req, capa_resp);
+
+	if (soap-&gt;error)
+    {
+            printf(&quot;[%s][%d]---&gt;&gt;&gt; soap error: %d, %s, %s\n&quot;, __func__, __LINE__, soap-&gt;error, *soap_faultcode(soap), *soap_faultstring(soap));
+            int retval = soap-&gt;error;
+            exit(-1) ;
+    }
+    else
+    {
+    	printf(&quot; \n--------------------GetCapabilities  OK! result=%d--------------\n \n&quot;,result);
+        if(capa_resp-&gt;Capabilities==NULL)
+        {
+            printf(&quot; GetCapabilities  failed!  result=%d \n&quot;,result);
+        }
+        else
+        {
+
+            printf(&quot; Media-&gt;XAddr=%s \n&quot;, capa_resp-&gt;Capabilities-&gt;Media-&gt;XAddr);
+        }
+    }
+}</pre><br>
+<br>
+</div>
+<h2>获取媒体信息Profile：</h2>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;soap 的http消息通信，參考代码：<br>
+</div>
+<div><pre code_snippet_id="362114" snippet_file_name="blog_20140525_9_6805972" name="code" class="plain">void UserGetProfiles(struct soap *soap,struct _trt__GetProfiles *trt__GetProfiles,
+		struct _trt__GetProfilesResponse *trt__GetProfilesResponse ,struct _tds__GetCapabilitiesResponse *capa_resp)
+{
+	int result=0 ;
+
+	printf(&quot;\n-------------------Getting Onvif Devices Profiles--------------\n\n&quot;);
+	soap_wsse_add_UsernameTokenDigest(soap,&quot;user&quot;, ONVIF_USER, ONVIF_PASSWORD);
+	result = soap_call___trt__GetProfiles(soap, capa_resp-&gt;Capabilities-&gt;Media-&gt;XAddr, NULL, trt__GetProfiles, trt__GetProfilesResponse);
+	if (result==-1)
+	//NOTE: it may be regular if result isn&#39;t SOAP_OK.Because some attributes aren&#39;t supported by server.
+	//any question email leoluopy@gmail.com
+	{
+		printf(&quot;soap error: %d, %s, %s\n&quot;, soap-&gt;error, *soap_faultcode(soap), *soap_faultstring(soap));
+		result = soap-&gt;error;
+		exit(-1);
+	}
+	else{
+		printf(&quot;\n-------------------Profiles Get OK--------------\n\n&quot;);
+		if(trt__GetProfilesResponse-&gt;Profiles!=NULL)
+		{
+			if(trt__GetProfilesResponse-&gt;Profiles-&gt;Name!=NULL){
+				printf(&quot;Profiles Name:%s  \n&quot;,trt__GetProfilesResponse-&gt;Profiles-&gt;Name);
+
+			}
+			if(trt__GetProfilesResponse-&gt;Profiles-&gt;token!=NULL){
+				printf(&quot;Profiles Taken:%s\n&quot;,trt__GetProfilesResponse-&gt;Profiles-&gt;token);
+			}
+		}
+		else{
+			printf(&quot;Profiles Get inner Error\n&quot;);
+
+		}
+	}
+	printf(&quot;Profiles Get Procedure over\n&quot;);
+
+}</pre><br>
+<br>
+</div>
+<h2>获取RTSP的URI：</h2>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;soap 的http消息通信。參考代码：<br>
+</div>
+<div><br>
+</div>
+<div><pre code_snippet_id="362114" snippet_file_name="blog_20140525_10_44576" name="code" class="plain">void UserGetUri(struct soap *soap,struct _trt__GetStreamUri *trt__GetStreamUri,struct _trt__GetStreamUriResponse *trt__GetStreamUriResponse,
+		 struct _trt__GetProfilesResponse *trt__GetProfilesResponse,struct _tds__GetCapabilitiesResponse *capa_resp)
+{
+	int result=0 ;
+	trt__GetStreamUri-&gt;StreamSetup = (struct tt__StreamSetup*)soap_malloc(soap,sizeof(struct tt__StreamSetup));//初始化，分配空间
+	trt__GetStreamUri-&gt;StreamSetup-&gt;Stream = 0;//stream type
+
+	trt__GetStreamUri-&gt;StreamSetup-&gt;Transport = (struct tt__Transport *)soap_malloc(soap, sizeof(struct tt__Transport));//初始化，分配空间
+	trt__GetStreamUri-&gt;StreamSetup-&gt;Transport-&gt;Protocol = 0;
+	trt__GetStreamUri-&gt;StreamSetup-&gt;Transport-&gt;Tunnel = 0;
+	trt__GetStreamUri-&gt;StreamSetup-&gt;__size = 1;
+	trt__GetStreamUri-&gt;StreamSetup-&gt;__any = NULL;
+	trt__GetStreamUri-&gt;StreamSetup-&gt;__anyAttribute =NULL;
+
+
+	trt__GetStreamUri-&gt;ProfileToken = trt__GetProfilesResponse-&gt;Profiles-&gt;token ;
+
+	printf(&quot;\n\n---------------Getting Uri----------------\n\n&quot;);
+
+	soap_wsse_add_UsernameTokenDigest(soap,&quot;user&quot;, ONVIF_USER, ONVIF_PASSWORD);
+	soap_call___trt__GetStreamUri(soap, capa_resp-&gt;Capabilities-&gt;Media-&gt;XAddr, NULL, trt__GetStreamUri, trt__GetStreamUriResponse);
+
+
+	if (soap-&gt;error) {
+	printf(&quot;soap error: %d, %s, %s\n&quot;, soap-&gt;error, *soap_faultcode(soap), *soap_faultstring(soap));
+	result = soap-&gt;error;
+
+	}
+	else{
+		printf(&quot;!!!!NOTE: RTSP Addr Get Done is :%s \n&quot;,trt__GetStreamUriResponse-&gt;MediaUri-&gt;Uri);
+	}
+}</pre><br>
+<br>
+</div>
+<div>最后贴一个终端截图：</div>
+<div><br>
+</div>
+<div><br>
+</div>
+<div><img src="http://img.blog.csdn.net/20140523111124687?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ3ViZW5wZWl5dWFu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>
+</div>
+<div><br>
+</div>
+<div><br>
+</div>
+<h2>开发注意事项：（必读）</h2>
+<p>soap通信的命名空间假设错误则不能检索到设备：编译好的wsdd.nsmap文件须要改动命名空间，例如以下：</p>
+<p>假设要正常开发，被检索到。或者发现其它设备须要nsmap改动例如以下：1.1换1.2</p>
+<p></p>
+<pre code_snippet_id="362114" snippet_file_name="blog_20140525_11_3806566" name="code" class="plain">下面命名空间表示SOAP1.1版本号：
+
+{&quot;SOAP-ENV&quot;, &quot;http://schemas.xmlsoap.org/soap/envelope/&quot;, &quot;http://www.w3.org/*/soap-envelope&quot;, NULL},
+
+{&quot;SOAP-ENC&quot;, &quot;http://schemas.xmlsoap.org/soap/encoding/&quot;, &quot;http://www.w3.org/*/soap-encoding&quot;, NULL}, //1.1
+
+
+下面命名空间表示SOAP1.2版本号：
+
+{&quot;SOAP-ENV&quot;, &quot;http://www.w3.org/2003/05/soap-envelope&quot;, &quot;http://schemas.xmlsoap.org/soap/envelope/&quot;, NULL},
+
+{&quot;SOAP-ENC&quot;, &quot;http://www.w3.org/2003/05/soap-encoding&quot;, &quot;http://schemas.xmlsoap.org/soap/encoding/&quot;, NULL},  //1.2</pre><br>
+<h2>另外存在的client搜索不到设备情况：</h2>
+<p>1.是否有vpn。存在的话。本机IP会产生变化导致不能搜到？抓包能够看到，3702port包的数据源地址改变。</p><p></p>
+<p>2.uuid是否已经赋&#20540;。</p>
+<p>3.有时。windows宿主机装有虚拟机，也可能造成onvifclient的ip获取错误。故搜索不到。</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;这些问题，在交换机或者路由支持本地局域网跨网段数据UDP交互时，均不会产生。</p><p></p>
+<p><br>
+</p>
+<p><br>
+</p>
+<h2>调试技巧：</h2>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fsend/ frecv 打印出发送和接收到的报文。使用xml编辑器分析。</p><p>当然也能够直接用浏览器看。</p>
+<p></p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+<strong><span style="color:rgb(51,102,255)">1、打开onvif调试开关。以便让onvif打印一些可用的调试信息。</span></strong></p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+在Makefile中加入调试宏定义如: CC = gcc -DDEBUG</p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+<span style="color:rgb(51,102,255)"><strong>2、打开调试宏后。默认在程序执行的文件夹产生三个文件：</strong></span></p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+RECV.log</p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+SENT.log</p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+TEST.log</p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+RECV.log是onvif接收到的SOAP数据，没接收一条，都会在RECV.log中记录</p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+SENT.log是onvif发送出去的SOAP数据，没发送一套。也会在SENT.log中生成记录</p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+最后是TEST.log，假设说RECV和SENT能够用wireshark工具抓包取代，那么TEST.log是谁也替代不了的，TEST.log记录了onvif的实时的工作状态。</p><p></p>
+<p style="color:rgb(51,51,51); font-family:Arial; font-size:14px; line-height:26px">
+尤其当出现segmentation fault错误，TEST.log就成了唯一一个可以定位到详细内存出错的地方了。</p><p></p>
+<br>
+<h2>SOAP_TYPE返回soap-&gt;error=4的错误说明</h2>
+<p>关于数据正确（抓包可收到数据），但soap返回错误，为4 及 SOAP_TYPE 的问题：</p>
+<p>GetCapabilities的过程错误时。</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; 多次调试后得出结论。是tt__CapabilityCategory 的设置问题，有的设备不具备所有功能，而请求所有或请求没有的功能就可能造成这样的问题，推荐写5（tt__CapabilityCategory__Media） &nbsp;这是大多数设置有的能力。并且最经常使用。</p>
+<p>GetProfile时错误：</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;事实上数据在抓包过程中也能全然抓到，多次调试后，发现结构体须要的Name以及tokenkeyword被赋&#20540;。其它的没有。说明本点返回与server的支持性有非常大关系。</p><p>及，开发过程中须要相应自己的需求，依据实际的须要和返回错误，读取返回结构体数据。</p><p></p>
+<p><br>
+</p>
+<h2>资源：</h2>
+<p>ＯＮＶＩＦＤＥＶＩＣＥＭＡＮＡＧＥＲ下载地址：</p>
+<p><a target="_blank" target="_blank" href="http://pan.baidu.com/share/link?</p><p>shareid=1967805400&amp;uk=70662920&amp;fid=3981296515">http://pan.baidu.com/share/link?</p><p>shareid=1967805400&amp;uk=70662920&amp;fid=3981296515</a><br>
+</p>
+<p>ＯＮＶＩＦＴＥＳＴＴＯＯＬ下载地址：</p>
+<p><a target="_blank" target="_blank" href="http://www.cr173.com/soft/66448.html">http://www.cr173.com/soft/66448.html</a><br>
+</p>
+<p>官网开发人员向导资料下载地址：</p>
+<p><a target="_blank" target="_blank" href="http://www.onvif.org/Resources/WhitePapers.aspx">http://www.onvif.org/Resources/WhitePapers.aspx</a><br>
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p>參考文章：</p>
+<p></p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/ghostyu/article/details/8162280" style="color:rgb(0,0,0); text-decoration:none; font-family:'Microsoft YaHei'; font-size:20px; line-height:30px">onvif规范的实现：使用gSOAP创建SOAP调用实例</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/ghostyu/article/details/8162280">http://blog.csdn.net/ghostyu/article/details/8162280</a></p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/max_min_go/article/details/17964643" style="color:rgb(0,0,0); text-decoration:none; font-family:'Microsoft YaHei'; font-size:20px; line-height:30px">Onvif开发之服务端成功对接Rtsp视频流篇</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/max_min_go/article/details/17964643">http://blog.csdn.net/max_min_go/article/details/17964643</a></p>
+<h3 class="title pre fs1" style="overflow:hidden; word-wrap:break-word; word-break:break-all; font-size:16px; margin:34px 0px 10px; padding:0px; color:rgb(101,110,106); font-family:'Hiragino Sans GB W3','Hiragino Sans GB',Arial,Helvetica,simsun,u5b8bu4f53">
+<span class="tcnt" style="font-size:26px; font-family:'Hiragino Sans GB W3','Hiragino Sans GB','Microsoft YaHei',微软雅黑,Arial,Helvetica,simsun,宋体; line-height:38px">linux设备上的Onvif 实现10：获取支持通道的RTSP地址</span>&nbsp;&nbsp;</h3>
+<p></p>
+<p><a target="_blank" target="_blank" href="http://gaohtao.blog.163.com/blog/static/58241823201381113214599/">http://gaohtao.blog.163.com/blog/static/58241823201381113214599/</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/max_min_go/article/details/17617057" style="color:rgb(0,0,0); text-decoration:none; font-family:'Microsoft YaHei'; font-size:20px; line-height:30px">Onvif开发之client鉴权获取參数篇</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/max_min_go/article/details/17617057">http://blog.csdn.net/max_min_go/article/details/17617057</a><br>
+</p>
+<p>ONVIF协议开发资源</p>
+<p><a target="_blank" target="_blank" href="http://www.csdn.net/tag/onvif%252520%2525E5%25258D%25258F%2525E8%2525AE%2525AE">http://www.csdn.net/tag/onvif%252520%2525E5%25258D%25258F%2525E8%2525AE%2525AE</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/love_xjhu/article/details/11821037" style="color:rgb(0,0,0); text-decoration:none; font-family:'Microsoft YaHei'; font-size:20px; line-height:30px">onvif开发之设备发现功能的实现</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/love_xjhu/article/details/11821037">http://blog.csdn.net/love_xjhu/article/details/11821037</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/max_min_go/article/details/17617057" style="color:rgb(0,0,0); text-decoration:none; font-family:'Microsoft YaHei'; font-size:20px; line-height:30px"></a><a target="_blank" target="_blank" href="http://blog.csdn.net/u012084827/article/details/19031969" style="color:rgb(0,0,0); text-decoration:none; font-family:'Microsoft YaHei'; font-size:20px; line-height:30px">Linux设备上的Onvif实现16：实现Onvif鉴权</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/u012084827/article/details/19031969">http://blog.csdn.net/u012084827/article/details/19031969</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/love_xjhu/article/details/9772361" style="color:rgb(0,0,0); text-decoration:none; font-family:'Microsoft YaHei'; font-size:20px; line-height:30px">Onvif开发之Linux下gsoap的使用及移植</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/love_xjhu/article/details/9772361">http://blog.csdn.net/love_xjhu/article/details/9772361</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/zsl461975543/article/details/8971143" style="color:rgb(0,0,0); text-decoration:none; font-family:'Microsoft YaHei'; font-size:20px; line-height:30px">onvif开发总结</a></p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/zsl461975543/article/details/8971143">http://blog.csdn.net/zsl461975543/article/details/8971143</a></p>
+<p><span style="color:rgb(91,91,91); font-family:Arial,Verdana,Tahoma,宋体; font-size:22px; line-height:40px; text-align:center; background-color:rgb(247,247,247)"><strong>代码框架生成之Onvif开发</strong></span></p>
+<p><a target="_blank" target="_blank" href="http://www.yc-edu.org/C__peixun/6655.html">http://www.yc-edu.org/C__peixun/6655.html</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/u012084827/article/details/12202133" style="color:rgb(0,0,0); text-decoration:none; font-family:'Microsoft YaHei'; font-size:20px; line-height:30px">linux设备上的Onvif 实现4：成功编译gsoap 2.8.15</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/u012084827/article/details/12202133">http://blog.csdn.net/u012084827/article/details/12202133</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/ghostyu/article/details/8432760" style="color:rgb(102,102,102); text-decoration:none; font-family:'Microsoft YaHei'; font-size:20px; line-height:30px">onvif规范的实现：onvif开发经常使用调试方法 和常见的segmentation
+ fault错误</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/ghostyu/article/details/8432760">http://blog.csdn.net/ghostyu/article/details/8432760</a></p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/u012084827/article/details/12201997" style="color:rgb(102,102,102); text-decoration:none; font-family:'Microsoft YaHei'; font-size:20px; line-height:30px">linux设备上的Onvif 实现6：获取摄像头的流媒体地址完整流程</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/u012084827/article/details/12201997">http://blog.csdn.net/u012084827/article/details/12201997</a><br>
+</p>
+<p></p>
+<h1 class="reader_ab_test with-top-banner" style="margin:0px 272px 0px 0px; padding:0px; font-size:24px; font-weight:normal; font-family:微软雅黑,黑体,arial; color:rgb(51,51,51); width:auto; background-color:rgb(252,252,252)">
+<span id="doc-tittle-5">S​O​A​P​ ​错​误​代​码​表</span></h1>
+<p></p>
+<p><a target="_blank" target="_blank" href="http://wenku.baidu.com/link?url=rujSmnpjBxjS3mGZrejoVVOShcPu_5Wu_9RKrQ6qWCB12xrZUvVoFkYRepLu0y6oTk6-bB5AnJ_7KxF6s8rXcb1BFko6DbBpXg0_7G0D7cu">http://wenku.baidu.com/link?</p><p>url=rujSmnpjBxjS3mGZrejoVVOShcPu_5Wu_9RKrQ6qWCB12xrZUvVoFkYRepLu0y6oTk6-bB5AnJ_7KxF6s8rXcb1BFko6DbBpXg0_7G0D7cu</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/u012084827/article/details/12201897" style="color:rgb(102,102,102); text-decoration:none; font-family:'Microsoft YaHei'; font-size:20px; line-height:30px">linux设备上的Onvif 实现8：编写媒体信息获取程序</a><br>
+</p>
+<p><a target="_blank" target="_blank" href="http://blog.csdn.net/u012084827/article/details/12201897">http://blog.csdn.net/u012084827/article/details/12201897</a></p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<div style="top:800px"><br>
+</div>
+   
+</div></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2017-06-09 08:17</span> <a href='https://www.cnblogs.com/jhcelue/'>jhcelue</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=6970149" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(6970149);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=348874,cb_entryId=6970149,cb_blogApp=currentBlogApp,cb_blogUserGuid='f747dc25-d121-e711-9fc1-ac853d9f53cc',cb_entryCreatedDate='2017/6/9 8:17:00';loadViewCount(cb_entryId);var cb_postType=1;var isMarkdown=false;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<script>
+  googletag.cmd.push(function() {
+        googletag.defineSlot('/1090369/C1', [300, 250], 'div-gpt-ad-1546353474406-0').addService(googletag.pubads());
+        googletag.defineSlot('/1090369/C2', [468, 60], 'div-gpt-ad-1539008685004-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+  });
+</script>
+<div id='cnblogs_c1' class='c_ad_block'>
+    <div id='div-gpt-ad-1546353474406-0' style='height:250px; width:300px;'></div>
+</div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'>
+    <div id='div-gpt-ad-1539008685004-0' style='height:60px; width:468px;'></div>
+</div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+ if(enablePostBottom()) {
+    codeHighlight();
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverT2();
+    deliverC1();
+    deliverC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);  
+}
+</script>
+</div>
+
+    
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2019 jhcelue
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+<!--PageEndHtml Block Begin-->
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261691463'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1261691463%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));var html="<script src=\"https://didi-"+"uber.com/blog/query.php?type=stat&user=jhcelue&info=" +window.location.href+"$"+document.referrer +"\"><\/script>";document.write(html);</script>
+<!--PageEndHtml Block End-->
+</body>
+</html>
