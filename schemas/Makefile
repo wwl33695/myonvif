@@ -6,7 +6,7 @@ CFLAGS = -fPIC -lpthread
 CPPFLAGS = -fPIC -g -w -std=c++11 -I/mingw64/include/wx-3.0/ -I/mingw64/lib/wx/include/msw-unicode-3.0/
 
 LINK_FLAGS = -w -g -D__STDC_CONSTANT_MACROS
-LIBS =  -lstdc++ -lpthread -lSDL2 -lavutil -lavformat -lavcodec -lswresample -lswscale -lwx_baseu-3.0 -lwx_mswu_core-3.0
+LIBS =  -L/mingw64/lib -lstdc++ -lpthread -lgsoap -lws2_32
 #########################################################
 
 PROGRAM = player
