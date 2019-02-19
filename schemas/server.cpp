@@ -1,4 +1,4 @@
-#include "onvif.h"
+#include "../gsoap-2.8/gsoap/stdsoap2.h"
 
 int main(int argc, char **argv)    
 {    

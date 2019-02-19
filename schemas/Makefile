@@ -23,7 +23,7 @@ SRCDIRS   :=  .
 # SRCEXTS   := .c      # C program  
 # SRCEXTS   := .cpp    # C++ program  
 # SRCEXTS   := .c .cpp # C/C++ program  
-SRCEXTS   := .cc .cpp
+SRCEXTS   := .c .cpp
 
 ifneq ($(SRCDIRS),)
 ifneq ($(SRCEXTS),)
