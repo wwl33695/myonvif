@@ -1,9 +1,11 @@
+#include "onvif.h"
+
 int main(int argc, char **argv)    
 {    
     int m, s;    
     struct soap add_soap;    
-    int server_udp;  
-  
+/*
+    int server_udp;    
 	server_udp = create_server_socket_udp();  
 	//bind_server_udp1(server_udp);  
 	pthread_t thrHello;  
@@ -11,7 +13,7 @@ int main(int argc, char **argv)
 	//pthread_create(&thrHello,NULL,main_Hello,server_udp);  
 	//sleep(2);  
 	pthread_create(&thrProbe,NULL,main_Probe,server_udp);  
-
+*/
 	soap_init(&add_soap);    
 	soap_set_namespaces(&add_soap, namespaces);    
    
