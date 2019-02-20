@@ -2,11 +2,11 @@ CC  = gcc
 CPP = g++
 
 ########################################
-CFLAGS = -fPIC -lpthread
-CPPFLAGS = -fPIC -g -w -std=c++11 -I/mingw64/include/wx-3.0/ -I/mingw64/lib/wx/include/msw-unicode-3.0/
+CFLAGS = -fPIC -lpthread -w
+CPPFLAGS = -fPIC -g -w -std=c++11 -I/mingw64/include
 
 LINK_FLAGS = -w -g -D__STDC_CONSTANT_MACROS
-LIBS =  -L/mingw64/lib -lstdc++ -lpthread -lgsoap -lws2_32
+LIBS =  -L/mingw64/lib -lstdc++ -lpthread -lgsoap++ -lgsoapck++ -lgsoapssl++ -lws2_32
 #########################################################
 
 PROGRAM = player
@@ -23,7 +23,7 @@ SRCDIRS   :=  .
 # SRCEXTS   := .c      # C program  
 # SRCEXTS   := .cpp    # C++ program  
 # SRCEXTS   := .c .cpp # C/C++ program  
-SRCEXTS   := .cc .cpp
+SRCEXTS   := .c .cpp
 
 ifneq ($(SRCDIRS),)
 ifneq ($(SRCEXTS),)
