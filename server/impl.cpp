@@ -42677,15 +42677,20 @@ typedef tt__ReferenceToken tt__RecordingJobReference;
 \******************************************************************************/
 
     /** Web service operation 'SOAP_ENV__Fault' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 SOAP_ENV__Fault(struct soap*, char *faultcode, char *faultstring, char *faultactor, struct SOAP_ENV__Detail *detail, struct SOAP_ENV__Code *SOAP_ENV__Code, struct SOAP_ENV__Reason *SOAP_ENV__Reason, char *SOAP_ENV__Node, char *SOAP_ENV__Role, struct SOAP_ENV__Detail *SOAP_ENV__Detail);
+    SOAP_FMAC5 int SOAP_FMAC6 SOAP_ENV__Fault(struct soap*, char *faultcode, char *faultstring, char *faultactor, struct SOAP_ENV__Detail *detail, struct SOAP_ENV__Code *SOAP_ENV__Code, struct SOAP_ENV__Reason *SOAP_ENV__Reason, char *SOAP_ENV__Node, char *SOAP_ENV__Role, struct SOAP_ENV__Detail *SOAP_ENV__Detail)
+	{return 0;}    
     /** Web service operation '__wsdd__Hello' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __wsdd__Hello(struct soap*, struct wsdd__HelloType *wsdd__Hello);
+    SOAP_FMAC5 int SOAP_FMAC6 __wsdd__Hello(struct soap*, struct wsdd__HelloType *wsdd__Hello)
+	{return 0;}    
     /** Web service operation '__wsdd__Bye' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __wsdd__Bye(struct soap*, struct wsdd__ByeType *wsdd__Bye);
+    SOAP_FMAC5 int SOAP_FMAC6 __wsdd__Bye(struct soap*, struct wsdd__ByeType *wsdd__Bye)
+	{return 0;}    
     /** Web service operation '__wsdd__Probe' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __wsdd__Probe(struct soap*, struct wsdd__ProbeType *wsdd__Probe);
+    SOAP_FMAC5 int SOAP_FMAC6 __wsdd__Probe(struct soap*, struct wsdd__ProbeType *wsdd__Probe)
+	{return 0;}    
     /** Web service operation '__wsdd__ProbeMatches' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __wsdd__ProbeMatches(struct soap*, struct wsdd__ProbeMatchesType *wsdd__ProbeMatches);
+    SOAP_FMAC5 int SOAP_FMAC6 __wsdd__ProbeMatches(struct soap*, struct wsdd__ProbeMatchesType *wsdd__ProbeMatches)
+	{return 0;}    
     /** Web service operation '__wsdd__Resolve' (returns SOAP_OK or error code) */
     SOAP_FMAC5 int SOAP_FMAC6 __wsdd__Resolve(struct soap*, struct wsdd__ResolveType *wsdd__Resolve);
     /** Web service operation '__wsdd__ResolveMatches' (returns SOAP_OK or error code) */
@@ -43381,203 +43386,302 @@ typedef tt__ReferenceToken tt__RecordingJobReference;
     /** Web service operation '__trp__GetReplayConfiguration' (returns SOAP_OK or error code) */
     SOAP_FMAC5 int SOAP_FMAC6 __trp__GetReplayConfiguration(struct soap*, struct _trp__GetReplayConfiguration *trp__GetReplayConfiguration, struct _trp__GetReplayConfigurationResponse *trp__GetReplayConfigurationResponse);
     /** Web service operation '__trp__SetReplayConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trp__SetReplayConfiguration(struct soap*, struct _trp__SetReplayConfiguration *trp__SetReplayConfiguration, struct _trp__SetReplayConfigurationResponse *trp__SetReplayConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trp__SetReplayConfiguration(struct soap*, struct _trp__SetReplayConfiguration *trp__SetReplayConfiguration, struct _trp__SetReplayConfigurationResponse *trp__SetReplayConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetServiceCapabilities(struct soap*, struct _trt__GetServiceCapabilities *trt__GetServiceCapabilities, struct _trt__GetServiceCapabilitiesResponse *trt__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetServiceCapabilities(struct soap*, struct _trt__GetServiceCapabilities *trt__GetServiceCapabilities, struct _trt__GetServiceCapabilitiesResponse *trt__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetVideoSources' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoSources(struct soap*, struct _trt__GetVideoSources *trt__GetVideoSources, struct _trt__GetVideoSourcesResponse *trt__GetVideoSourcesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoSources(struct soap*, struct _trt__GetVideoSources *trt__GetVideoSources, struct _trt__GetVideoSourcesResponse *trt__GetVideoSourcesResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioSources' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioSources(struct soap*, struct _trt__GetAudioSources *trt__GetAudioSources, struct _trt__GetAudioSourcesResponse *trt__GetAudioSourcesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioSources(struct soap*, struct _trt__GetAudioSources *trt__GetAudioSources, struct _trt__GetAudioSourcesResponse *trt__GetAudioSourcesResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioOutputs' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioOutputs(struct soap*, struct _trt__GetAudioOutputs *trt__GetAudioOutputs, struct _trt__GetAudioOutputsResponse *trt__GetAudioOutputsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioOutputs(struct soap*, struct _trt__GetAudioOutputs *trt__GetAudioOutputs, struct _trt__GetAudioOutputsResponse *trt__GetAudioOutputsResponse)
+	{return 0;}    
     /** Web service operation '__trt__CreateProfile' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__CreateProfile(struct soap*, struct _trt__CreateProfile *trt__CreateProfile, struct _trt__CreateProfileResponse *trt__CreateProfileResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__CreateProfile(struct soap*, struct _trt__CreateProfile *trt__CreateProfile, struct _trt__CreateProfileResponse *trt__CreateProfileResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetProfile' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetProfile(struct soap*, struct _trt__GetProfile *trt__GetProfile, struct _trt__GetProfileResponse *trt__GetProfileResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetProfile(struct soap*, struct _trt__GetProfile *trt__GetProfile, struct _trt__GetProfileResponse *trt__GetProfileResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetProfiles' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetProfiles(struct soap*, struct _trt__GetProfiles *trt__GetProfiles, struct _trt__GetProfilesResponse *trt__GetProfilesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetProfiles(struct soap*, struct _trt__GetProfiles *trt__GetProfiles, struct _trt__GetProfilesResponse *trt__GetProfilesResponse)
+	{return 0;}    
     /** Web service operation '__trt__AddVideoEncoderConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddVideoEncoderConfiguration(struct soap*, struct _trt__AddVideoEncoderConfiguration *trt__AddVideoEncoderConfiguration, struct _trt__AddVideoEncoderConfigurationResponse *trt__AddVideoEncoderConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddVideoEncoderConfiguration(struct soap*, struct _trt__AddVideoEncoderConfiguration *trt__AddVideoEncoderConfiguration, struct _trt__AddVideoEncoderConfigurationResponse *trt__AddVideoEncoderConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__AddVideoSourceConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddVideoSourceConfiguration(struct soap*, struct _trt__AddVideoSourceConfiguration *trt__AddVideoSourceConfiguration, struct _trt__AddVideoSourceConfigurationResponse *trt__AddVideoSourceConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddVideoSourceConfiguration(struct soap*, struct _trt__AddVideoSourceConfiguration *trt__AddVideoSourceConfiguration, struct _trt__AddVideoSourceConfigurationResponse *trt__AddVideoSourceConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__AddAudioEncoderConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddAudioEncoderConfiguration(struct soap*, struct _trt__AddAudioEncoderConfiguration *trt__AddAudioEncoderConfiguration, struct _trt__AddAudioEncoderConfigurationResponse *trt__AddAudioEncoderConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddAudioEncoderConfiguration(struct soap*, struct _trt__AddAudioEncoderConfiguration *trt__AddAudioEncoderConfiguration, struct _trt__AddAudioEncoderConfigurationResponse *trt__AddAudioEncoderConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__AddAudioSourceConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddAudioSourceConfiguration(struct soap*, struct _trt__AddAudioSourceConfiguration *trt__AddAudioSourceConfiguration, struct _trt__AddAudioSourceConfigurationResponse *trt__AddAudioSourceConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddAudioSourceConfiguration(struct soap*, struct _trt__AddAudioSourceConfiguration *trt__AddAudioSourceConfiguration, struct _trt__AddAudioSourceConfigurationResponse *trt__AddAudioSourceConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__AddPTZConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddPTZConfiguration(struct soap*, struct _trt__AddPTZConfiguration *trt__AddPTZConfiguration, struct _trt__AddPTZConfigurationResponse *trt__AddPTZConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddPTZConfiguration(struct soap*, struct _trt__AddPTZConfiguration *trt__AddPTZConfiguration, struct _trt__AddPTZConfigurationResponse *trt__AddPTZConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__AddVideoAnalyticsConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddVideoAnalyticsConfiguration(struct soap*, struct _trt__AddVideoAnalyticsConfiguration *trt__AddVideoAnalyticsConfiguration, struct _trt__AddVideoAnalyticsConfigurationResponse *trt__AddVideoAnalyticsConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddVideoAnalyticsConfiguration(struct soap*, struct _trt__AddVideoAnalyticsConfiguration *trt__AddVideoAnalyticsConfiguration, struct _trt__AddVideoAnalyticsConfigurationResponse *trt__AddVideoAnalyticsConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__AddMetadataConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddMetadataConfiguration(struct soap*, struct _trt__AddMetadataConfiguration *trt__AddMetadataConfiguration, struct _trt__AddMetadataConfigurationResponse *trt__AddMetadataConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddMetadataConfiguration(struct soap*, struct _trt__AddMetadataConfiguration *trt__AddMetadataConfiguration, struct _trt__AddMetadataConfigurationResponse *trt__AddMetadataConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__AddAudioOutputConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddAudioOutputConfiguration(struct soap*, struct _trt__AddAudioOutputConfiguration *trt__AddAudioOutputConfiguration, struct _trt__AddAudioOutputConfigurationResponse *trt__AddAudioOutputConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddAudioOutputConfiguration(struct soap*, struct _trt__AddAudioOutputConfiguration *trt__AddAudioOutputConfiguration, struct _trt__AddAudioOutputConfigurationResponse *trt__AddAudioOutputConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__AddAudioDecoderConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddAudioDecoderConfiguration(struct soap*, struct _trt__AddAudioDecoderConfiguration *trt__AddAudioDecoderConfiguration, struct _trt__AddAudioDecoderConfigurationResponse *trt__AddAudioDecoderConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__AddAudioDecoderConfiguration(struct soap*, struct _trt__AddAudioDecoderConfiguration *trt__AddAudioDecoderConfiguration, struct _trt__AddAudioDecoderConfigurationResponse *trt__AddAudioDecoderConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__RemoveVideoEncoderConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveVideoEncoderConfiguration(struct soap*, struct _trt__RemoveVideoEncoderConfiguration *trt__RemoveVideoEncoderConfiguration, struct _trt__RemoveVideoEncoderConfigurationResponse *trt__RemoveVideoEncoderConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveVideoEncoderConfiguration(struct soap*, struct _trt__RemoveVideoEncoderConfiguration *trt__RemoveVideoEncoderConfiguration, struct _trt__RemoveVideoEncoderConfigurationResponse *trt__RemoveVideoEncoderConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__RemoveVideoSourceConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveVideoSourceConfiguration(struct soap*, struct _trt__RemoveVideoSourceConfiguration *trt__RemoveVideoSourceConfiguration, struct _trt__RemoveVideoSourceConfigurationResponse *trt__RemoveVideoSourceConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveVideoSourceConfiguration(struct soap*, struct _trt__RemoveVideoSourceConfiguration *trt__RemoveVideoSourceConfiguration, struct _trt__RemoveVideoSourceConfigurationResponse *trt__RemoveVideoSourceConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__RemoveAudioEncoderConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveAudioEncoderConfiguration(struct soap*, struct _trt__RemoveAudioEncoderConfiguration *trt__RemoveAudioEncoderConfiguration, struct _trt__RemoveAudioEncoderConfigurationResponse *trt__RemoveAudioEncoderConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveAudioEncoderConfiguration(struct soap*, struct _trt__RemoveAudioEncoderConfiguration *trt__RemoveAudioEncoderConfiguration, struct _trt__RemoveAudioEncoderConfigurationResponse *trt__RemoveAudioEncoderConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__RemoveAudioSourceConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveAudioSourceConfiguration(struct soap*, struct _trt__RemoveAudioSourceConfiguration *trt__RemoveAudioSourceConfiguration, struct _trt__RemoveAudioSourceConfigurationResponse *trt__RemoveAudioSourceConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveAudioSourceConfiguration(struct soap*, struct _trt__RemoveAudioSourceConfiguration *trt__RemoveAudioSourceConfiguration, struct _trt__RemoveAudioSourceConfigurationResponse *trt__RemoveAudioSourceConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__RemovePTZConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemovePTZConfiguration(struct soap*, struct _trt__RemovePTZConfiguration *trt__RemovePTZConfiguration, struct _trt__RemovePTZConfigurationResponse *trt__RemovePTZConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemovePTZConfiguration(struct soap*, struct _trt__RemovePTZConfiguration *trt__RemovePTZConfiguration, struct _trt__RemovePTZConfigurationResponse *trt__RemovePTZConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__RemoveVideoAnalyticsConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveVideoAnalyticsConfiguration(struct soap*, struct _trt__RemoveVideoAnalyticsConfiguration *trt__RemoveVideoAnalyticsConfiguration, struct _trt__RemoveVideoAnalyticsConfigurationResponse *trt__RemoveVideoAnalyticsConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveVideoAnalyticsConfiguration(struct soap*, struct _trt__RemoveVideoAnalyticsConfiguration *trt__RemoveVideoAnalyticsConfiguration, struct _trt__RemoveVideoAnalyticsConfigurationResponse *trt__RemoveVideoAnalyticsConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__RemoveMetadataConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveMetadataConfiguration(struct soap*, struct _trt__RemoveMetadataConfiguration *trt__RemoveMetadataConfiguration, struct _trt__RemoveMetadataConfigurationResponse *trt__RemoveMetadataConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveMetadataConfiguration(struct soap*, struct _trt__RemoveMetadataConfiguration *trt__RemoveMetadataConfiguration, struct _trt__RemoveMetadataConfigurationResponse *trt__RemoveMetadataConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__RemoveAudioOutputConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveAudioOutputConfiguration(struct soap*, struct _trt__RemoveAudioOutputConfiguration *trt__RemoveAudioOutputConfiguration, struct _trt__RemoveAudioOutputConfigurationResponse *trt__RemoveAudioOutputConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveAudioOutputConfiguration(struct soap*, struct _trt__RemoveAudioOutputConfiguration *trt__RemoveAudioOutputConfiguration, struct _trt__RemoveAudioOutputConfigurationResponse *trt__RemoveAudioOutputConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__RemoveAudioDecoderConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveAudioDecoderConfiguration(struct soap*, struct _trt__RemoveAudioDecoderConfiguration *trt__RemoveAudioDecoderConfiguration, struct _trt__RemoveAudioDecoderConfigurationResponse *trt__RemoveAudioDecoderConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__RemoveAudioDecoderConfiguration(struct soap*, struct _trt__RemoveAudioDecoderConfiguration *trt__RemoveAudioDecoderConfiguration, struct _trt__RemoveAudioDecoderConfigurationResponse *trt__RemoveAudioDecoderConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__DeleteProfile' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__DeleteProfile(struct soap*, struct _trt__DeleteProfile *trt__DeleteProfile, struct _trt__DeleteProfileResponse *trt__DeleteProfileResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__DeleteProfile(struct soap*, struct _trt__DeleteProfile *trt__DeleteProfile, struct _trt__DeleteProfileResponse *trt__DeleteProfileResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetVideoSourceConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoSourceConfigurations(struct soap*, struct _trt__GetVideoSourceConfigurations *trt__GetVideoSourceConfigurations, struct _trt__GetVideoSourceConfigurationsResponse *trt__GetVideoSourceConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoSourceConfigurations(struct soap*, struct _trt__GetVideoSourceConfigurations *trt__GetVideoSourceConfigurations, struct _trt__GetVideoSourceConfigurationsResponse *trt__GetVideoSourceConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetVideoEncoderConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoEncoderConfigurations(struct soap*, struct _trt__GetVideoEncoderConfigurations *trt__GetVideoEncoderConfigurations, struct _trt__GetVideoEncoderConfigurationsResponse *trt__GetVideoEncoderConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoEncoderConfigurations(struct soap*, struct _trt__GetVideoEncoderConfigurations *trt__GetVideoEncoderConfigurations, struct _trt__GetVideoEncoderConfigurationsResponse *trt__GetVideoEncoderConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioSourceConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioSourceConfigurations(struct soap*, struct _trt__GetAudioSourceConfigurations *trt__GetAudioSourceConfigurations, struct _trt__GetAudioSourceConfigurationsResponse *trt__GetAudioSourceConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioSourceConfigurations(struct soap*, struct _trt__GetAudioSourceConfigurations *trt__GetAudioSourceConfigurations, struct _trt__GetAudioSourceConfigurationsResponse *trt__GetAudioSourceConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioEncoderConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioEncoderConfigurations(struct soap*, struct _trt__GetAudioEncoderConfigurations *trt__GetAudioEncoderConfigurations, struct _trt__GetAudioEncoderConfigurationsResponse *trt__GetAudioEncoderConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioEncoderConfigurations(struct soap*, struct _trt__GetAudioEncoderConfigurations *trt__GetAudioEncoderConfigurations, struct _trt__GetAudioEncoderConfigurationsResponse *trt__GetAudioEncoderConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetVideoAnalyticsConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoAnalyticsConfigurations(struct soap*, struct _trt__GetVideoAnalyticsConfigurations *trt__GetVideoAnalyticsConfigurations, struct _trt__GetVideoAnalyticsConfigurationsResponse *trt__GetVideoAnalyticsConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoAnalyticsConfigurations(struct soap*, struct _trt__GetVideoAnalyticsConfigurations *trt__GetVideoAnalyticsConfigurations, struct _trt__GetVideoAnalyticsConfigurationsResponse *trt__GetVideoAnalyticsConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetMetadataConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetMetadataConfigurations(struct soap*, struct _trt__GetMetadataConfigurations *trt__GetMetadataConfigurations, struct _trt__GetMetadataConfigurationsResponse *trt__GetMetadataConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetMetadataConfigurations(struct soap*, struct _trt__GetMetadataConfigurations *trt__GetMetadataConfigurations, struct _trt__GetMetadataConfigurationsResponse *trt__GetMetadataConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioOutputConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioOutputConfigurations(struct soap*, struct _trt__GetAudioOutputConfigurations *trt__GetAudioOutputConfigurations, struct _trt__GetAudioOutputConfigurationsResponse *trt__GetAudioOutputConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioOutputConfigurations(struct soap*, struct _trt__GetAudioOutputConfigurations *trt__GetAudioOutputConfigurations, struct _trt__GetAudioOutputConfigurationsResponse *trt__GetAudioOutputConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioDecoderConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioDecoderConfigurations(struct soap*, struct _trt__GetAudioDecoderConfigurations *trt__GetAudioDecoderConfigurations, struct _trt__GetAudioDecoderConfigurationsResponse *trt__GetAudioDecoderConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioDecoderConfigurations(struct soap*, struct _trt__GetAudioDecoderConfigurations *trt__GetAudioDecoderConfigurations, struct _trt__GetAudioDecoderConfigurationsResponse *trt__GetAudioDecoderConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetVideoSourceConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoSourceConfiguration(struct soap*, struct _trt__GetVideoSourceConfiguration *trt__GetVideoSourceConfiguration, struct _trt__GetVideoSourceConfigurationResponse *trt__GetVideoSourceConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoSourceConfiguration(struct soap*, struct _trt__GetVideoSourceConfiguration *trt__GetVideoSourceConfiguration, struct _trt__GetVideoSourceConfigurationResponse *trt__GetVideoSourceConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetVideoEncoderConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoEncoderConfiguration(struct soap*, struct _trt__GetVideoEncoderConfiguration *trt__GetVideoEncoderConfiguration, struct _trt__GetVideoEncoderConfigurationResponse *trt__GetVideoEncoderConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoEncoderConfiguration(struct soap*, struct _trt__GetVideoEncoderConfiguration *trt__GetVideoEncoderConfiguration, struct _trt__GetVideoEncoderConfigurationResponse *trt__GetVideoEncoderConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioSourceConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioSourceConfiguration(struct soap*, struct _trt__GetAudioSourceConfiguration *trt__GetAudioSourceConfiguration, struct _trt__GetAudioSourceConfigurationResponse *trt__GetAudioSourceConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioSourceConfiguration(struct soap*, struct _trt__GetAudioSourceConfiguration *trt__GetAudioSourceConfiguration, struct _trt__GetAudioSourceConfigurationResponse *trt__GetAudioSourceConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioEncoderConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioEncoderConfiguration(struct soap*, struct _trt__GetAudioEncoderConfiguration *trt__GetAudioEncoderConfiguration, struct _trt__GetAudioEncoderConfigurationResponse *trt__GetAudioEncoderConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioEncoderConfiguration(struct soap*, struct _trt__GetAudioEncoderConfiguration *trt__GetAudioEncoderConfiguration, struct _trt__GetAudioEncoderConfigurationResponse *trt__GetAudioEncoderConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetVideoAnalyticsConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoAnalyticsConfiguration(struct soap*, struct _trt__GetVideoAnalyticsConfiguration *trt__GetVideoAnalyticsConfiguration, struct _trt__GetVideoAnalyticsConfigurationResponse *trt__GetVideoAnalyticsConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoAnalyticsConfiguration(struct soap*, struct _trt__GetVideoAnalyticsConfiguration *trt__GetVideoAnalyticsConfiguration, struct _trt__GetVideoAnalyticsConfigurationResponse *trt__GetVideoAnalyticsConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetMetadataConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetMetadataConfiguration(struct soap*, struct _trt__GetMetadataConfiguration *trt__GetMetadataConfiguration, struct _trt__GetMetadataConfigurationResponse *trt__GetMetadataConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetMetadataConfiguration(struct soap*, struct _trt__GetMetadataConfiguration *trt__GetMetadataConfiguration, struct _trt__GetMetadataConfigurationResponse *trt__GetMetadataConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioOutputConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioOutputConfiguration(struct soap*, struct _trt__GetAudioOutputConfiguration *trt__GetAudioOutputConfiguration, struct _trt__GetAudioOutputConfigurationResponse *trt__GetAudioOutputConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioOutputConfiguration(struct soap*, struct _trt__GetAudioOutputConfiguration *trt__GetAudioOutputConfiguration, struct _trt__GetAudioOutputConfigurationResponse *trt__GetAudioOutputConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioDecoderConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioDecoderConfiguration(struct soap*, struct _trt__GetAudioDecoderConfiguration *trt__GetAudioDecoderConfiguration, struct _trt__GetAudioDecoderConfigurationResponse *trt__GetAudioDecoderConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioDecoderConfiguration(struct soap*, struct _trt__GetAudioDecoderConfiguration *trt__GetAudioDecoderConfiguration, struct _trt__GetAudioDecoderConfigurationResponse *trt__GetAudioDecoderConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetCompatibleVideoEncoderConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleVideoEncoderConfigurations(struct soap*, struct _trt__GetCompatibleVideoEncoderConfigurations *trt__GetCompatibleVideoEncoderConfigurations, struct _trt__GetCompatibleVideoEncoderConfigurationsResponse *trt__GetCompatibleVideoEncoderConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleVideoEncoderConfigurations(struct soap*, struct _trt__GetCompatibleVideoEncoderConfigurations *trt__GetCompatibleVideoEncoderConfigurations, struct _trt__GetCompatibleVideoEncoderConfigurationsResponse *trt__GetCompatibleVideoEncoderConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetCompatibleVideoSourceConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleVideoSourceConfigurations(struct soap*, struct _trt__GetCompatibleVideoSourceConfigurations *trt__GetCompatibleVideoSourceConfigurations, struct _trt__GetCompatibleVideoSourceConfigurationsResponse *trt__GetCompatibleVideoSourceConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleVideoSourceConfigurations(struct soap*, struct _trt__GetCompatibleVideoSourceConfigurations *trt__GetCompatibleVideoSourceConfigurations, struct _trt__GetCompatibleVideoSourceConfigurationsResponse *trt__GetCompatibleVideoSourceConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetCompatibleAudioEncoderConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleAudioEncoderConfigurations(struct soap*, struct _trt__GetCompatibleAudioEncoderConfigurations *trt__GetCompatibleAudioEncoderConfigurations, struct _trt__GetCompatibleAudioEncoderConfigurationsResponse *trt__GetCompatibleAudioEncoderConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleAudioEncoderConfigurations(struct soap*, struct _trt__GetCompatibleAudioEncoderConfigurations *trt__GetCompatibleAudioEncoderConfigurations, struct _trt__GetCompatibleAudioEncoderConfigurationsResponse *trt__GetCompatibleAudioEncoderConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetCompatibleAudioSourceConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleAudioSourceConfigurations(struct soap*, struct _trt__GetCompatibleAudioSourceConfigurations *trt__GetCompatibleAudioSourceConfigurations, struct _trt__GetCompatibleAudioSourceConfigurationsResponse *trt__GetCompatibleAudioSourceConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleAudioSourceConfigurations(struct soap*, struct _trt__GetCompatibleAudioSourceConfigurations *trt__GetCompatibleAudioSourceConfigurations, struct _trt__GetCompatibleAudioSourceConfigurationsResponse *trt__GetCompatibleAudioSourceConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetCompatibleVideoAnalyticsConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleVideoAnalyticsConfigurations(struct soap*, struct _trt__GetCompatibleVideoAnalyticsConfigurations *trt__GetCompatibleVideoAnalyticsConfigurations, struct _trt__GetCompatibleVideoAnalyticsConfigurationsResponse *trt__GetCompatibleVideoAnalyticsConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleVideoAnalyticsConfigurations(struct soap*, struct _trt__GetCompatibleVideoAnalyticsConfigurations *trt__GetCompatibleVideoAnalyticsConfigurations, struct _trt__GetCompatibleVideoAnalyticsConfigurationsResponse *trt__GetCompatibleVideoAnalyticsConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetCompatibleMetadataConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleMetadataConfigurations(struct soap*, struct _trt__GetCompatibleMetadataConfigurations *trt__GetCompatibleMetadataConfigurations, struct _trt__GetCompatibleMetadataConfigurationsResponse *trt__GetCompatibleMetadataConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleMetadataConfigurations(struct soap*, struct _trt__GetCompatibleMetadataConfigurations *trt__GetCompatibleMetadataConfigurations, struct _trt__GetCompatibleMetadataConfigurationsResponse *trt__GetCompatibleMetadataConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetCompatibleAudioOutputConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleAudioOutputConfigurations(struct soap*, struct _trt__GetCompatibleAudioOutputConfigurations *trt__GetCompatibleAudioOutputConfigurations, struct _trt__GetCompatibleAudioOutputConfigurationsResponse *trt__GetCompatibleAudioOutputConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleAudioOutputConfigurations(struct soap*, struct _trt__GetCompatibleAudioOutputConfigurations *trt__GetCompatibleAudioOutputConfigurations, struct _trt__GetCompatibleAudioOutputConfigurationsResponse *trt__GetCompatibleAudioOutputConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetCompatibleAudioDecoderConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleAudioDecoderConfigurations(struct soap*, struct _trt__GetCompatibleAudioDecoderConfigurations *trt__GetCompatibleAudioDecoderConfigurations, struct _trt__GetCompatibleAudioDecoderConfigurationsResponse *trt__GetCompatibleAudioDecoderConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetCompatibleAudioDecoderConfigurations(struct soap*, struct _trt__GetCompatibleAudioDecoderConfigurations *trt__GetCompatibleAudioDecoderConfigurations, struct _trt__GetCompatibleAudioDecoderConfigurationsResponse *trt__GetCompatibleAudioDecoderConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trt__SetVideoSourceConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetVideoSourceConfiguration(struct soap*, struct _trt__SetVideoSourceConfiguration *trt__SetVideoSourceConfiguration, struct _trt__SetVideoSourceConfigurationResponse *trt__SetVideoSourceConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetVideoSourceConfiguration(struct soap*, struct _trt__SetVideoSourceConfiguration *trt__SetVideoSourceConfiguration, struct _trt__SetVideoSourceConfigurationResponse *trt__SetVideoSourceConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__SetVideoEncoderConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetVideoEncoderConfiguration(struct soap*, struct _trt__SetVideoEncoderConfiguration *trt__SetVideoEncoderConfiguration, struct _trt__SetVideoEncoderConfigurationResponse *trt__SetVideoEncoderConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetVideoEncoderConfiguration(struct soap*, struct _trt__SetVideoEncoderConfiguration *trt__SetVideoEncoderConfiguration, struct _trt__SetVideoEncoderConfigurationResponse *trt__SetVideoEncoderConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__SetAudioSourceConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetAudioSourceConfiguration(struct soap*, struct _trt__SetAudioSourceConfiguration *trt__SetAudioSourceConfiguration, struct _trt__SetAudioSourceConfigurationResponse *trt__SetAudioSourceConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetAudioSourceConfiguration(struct soap*, struct _trt__SetAudioSourceConfiguration *trt__SetAudioSourceConfiguration, struct _trt__SetAudioSourceConfigurationResponse *trt__SetAudioSourceConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__SetAudioEncoderConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetAudioEncoderConfiguration(struct soap*, struct _trt__SetAudioEncoderConfiguration *trt__SetAudioEncoderConfiguration, struct _trt__SetAudioEncoderConfigurationResponse *trt__SetAudioEncoderConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetAudioEncoderConfiguration(struct soap*, struct _trt__SetAudioEncoderConfiguration *trt__SetAudioEncoderConfiguration, struct _trt__SetAudioEncoderConfigurationResponse *trt__SetAudioEncoderConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__SetVideoAnalyticsConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetVideoAnalyticsConfiguration(struct soap*, struct _trt__SetVideoAnalyticsConfiguration *trt__SetVideoAnalyticsConfiguration, struct _trt__SetVideoAnalyticsConfigurationResponse *trt__SetVideoAnalyticsConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetVideoAnalyticsConfiguration(struct soap*, struct _trt__SetVideoAnalyticsConfiguration *trt__SetVideoAnalyticsConfiguration, struct _trt__SetVideoAnalyticsConfigurationResponse *trt__SetVideoAnalyticsConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__SetMetadataConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetMetadataConfiguration(struct soap*, struct _trt__SetMetadataConfiguration *trt__SetMetadataConfiguration, struct _trt__SetMetadataConfigurationResponse *trt__SetMetadataConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetMetadataConfiguration(struct soap*, struct _trt__SetMetadataConfiguration *trt__SetMetadataConfiguration, struct _trt__SetMetadataConfigurationResponse *trt__SetMetadataConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__SetAudioOutputConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetAudioOutputConfiguration(struct soap*, struct _trt__SetAudioOutputConfiguration *trt__SetAudioOutputConfiguration, struct _trt__SetAudioOutputConfigurationResponse *trt__SetAudioOutputConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetAudioOutputConfiguration(struct soap*, struct _trt__SetAudioOutputConfiguration *trt__SetAudioOutputConfiguration, struct _trt__SetAudioOutputConfigurationResponse *trt__SetAudioOutputConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__SetAudioDecoderConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetAudioDecoderConfiguration(struct soap*, struct _trt__SetAudioDecoderConfiguration *trt__SetAudioDecoderConfiguration, struct _trt__SetAudioDecoderConfigurationResponse *trt__SetAudioDecoderConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetAudioDecoderConfiguration(struct soap*, struct _trt__SetAudioDecoderConfiguration *trt__SetAudioDecoderConfiguration, struct _trt__SetAudioDecoderConfigurationResponse *trt__SetAudioDecoderConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetVideoSourceConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoSourceConfigurationOptions(struct soap*, struct _trt__GetVideoSourceConfigurationOptions *trt__GetVideoSourceConfigurationOptions, struct _trt__GetVideoSourceConfigurationOptionsResponse *trt__GetVideoSourceConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoSourceConfigurationOptions(struct soap*, struct _trt__GetVideoSourceConfigurationOptions *trt__GetVideoSourceConfigurationOptions, struct _trt__GetVideoSourceConfigurationOptionsResponse *trt__GetVideoSourceConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetVideoEncoderConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoEncoderConfigurationOptions(struct soap*, struct _trt__GetVideoEncoderConfigurationOptions *trt__GetVideoEncoderConfigurationOptions, struct _trt__GetVideoEncoderConfigurationOptionsResponse *trt__GetVideoEncoderConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoEncoderConfigurationOptions(struct soap*, struct _trt__GetVideoEncoderConfigurationOptions *trt__GetVideoEncoderConfigurationOptions, struct _trt__GetVideoEncoderConfigurationOptionsResponse *trt__GetVideoEncoderConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioSourceConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioSourceConfigurationOptions(struct soap*, struct _trt__GetAudioSourceConfigurationOptions *trt__GetAudioSourceConfigurationOptions, struct _trt__GetAudioSourceConfigurationOptionsResponse *trt__GetAudioSourceConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioSourceConfigurationOptions(struct soap*, struct _trt__GetAudioSourceConfigurationOptions *trt__GetAudioSourceConfigurationOptions, struct _trt__GetAudioSourceConfigurationOptionsResponse *trt__GetAudioSourceConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioEncoderConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioEncoderConfigurationOptions(struct soap*, struct _trt__GetAudioEncoderConfigurationOptions *trt__GetAudioEncoderConfigurationOptions, struct _trt__GetAudioEncoderConfigurationOptionsResponse *trt__GetAudioEncoderConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioEncoderConfigurationOptions(struct soap*, struct _trt__GetAudioEncoderConfigurationOptions *trt__GetAudioEncoderConfigurationOptions, struct _trt__GetAudioEncoderConfigurationOptionsResponse *trt__GetAudioEncoderConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetMetadataConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetMetadataConfigurationOptions(struct soap*, struct _trt__GetMetadataConfigurationOptions *trt__GetMetadataConfigurationOptions, struct _trt__GetMetadataConfigurationOptionsResponse *trt__GetMetadataConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetMetadataConfigurationOptions(struct soap*, struct _trt__GetMetadataConfigurationOptions *trt__GetMetadataConfigurationOptions, struct _trt__GetMetadataConfigurationOptionsResponse *trt__GetMetadataConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioOutputConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioOutputConfigurationOptions(struct soap*, struct _trt__GetAudioOutputConfigurationOptions *trt__GetAudioOutputConfigurationOptions, struct _trt__GetAudioOutputConfigurationOptionsResponse *trt__GetAudioOutputConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioOutputConfigurationOptions(struct soap*, struct _trt__GetAudioOutputConfigurationOptions *trt__GetAudioOutputConfigurationOptions, struct _trt__GetAudioOutputConfigurationOptionsResponse *trt__GetAudioOutputConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetAudioDecoderConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioDecoderConfigurationOptions(struct soap*, struct _trt__GetAudioDecoderConfigurationOptions *trt__GetAudioDecoderConfigurationOptions, struct _trt__GetAudioDecoderConfigurationOptionsResponse *trt__GetAudioDecoderConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetAudioDecoderConfigurationOptions(struct soap*, struct _trt__GetAudioDecoderConfigurationOptions *trt__GetAudioDecoderConfigurationOptions, struct _trt__GetAudioDecoderConfigurationOptionsResponse *trt__GetAudioDecoderConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetGuaranteedNumberOfVideoEncoderInstances' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetGuaranteedNumberOfVideoEncoderInstances(struct soap*, struct _trt__GetGuaranteedNumberOfVideoEncoderInstances *trt__GetGuaranteedNumberOfVideoEncoderInstances, struct _trt__GetGuaranteedNumberOfVideoEncoderInstancesResponse *trt__GetGuaranteedNumberOfVideoEncoderInstancesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetGuaranteedNumberOfVideoEncoderInstances(struct soap*, struct _trt__GetGuaranteedNumberOfVideoEncoderInstances *trt__GetGuaranteedNumberOfVideoEncoderInstances, struct _trt__GetGuaranteedNumberOfVideoEncoderInstancesResponse *trt__GetGuaranteedNumberOfVideoEncoderInstancesResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetStreamUri' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetStreamUri(struct soap*, struct _trt__GetStreamUri *trt__GetStreamUri, struct _trt__GetStreamUriResponse *trt__GetStreamUriResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetStreamUri(struct soap*, struct _trt__GetStreamUri *trt__GetStreamUri, struct _trt__GetStreamUriResponse *trt__GetStreamUriResponse)
+	{return 0;}    
     /** Web service operation '__trt__StartMulticastStreaming' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__StartMulticastStreaming(struct soap*, struct _trt__StartMulticastStreaming *trt__StartMulticastStreaming, struct _trt__StartMulticastStreamingResponse *trt__StartMulticastStreamingResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__StartMulticastStreaming(struct soap*, struct _trt__StartMulticastStreaming *trt__StartMulticastStreaming, struct _trt__StartMulticastStreamingResponse *trt__StartMulticastStreamingResponse)
+	{return 0;}    
     /** Web service operation '__trt__StopMulticastStreaming' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__StopMulticastStreaming(struct soap*, struct _trt__StopMulticastStreaming *trt__StopMulticastStreaming, struct _trt__StopMulticastStreamingResponse *trt__StopMulticastStreamingResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__StopMulticastStreaming(struct soap*, struct _trt__StopMulticastStreaming *trt__StopMulticastStreaming, struct _trt__StopMulticastStreamingResponse *trt__StopMulticastStreamingResponse)
+	{return 0;}    
     /** Web service operation '__trt__SetSynchronizationPoint' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetSynchronizationPoint(struct soap*, struct _trt__SetSynchronizationPoint *trt__SetSynchronizationPoint, struct _trt__SetSynchronizationPointResponse *trt__SetSynchronizationPointResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetSynchronizationPoint(struct soap*, struct _trt__SetSynchronizationPoint *trt__SetSynchronizationPoint, struct _trt__SetSynchronizationPointResponse *trt__SetSynchronizationPointResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetSnapshotUri' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetSnapshotUri(struct soap*, struct _trt__GetSnapshotUri *trt__GetSnapshotUri, struct _trt__GetSnapshotUriResponse *trt__GetSnapshotUriResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetSnapshotUri(struct soap*, struct _trt__GetSnapshotUri *trt__GetSnapshotUri, struct _trt__GetSnapshotUriResponse *trt__GetSnapshotUriResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetVideoSourceModes' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoSourceModes(struct soap*, struct _trt__GetVideoSourceModes *trt__GetVideoSourceModes, struct _trt__GetVideoSourceModesResponse *trt__GetVideoSourceModesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetVideoSourceModes(struct soap*, struct _trt__GetVideoSourceModes *trt__GetVideoSourceModes, struct _trt__GetVideoSourceModesResponse *trt__GetVideoSourceModesResponse)
+	{return 0;}    
     /** Web service operation '__trt__SetVideoSourceMode' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetVideoSourceMode(struct soap*, struct _trt__SetVideoSourceMode *trt__SetVideoSourceMode, struct _trt__SetVideoSourceModeResponse *trt__SetVideoSourceModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetVideoSourceMode(struct soap*, struct _trt__SetVideoSourceMode *trt__SetVideoSourceMode, struct _trt__SetVideoSourceModeResponse *trt__SetVideoSourceModeResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetOSDs' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetOSDs(struct soap*, struct _trt__GetOSDs *trt__GetOSDs, struct _trt__GetOSDsResponse *trt__GetOSDsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetOSDs(struct soap*, struct _trt__GetOSDs *trt__GetOSDs, struct _trt__GetOSDsResponse *trt__GetOSDsResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetOSD' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetOSD(struct soap*, struct _trt__GetOSD *trt__GetOSD, struct _trt__GetOSDResponse *trt__GetOSDResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetOSD(struct soap*, struct _trt__GetOSD *trt__GetOSD, struct _trt__GetOSDResponse *trt__GetOSDResponse)
+	{return 0;}    
     /** Web service operation '__trt__GetOSDOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetOSDOptions(struct soap*, struct _trt__GetOSDOptions *trt__GetOSDOptions, struct _trt__GetOSDOptionsResponse *trt__GetOSDOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__GetOSDOptions(struct soap*, struct _trt__GetOSDOptions *trt__GetOSDOptions, struct _trt__GetOSDOptionsResponse *trt__GetOSDOptionsResponse)
+	{return 0;}    
     /** Web service operation '__trt__SetOSD' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetOSD(struct soap*, struct _trt__SetOSD *trt__SetOSD, struct _trt__SetOSDResponse *trt__SetOSDResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__SetOSD(struct soap*, struct _trt__SetOSD *trt__SetOSD, struct _trt__SetOSDResponse *trt__SetOSDResponse)
+	{return 0;}    
     /** Web service operation '__trt__CreateOSD' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__CreateOSD(struct soap*, struct _trt__CreateOSD *trt__CreateOSD, struct _trt__CreateOSDResponse *trt__CreateOSDResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__CreateOSD(struct soap*, struct _trt__CreateOSD *trt__CreateOSD, struct _trt__CreateOSDResponse *trt__CreateOSDResponse)
+	{return 0;}    
     /** Web service operation '__trt__DeleteOSD' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trt__DeleteOSD(struct soap*, struct _trt__DeleteOSD *trt__DeleteOSD, struct _trt__DeleteOSDResponse *trt__DeleteOSDResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trt__DeleteOSD(struct soap*, struct _trt__DeleteOSD *trt__DeleteOSD, struct _trt__DeleteOSDResponse *trt__DeleteOSDResponse)
+	{return 0;}    
     /** Web service operation '__trv__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trv__GetServiceCapabilities(struct soap*, struct _trv__GetServiceCapabilities *trv__GetServiceCapabilities, struct _trv__GetServiceCapabilitiesResponse *trv__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trv__GetServiceCapabilities(struct soap*, struct _trv__GetServiceCapabilities *trv__GetServiceCapabilities, struct _trv__GetServiceCapabilitiesResponse *trv__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__trv__GetReceivers' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trv__GetReceivers(struct soap*, struct _trv__GetReceivers *trv__GetReceivers, struct _trv__GetReceiversResponse *trv__GetReceiversResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trv__GetReceivers(struct soap*, struct _trv__GetReceivers *trv__GetReceivers, struct _trv__GetReceiversResponse *trv__GetReceiversResponse)
+	{return 0;}    
     /** Web service operation '__trv__GetReceiver' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trv__GetReceiver(struct soap*, struct _trv__GetReceiver *trv__GetReceiver, struct _trv__GetReceiverResponse *trv__GetReceiverResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trv__GetReceiver(struct soap*, struct _trv__GetReceiver *trv__GetReceiver, struct _trv__GetReceiverResponse *trv__GetReceiverResponse)
+	{return 0;}    
     /** Web service operation '__trv__CreateReceiver' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trv__CreateReceiver(struct soap*, struct _trv__CreateReceiver *trv__CreateReceiver, struct _trv__CreateReceiverResponse *trv__CreateReceiverResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trv__CreateReceiver(struct soap*, struct _trv__CreateReceiver *trv__CreateReceiver, struct _trv__CreateReceiverResponse *trv__CreateReceiverResponse)
+	{return 0;}    
     /** Web service operation '__trv__DeleteReceiver' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trv__DeleteReceiver(struct soap*, struct _trv__DeleteReceiver *trv__DeleteReceiver, struct _trv__DeleteReceiverResponse *trv__DeleteReceiverResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trv__DeleteReceiver(struct soap*, struct _trv__DeleteReceiver *trv__DeleteReceiver, struct _trv__DeleteReceiverResponse *trv__DeleteReceiverResponse)
+	{return 0;}    
     /** Web service operation '__trv__ConfigureReceiver' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trv__ConfigureReceiver(struct soap*, struct _trv__ConfigureReceiver *trv__ConfigureReceiver, struct _trv__ConfigureReceiverResponse *trv__ConfigureReceiverResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trv__ConfigureReceiver(struct soap*, struct _trv__ConfigureReceiver *trv__ConfigureReceiver, struct _trv__ConfigureReceiverResponse *trv__ConfigureReceiverResponse)
+	{return 0;}    
     /** Web service operation '__trv__SetReceiverMode' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trv__SetReceiverMode(struct soap*, struct _trv__SetReceiverMode *trv__SetReceiverMode, struct _trv__SetReceiverModeResponse *trv__SetReceiverModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trv__SetReceiverMode(struct soap*, struct _trv__SetReceiverMode *trv__SetReceiverMode, struct _trv__SetReceiverModeResponse *trv__SetReceiverModeResponse)
+	{return 0;}    
     /** Web service operation '__trv__GetReceiverState' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trv__GetReceiverState(struct soap*, struct _trv__GetReceiverState *trv__GetReceiverState, struct _trv__GetReceiverStateResponse *trv__GetReceiverStateResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trv__GetReceiverState(struct soap*, struct _trv__GetReceiverState *trv__GetReceiverState, struct _trv__GetReceiverStateResponse *trv__GetReceiverStateResponse)
+	{return 0;}    
     /** Web service operation '__tse__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetServiceCapabilities(struct soap*, struct _tse__GetServiceCapabilities *tse__GetServiceCapabilities, struct _tse__GetServiceCapabilitiesResponse *tse__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetServiceCapabilities(struct soap*, struct _tse__GetServiceCapabilities *tse__GetServiceCapabilities, struct _tse__GetServiceCapabilitiesResponse *tse__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tse__GetRecordingSummary' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetRecordingSummary(struct soap*, struct _tse__GetRecordingSummary *tse__GetRecordingSummary, struct _tse__GetRecordingSummaryResponse *tse__GetRecordingSummaryResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetRecordingSummary(struct soap*, struct _tse__GetRecordingSummary *tse__GetRecordingSummary, struct _tse__GetRecordingSummaryResponse *tse__GetRecordingSummaryResponse)
+	{return 0;}    
     /** Web service operation '__tse__GetRecordingInformation' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetRecordingInformation(struct soap*, struct _tse__GetRecordingInformation *tse__GetRecordingInformation, struct _tse__GetRecordingInformationResponse *tse__GetRecordingInformationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetRecordingInformation(struct soap*, struct _tse__GetRecordingInformation *tse__GetRecordingInformation, struct _tse__GetRecordingInformationResponse *tse__GetRecordingInformationResponse)
+	{return 0;}    
     /** Web service operation '__tse__GetMediaAttributes' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetMediaAttributes(struct soap*, struct _tse__GetMediaAttributes *tse__GetMediaAttributes, struct _tse__GetMediaAttributesResponse *tse__GetMediaAttributesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetMediaAttributes(struct soap*, struct _tse__GetMediaAttributes *tse__GetMediaAttributes, struct _tse__GetMediaAttributesResponse *tse__GetMediaAttributesResponse)
+	{return 0;}    
     /** Web service operation '__tse__FindRecordings' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tse__FindRecordings(struct soap*, struct _tse__FindRecordings *tse__FindRecordings, struct _tse__FindRecordingsResponse *tse__FindRecordingsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tse__FindRecordings(struct soap*, struct _tse__FindRecordings *tse__FindRecordings, struct _tse__FindRecordingsResponse *tse__FindRecordingsResponse)
+	{return 0;}    
     /** Web service operation '__tse__GetRecordingSearchResults' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetRecordingSearchResults(struct soap*, struct _tse__GetRecordingSearchResults *tse__GetRecordingSearchResults, struct _tse__GetRecordingSearchResultsResponse *tse__GetRecordingSearchResultsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetRecordingSearchResults(struct soap*, struct _tse__GetRecordingSearchResults *tse__GetRecordingSearchResults, struct _tse__GetRecordingSearchResultsResponse *tse__GetRecordingSearchResultsResponse)
+	{return 0;}    
     /** Web service operation '__tse__FindEvents' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tse__FindEvents(struct soap*, struct _tse__FindEvents *tse__FindEvents, struct _tse__FindEventsResponse *tse__FindEventsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tse__FindEvents(struct soap*, struct _tse__FindEvents *tse__FindEvents, struct _tse__FindEventsResponse *tse__FindEventsResponse)
+	{return 0;}    
     /** Web service operation '__tse__GetEventSearchResults' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetEventSearchResults(struct soap*, struct _tse__GetEventSearchResults *tse__GetEventSearchResults, struct _tse__GetEventSearchResultsResponse *tse__GetEventSearchResultsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetEventSearchResults(struct soap*, struct _tse__GetEventSearchResults *tse__GetEventSearchResults, struct _tse__GetEventSearchResultsResponse *tse__GetEventSearchResultsResponse)
+	{return 0;}    
     /** Web service operation '__tse__FindPTZPosition' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tse__FindPTZPosition(struct soap*, struct _tse__FindPTZPosition *tse__FindPTZPosition, struct _tse__FindPTZPositionResponse *tse__FindPTZPositionResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tse__FindPTZPosition(struct soap*, struct _tse__FindPTZPosition *tse__FindPTZPosition, struct _tse__FindPTZPositionResponse *tse__FindPTZPositionResponse)
+	{return 0;}    
     /** Web service operation '__tse__GetPTZPositionSearchResults' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetPTZPositionSearchResults(struct soap*, struct _tse__GetPTZPositionSearchResults *tse__GetPTZPositionSearchResults, struct _tse__GetPTZPositionSearchResultsResponse *tse__GetPTZPositionSearchResultsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetPTZPositionSearchResults(struct soap*, struct _tse__GetPTZPositionSearchResults *tse__GetPTZPositionSearchResults, struct _tse__GetPTZPositionSearchResultsResponse *tse__GetPTZPositionSearchResultsResponse)
+	{return 0;}    
     /** Web service operation '__tse__GetSearchState' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetSearchState(struct soap*, struct _tse__GetSearchState *tse__GetSearchState, struct _tse__GetSearchStateResponse *tse__GetSearchStateResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tse__GetSearchState(struct soap*, struct _tse__GetSearchState *tse__GetSearchState, struct _tse__GetSearchStateResponse *tse__GetSearchStateResponse)
+	{return 0;}    
     /** Web service operation '__tse__EndSearch' (returns SOAP_OK or error code) */
     SOAP_FMAC5 int SOAP_FMAC6 __tse__EndSearch(struct soap*, struct _tse__EndSearch *tse__EndSearch, struct _tse__EndSearchResponse *tse__EndSearchResponse)
 	{return 0;}    
