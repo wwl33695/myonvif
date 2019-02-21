@@ -42692,699 +42692,1046 @@ typedef tt__ReferenceToken tt__RecordingJobReference;
     SOAP_FMAC5 int SOAP_FMAC6 __wsdd__ProbeMatches(struct soap*, struct wsdd__ProbeMatchesType *wsdd__ProbeMatches)
 	{return 0;}    
     /** Web service operation '__wsdd__Resolve' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __wsdd__Resolve(struct soap*, struct wsdd__ResolveType *wsdd__Resolve);
+    SOAP_FMAC5 int SOAP_FMAC6 __wsdd__Resolve(struct soap*, struct wsdd__ResolveType *wsdd__Resolve)
+	{return 0;}    
     /** Web service operation '__wsdd__ResolveMatches' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __wsdd__ResolveMatches(struct soap*, struct wsdd__ResolveMatchesType *wsdd__ResolveMatches);
+    SOAP_FMAC5 int SOAP_FMAC6 __wsdd__ResolveMatches(struct soap*, struct wsdd__ResolveMatchesType *wsdd__ResolveMatches)
+	{return 0;}    
     /** Web service operation '__ns1__GetSupportedActions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __ns1__GetSupportedActions(struct soap*, struct _ns1__GetSupportedActions *ns1__GetSupportedActions, struct _ns1__GetSupportedActionsResponse *ns1__GetSupportedActionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __ns1__GetSupportedActions(struct soap*, struct _ns1__GetSupportedActions *ns1__GetSupportedActions, struct _ns1__GetSupportedActionsResponse *ns1__GetSupportedActionsResponse)
+	{return 0;}    
     /** Web service operation '__ns1__GetActions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __ns1__GetActions(struct soap*, struct _ns1__GetActions *ns1__GetActions, struct _ns1__GetActionsResponse *ns1__GetActionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __ns1__GetActions(struct soap*, struct _ns1__GetActions *ns1__GetActions, struct _ns1__GetActionsResponse *ns1__GetActionsResponse)
+	{return 0;}    
     /** Web service operation '__ns1__CreateActions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __ns1__CreateActions(struct soap*, struct _ns1__CreateActions *ns1__CreateActions, struct _ns1__CreateActionsResponse *ns1__CreateActionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __ns1__CreateActions(struct soap*, struct _ns1__CreateActions *ns1__CreateActions, struct _ns1__CreateActionsResponse *ns1__CreateActionsResponse)
+	{return 0;}    
     /** Web service operation '__ns1__DeleteActions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __ns1__DeleteActions(struct soap*, struct _ns1__DeleteActions *ns1__DeleteActions, struct _ns1__DeleteActionsResponse *ns1__DeleteActionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __ns1__DeleteActions(struct soap*, struct _ns1__DeleteActions *ns1__DeleteActions, struct _ns1__DeleteActionsResponse *ns1__DeleteActionsResponse)
+	{return 0;}    
     /** Web service operation '__ns1__ModifyActions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __ns1__ModifyActions(struct soap*, struct _ns1__ModifyActions *ns1__ModifyActions, struct _ns1__ModifyActionsResponse *ns1__ModifyActionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __ns1__ModifyActions(struct soap*, struct _ns1__ModifyActions *ns1__ModifyActions, struct _ns1__ModifyActionsResponse *ns1__ModifyActionsResponse)
+	{return 0;}    
     /** Web service operation '__ns1__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __ns1__GetServiceCapabilities(struct soap*, struct _ns1__GetServiceCapabilities *ns1__GetServiceCapabilities, struct _ns1__GetServiceCapabilitiesResponse *ns1__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __ns1__GetServiceCapabilities(struct soap*, struct _ns1__GetServiceCapabilities *ns1__GetServiceCapabilities, struct _ns1__GetServiceCapabilitiesResponse *ns1__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__ns1__GetActionTriggers' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __ns1__GetActionTriggers(struct soap*, struct _ns1__GetActionTriggers *ns1__GetActionTriggers, struct _ns1__GetActionTriggersResponse *ns1__GetActionTriggersResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __ns1__GetActionTriggers(struct soap*, struct _ns1__GetActionTriggers *ns1__GetActionTriggers, struct _ns1__GetActionTriggersResponse *ns1__GetActionTriggersResponse)
+	{return 0;}    
     /** Web service operation '__ns1__CreateActionTriggers' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __ns1__CreateActionTriggers(struct soap*, struct _ns1__CreateActionTriggers *ns1__CreateActionTriggers, struct _ns1__CreateActionTriggersResponse *ns1__CreateActionTriggersResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __ns1__CreateActionTriggers(struct soap*, struct _ns1__CreateActionTriggers *ns1__CreateActionTriggers, struct _ns1__CreateActionTriggersResponse *ns1__CreateActionTriggersResponse)
+	{return 0;}    
     /** Web service operation '__ns1__DeleteActionTriggers' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __ns1__DeleteActionTriggers(struct soap*, struct _ns1__DeleteActionTriggers *ns1__DeleteActionTriggers, struct _ns1__DeleteActionTriggersResponse *ns1__DeleteActionTriggersResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __ns1__DeleteActionTriggers(struct soap*, struct _ns1__DeleteActionTriggers *ns1__DeleteActionTriggers, struct _ns1__DeleteActionTriggersResponse *ns1__DeleteActionTriggersResponse)
+	{return 0;}    
     /** Web service operation '__ns1__ModifyActionTriggers' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __ns1__ModifyActionTriggers(struct soap*, struct _ns1__ModifyActionTriggers *ns1__ModifyActionTriggers, struct _ns1__ModifyActionTriggersResponse *ns1__ModifyActionTriggersResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __ns1__ModifyActionTriggers(struct soap*, struct _ns1__ModifyActionTriggers *ns1__ModifyActionTriggers, struct _ns1__ModifyActionTriggersResponse *ns1__ModifyActionTriggersResponse)
+	{return 0;}    
     /** Web service operation '__tad__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetServiceCapabilities(struct soap*, struct _tad__GetServiceCapabilities *tad__GetServiceCapabilities, struct _tad__GetServiceCapabilitiesResponse *tad__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetServiceCapabilities(struct soap*, struct _tad__GetServiceCapabilities *tad__GetServiceCapabilities, struct _tad__GetServiceCapabilitiesResponse *tad__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tad__DeleteAnalyticsEngineControl' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__DeleteAnalyticsEngineControl(struct soap*, struct _tad__DeleteAnalyticsEngineControl *tad__DeleteAnalyticsEngineControl, struct _tad__DeleteAnalyticsEngineControlResponse *tad__DeleteAnalyticsEngineControlResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__DeleteAnalyticsEngineControl(struct soap*, struct _tad__DeleteAnalyticsEngineControl *tad__DeleteAnalyticsEngineControl, struct _tad__DeleteAnalyticsEngineControlResponse *tad__DeleteAnalyticsEngineControlResponse)
+	{return 0;}    
     /** Web service operation '__tad__CreateAnalyticsEngineControl' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__CreateAnalyticsEngineControl(struct soap*, struct _tad__CreateAnalyticsEngineControl *tad__CreateAnalyticsEngineControl, struct _tad__CreateAnalyticsEngineControlResponse *tad__CreateAnalyticsEngineControlResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__CreateAnalyticsEngineControl(struct soap*, struct _tad__CreateAnalyticsEngineControl *tad__CreateAnalyticsEngineControl, struct _tad__CreateAnalyticsEngineControlResponse *tad__CreateAnalyticsEngineControlResponse)
+	{return 0;}    
     /** Web service operation '__tad__SetAnalyticsEngineControl' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__SetAnalyticsEngineControl(struct soap*, struct _tad__SetAnalyticsEngineControl *tad__SetAnalyticsEngineControl, struct _tad__SetAnalyticsEngineControlResponse *tad__SetAnalyticsEngineControlResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__SetAnalyticsEngineControl(struct soap*, struct _tad__SetAnalyticsEngineControl *tad__SetAnalyticsEngineControl, struct _tad__SetAnalyticsEngineControlResponse *tad__SetAnalyticsEngineControlResponse)
+	{return 0;}    
     /** Web service operation '__tad__GetAnalyticsEngineControl' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsEngineControl(struct soap*, struct _tad__GetAnalyticsEngineControl *tad__GetAnalyticsEngineControl, struct _tad__GetAnalyticsEngineControlResponse *tad__GetAnalyticsEngineControlResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsEngineControl(struct soap*, struct _tad__GetAnalyticsEngineControl *tad__GetAnalyticsEngineControl, struct _tad__GetAnalyticsEngineControlResponse *tad__GetAnalyticsEngineControlResponse)
+	{return 0;}    
     /** Web service operation '__tad__GetAnalyticsEngineControls' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsEngineControls(struct soap*, struct _tad__GetAnalyticsEngineControls *tad__GetAnalyticsEngineControls, struct _tad__GetAnalyticsEngineControlsResponse *tad__GetAnalyticsEngineControlsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsEngineControls(struct soap*, struct _tad__GetAnalyticsEngineControls *tad__GetAnalyticsEngineControls, struct _tad__GetAnalyticsEngineControlsResponse *tad__GetAnalyticsEngineControlsResponse)
+	{return 0;}    
     /** Web service operation '__tad__GetAnalyticsEngine' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsEngine(struct soap*, struct _tad__GetAnalyticsEngine *tad__GetAnalyticsEngine, struct _tad__GetAnalyticsEngineResponse *tad__GetAnalyticsEngineResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsEngine(struct soap*, struct _tad__GetAnalyticsEngine *tad__GetAnalyticsEngine, struct _tad__GetAnalyticsEngineResponse *tad__GetAnalyticsEngineResponse)
+	{return 0;}    
     /** Web service operation '__tad__GetAnalyticsEngines' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsEngines(struct soap*, struct _tad__GetAnalyticsEngines *tad__GetAnalyticsEngines, struct _tad__GetAnalyticsEnginesResponse *tad__GetAnalyticsEnginesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsEngines(struct soap*, struct _tad__GetAnalyticsEngines *tad__GetAnalyticsEngines, struct _tad__GetAnalyticsEnginesResponse *tad__GetAnalyticsEnginesResponse)
+	{return 0;}    
     /** Web service operation '__tad__SetVideoAnalyticsConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__SetVideoAnalyticsConfiguration(struct soap*, struct _tad__SetVideoAnalyticsConfiguration *tad__SetVideoAnalyticsConfiguration, struct _tad__SetVideoAnalyticsConfigurationResponse *tad__SetVideoAnalyticsConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__SetVideoAnalyticsConfiguration(struct soap*, struct _tad__SetVideoAnalyticsConfiguration *tad__SetVideoAnalyticsConfiguration, struct _tad__SetVideoAnalyticsConfigurationResponse *tad__SetVideoAnalyticsConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tad__SetAnalyticsEngineInput' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__SetAnalyticsEngineInput(struct soap*, struct _tad__SetAnalyticsEngineInput *tad__SetAnalyticsEngineInput, struct _tad__SetAnalyticsEngineInputResponse *tad__SetAnalyticsEngineInputResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__SetAnalyticsEngineInput(struct soap*, struct _tad__SetAnalyticsEngineInput *tad__SetAnalyticsEngineInput, struct _tad__SetAnalyticsEngineInputResponse *tad__SetAnalyticsEngineInputResponse)
+	{return 0;}    
     /** Web service operation '__tad__GetAnalyticsEngineInput' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsEngineInput(struct soap*, struct _tad__GetAnalyticsEngineInput *tad__GetAnalyticsEngineInput, struct _tad__GetAnalyticsEngineInputResponse *tad__GetAnalyticsEngineInputResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsEngineInput(struct soap*, struct _tad__GetAnalyticsEngineInput *tad__GetAnalyticsEngineInput, struct _tad__GetAnalyticsEngineInputResponse *tad__GetAnalyticsEngineInputResponse)
+	{return 0;}    
     /** Web service operation '__tad__GetAnalyticsEngineInputs' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsEngineInputs(struct soap*, struct _tad__GetAnalyticsEngineInputs *tad__GetAnalyticsEngineInputs, struct _tad__GetAnalyticsEngineInputsResponse *tad__GetAnalyticsEngineInputsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsEngineInputs(struct soap*, struct _tad__GetAnalyticsEngineInputs *tad__GetAnalyticsEngineInputs, struct _tad__GetAnalyticsEngineInputsResponse *tad__GetAnalyticsEngineInputsResponse)
+	{return 0;}    
     /** Web service operation '__tad__GetAnalyticsDeviceStreamUri' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsDeviceStreamUri(struct soap*, struct _tad__GetAnalyticsDeviceStreamUri *tad__GetAnalyticsDeviceStreamUri, struct _tad__GetAnalyticsDeviceStreamUriResponse *tad__GetAnalyticsDeviceStreamUriResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsDeviceStreamUri(struct soap*, struct _tad__GetAnalyticsDeviceStreamUri *tad__GetAnalyticsDeviceStreamUri, struct _tad__GetAnalyticsDeviceStreamUriResponse *tad__GetAnalyticsDeviceStreamUriResponse)
+	{return 0;}    
     /** Web service operation '__tad__GetVideoAnalyticsConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetVideoAnalyticsConfiguration(struct soap*, struct _tad__GetVideoAnalyticsConfiguration *tad__GetVideoAnalyticsConfiguration, struct _tad__GetVideoAnalyticsConfigurationResponse *tad__GetVideoAnalyticsConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetVideoAnalyticsConfiguration(struct soap*, struct _tad__GetVideoAnalyticsConfiguration *tad__GetVideoAnalyticsConfiguration, struct _tad__GetVideoAnalyticsConfigurationResponse *tad__GetVideoAnalyticsConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tad__CreateAnalyticsEngineInputs' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__CreateAnalyticsEngineInputs(struct soap*, struct _tad__CreateAnalyticsEngineInputs *tad__CreateAnalyticsEngineInputs, struct _tad__CreateAnalyticsEngineInputsResponse *tad__CreateAnalyticsEngineInputsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__CreateAnalyticsEngineInputs(struct soap*, struct _tad__CreateAnalyticsEngineInputs *tad__CreateAnalyticsEngineInputs, struct _tad__CreateAnalyticsEngineInputsResponse *tad__CreateAnalyticsEngineInputsResponse)
+	{return 0;}    
     /** Web service operation '__tad__DeleteAnalyticsEngineInputs' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__DeleteAnalyticsEngineInputs(struct soap*, struct _tad__DeleteAnalyticsEngineInputs *tad__DeleteAnalyticsEngineInputs, struct _tad__DeleteAnalyticsEngineInputsResponse *tad__DeleteAnalyticsEngineInputsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__DeleteAnalyticsEngineInputs(struct soap*, struct _tad__DeleteAnalyticsEngineInputs *tad__DeleteAnalyticsEngineInputs, struct _tad__DeleteAnalyticsEngineInputsResponse *tad__DeleteAnalyticsEngineInputsResponse)
+	{return 0;}    
     /** Web service operation '__tad__GetAnalyticsState' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsState(struct soap*, struct _tad__GetAnalyticsState *tad__GetAnalyticsState, struct _tad__GetAnalyticsStateResponse *tad__GetAnalyticsStateResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tad__GetAnalyticsState(struct soap*, struct _tad__GetAnalyticsState *tad__GetAnalyticsState, struct _tad__GetAnalyticsStateResponse *tad__GetAnalyticsStateResponse)
+	{return 0;}    
     /** Web service operation '__tan__GetSupportedRules' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetSupportedRules(struct soap*, struct _tan__GetSupportedRules *tan__GetSupportedRules, struct _tan__GetSupportedRulesResponse *tan__GetSupportedRulesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetSupportedRules(struct soap*, struct _tan__GetSupportedRules *tan__GetSupportedRules, struct _tan__GetSupportedRulesResponse *tan__GetSupportedRulesResponse)
+	{return 0;}    
     /** Web service operation '__tan__CreateRules' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__CreateRules(struct soap*, struct _tan__CreateRules *tan__CreateRules, struct _tan__CreateRulesResponse *tan__CreateRulesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__CreateRules(struct soap*, struct _tan__CreateRules *tan__CreateRules, struct _tan__CreateRulesResponse *tan__CreateRulesResponse)
+	{return 0;}    
     /** Web service operation '__tan__DeleteRules' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__DeleteRules(struct soap*, struct _tan__DeleteRules *tan__DeleteRules, struct _tan__DeleteRulesResponse *tan__DeleteRulesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__DeleteRules(struct soap*, struct _tan__DeleteRules *tan__DeleteRules, struct _tan__DeleteRulesResponse *tan__DeleteRulesResponse)
+	{return 0;}    
     /** Web service operation '__tan__GetRules' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetRules(struct soap*, struct _tan__GetRules *tan__GetRules, struct _tan__GetRulesResponse *tan__GetRulesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetRules(struct soap*, struct _tan__GetRules *tan__GetRules, struct _tan__GetRulesResponse *tan__GetRulesResponse)
+	{return 0;}    
     /** Web service operation '__tan__GetRuleOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetRuleOptions(struct soap*, struct _tan__GetRuleOptions *tan__GetRuleOptions, struct _tan__GetRuleOptionsResponse *tan__GetRuleOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetRuleOptions(struct soap*, struct _tan__GetRuleOptions *tan__GetRuleOptions, struct _tan__GetRuleOptionsResponse *tan__GetRuleOptionsResponse)
+	{return 0;}    
     /** Web service operation '__tan__ModifyRules' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__ModifyRules(struct soap*, struct _tan__ModifyRules *tan__ModifyRules, struct _tan__ModifyRulesResponse *tan__ModifyRulesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__ModifyRules(struct soap*, struct _tan__ModifyRules *tan__ModifyRules, struct _tan__ModifyRulesResponse *tan__ModifyRulesResponse)
+	{return 0;}    
     /** Web service operation '__tan__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetServiceCapabilities(struct soap*, struct _tan__GetServiceCapabilities *tan__GetServiceCapabilities, struct _tan__GetServiceCapabilitiesResponse *tan__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetServiceCapabilities(struct soap*, struct _tan__GetServiceCapabilities *tan__GetServiceCapabilities, struct _tan__GetServiceCapabilitiesResponse *tan__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tan__GetSupportedAnalyticsModules' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetSupportedAnalyticsModules(struct soap*, struct _tan__GetSupportedAnalyticsModules *tan__GetSupportedAnalyticsModules, struct _tan__GetSupportedAnalyticsModulesResponse *tan__GetSupportedAnalyticsModulesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetSupportedAnalyticsModules(struct soap*, struct _tan__GetSupportedAnalyticsModules *tan__GetSupportedAnalyticsModules, struct _tan__GetSupportedAnalyticsModulesResponse *tan__GetSupportedAnalyticsModulesResponse)
+	{return 0;}    
     /** Web service operation '__tan__CreateAnalyticsModules' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__CreateAnalyticsModules(struct soap*, struct _tan__CreateAnalyticsModules *tan__CreateAnalyticsModules, struct _tan__CreateAnalyticsModulesResponse *tan__CreateAnalyticsModulesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__CreateAnalyticsModules(struct soap*, struct _tan__CreateAnalyticsModules *tan__CreateAnalyticsModules, struct _tan__CreateAnalyticsModulesResponse *tan__CreateAnalyticsModulesResponse)
+	{return 0;}    
     /** Web service operation '__tan__DeleteAnalyticsModules' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__DeleteAnalyticsModules(struct soap*, struct _tan__DeleteAnalyticsModules *tan__DeleteAnalyticsModules, struct _tan__DeleteAnalyticsModulesResponse *tan__DeleteAnalyticsModulesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__DeleteAnalyticsModules(struct soap*, struct _tan__DeleteAnalyticsModules *tan__DeleteAnalyticsModules, struct _tan__DeleteAnalyticsModulesResponse *tan__DeleteAnalyticsModulesResponse)
+	{return 0;}    
     /** Web service operation '__tan__GetAnalyticsModules' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetAnalyticsModules(struct soap*, struct _tan__GetAnalyticsModules *tan__GetAnalyticsModules, struct _tan__GetAnalyticsModulesResponse *tan__GetAnalyticsModulesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetAnalyticsModules(struct soap*, struct _tan__GetAnalyticsModules *tan__GetAnalyticsModules, struct _tan__GetAnalyticsModulesResponse *tan__GetAnalyticsModulesResponse)
+	{return 0;}    
     /** Web service operation '__tan__GetAnalyticsModuleOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetAnalyticsModuleOptions(struct soap*, struct _tan__GetAnalyticsModuleOptions *tan__GetAnalyticsModuleOptions, struct _tan__GetAnalyticsModuleOptionsResponse *tan__GetAnalyticsModuleOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__GetAnalyticsModuleOptions(struct soap*, struct _tan__GetAnalyticsModuleOptions *tan__GetAnalyticsModuleOptions, struct _tan__GetAnalyticsModuleOptionsResponse *tan__GetAnalyticsModuleOptionsResponse)
+	{return 0;}    
     /** Web service operation '__tan__ModifyAnalyticsModules' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tan__ModifyAnalyticsModules(struct soap*, struct _tan__ModifyAnalyticsModules *tan__ModifyAnalyticsModules, struct _tan__ModifyAnalyticsModulesResponse *tan__ModifyAnalyticsModulesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tan__ModifyAnalyticsModules(struct soap*, struct _tan__ModifyAnalyticsModules *tan__ModifyAnalyticsModules, struct _tan__ModifyAnalyticsModulesResponse *tan__ModifyAnalyticsModulesResponse)
+	{return 0;}    
     /** Web service operation '__tdn__Hello' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tdn__Hello(struct soap*, struct wsdd__HelloType tdn__Hello, struct wsdd__ResolveType *tdn__HelloResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tdn__Hello(struct soap*, struct wsdd__HelloType tdn__Hello, struct wsdd__ResolveType *tdn__HelloResponse)
+	{return 0;}    
     /** Web service operation '__tdn__Bye' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tdn__Bye(struct soap*, struct wsdd__ByeType tdn__Bye, struct wsdd__ResolveType *tdn__ByeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tdn__Bye(struct soap*, struct wsdd__ByeType tdn__Bye, struct wsdd__ResolveType *tdn__ByeResponse)
+	{return 0;}    
     /** Web service operation '__tdn__Probe' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tdn__Probe(struct soap*, struct wsdd__ProbeType tdn__Probe, struct wsdd__ProbeMatchesType *tdn__ProbeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tdn__Probe(struct soap*, struct wsdd__ProbeType tdn__Probe, struct wsdd__ProbeMatchesType *tdn__ProbeResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetServices' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetServices(struct soap*, struct _tds__GetServices *tds__GetServices, struct _tds__GetServicesResponse *tds__GetServicesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetServices(struct soap*, struct _tds__GetServices *tds__GetServices, struct _tds__GetServicesResponse *tds__GetServicesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetServiceCapabilities(struct soap*, struct _tds__GetServiceCapabilities *tds__GetServiceCapabilities, struct _tds__GetServiceCapabilitiesResponse *tds__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetServiceCapabilities(struct soap*, struct _tds__GetServiceCapabilities *tds__GetServiceCapabilities, struct _tds__GetServiceCapabilitiesResponse *tds__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDeviceInformation' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDeviceInformation(struct soap*, struct _tds__GetDeviceInformation *tds__GetDeviceInformation, struct _tds__GetDeviceInformationResponse *tds__GetDeviceInformationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDeviceInformation(struct soap*, struct _tds__GetDeviceInformation *tds__GetDeviceInformation, struct _tds__GetDeviceInformationResponse *tds__GetDeviceInformationResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetSystemDateAndTime' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetSystemDateAndTime(struct soap*, struct _tds__SetSystemDateAndTime *tds__SetSystemDateAndTime, struct _tds__SetSystemDateAndTimeResponse *tds__SetSystemDateAndTimeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetSystemDateAndTime(struct soap*, struct _tds__SetSystemDateAndTime *tds__SetSystemDateAndTime, struct _tds__SetSystemDateAndTimeResponse *tds__SetSystemDateAndTimeResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetSystemDateAndTime' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemDateAndTime(struct soap*, struct _tds__GetSystemDateAndTime *tds__GetSystemDateAndTime, struct _tds__GetSystemDateAndTimeResponse *tds__GetSystemDateAndTimeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemDateAndTime(struct soap*, struct _tds__GetSystemDateAndTime *tds__GetSystemDateAndTime, struct _tds__GetSystemDateAndTimeResponse *tds__GetSystemDateAndTimeResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetSystemFactoryDefault' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetSystemFactoryDefault(struct soap*, struct _tds__SetSystemFactoryDefault *tds__SetSystemFactoryDefault, struct _tds__SetSystemFactoryDefaultResponse *tds__SetSystemFactoryDefaultResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetSystemFactoryDefault(struct soap*, struct _tds__SetSystemFactoryDefault *tds__SetSystemFactoryDefault, struct _tds__SetSystemFactoryDefaultResponse *tds__SetSystemFactoryDefaultResponse)
+	{return 0;}    
     /** Web service operation '__tds__UpgradeSystemFirmware' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__UpgradeSystemFirmware(struct soap*, struct _tds__UpgradeSystemFirmware *tds__UpgradeSystemFirmware, struct _tds__UpgradeSystemFirmwareResponse *tds__UpgradeSystemFirmwareResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__UpgradeSystemFirmware(struct soap*, struct _tds__UpgradeSystemFirmware *tds__UpgradeSystemFirmware, struct _tds__UpgradeSystemFirmwareResponse *tds__UpgradeSystemFirmwareResponse)
+	{return 0;}    
     /** Web service operation '__tds__SystemReboot' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SystemReboot(struct soap*, struct _tds__SystemReboot *tds__SystemReboot, struct _tds__SystemRebootResponse *tds__SystemRebootResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SystemReboot(struct soap*, struct _tds__SystemReboot *tds__SystemReboot, struct _tds__SystemRebootResponse *tds__SystemRebootResponse)
+	{return 0;}    
     /** Web service operation '__tds__RestoreSystem' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__RestoreSystem(struct soap*, struct _tds__RestoreSystem *tds__RestoreSystem, struct _tds__RestoreSystemResponse *tds__RestoreSystemResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__RestoreSystem(struct soap*, struct _tds__RestoreSystem *tds__RestoreSystem, struct _tds__RestoreSystemResponse *tds__RestoreSystemResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetSystemBackup' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemBackup(struct soap*, struct _tds__GetSystemBackup *tds__GetSystemBackup, struct _tds__GetSystemBackupResponse *tds__GetSystemBackupResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemBackup(struct soap*, struct _tds__GetSystemBackup *tds__GetSystemBackup, struct _tds__GetSystemBackupResponse *tds__GetSystemBackupResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetSystemLog' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemLog(struct soap*, struct _tds__GetSystemLog *tds__GetSystemLog, struct _tds__GetSystemLogResponse *tds__GetSystemLogResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemLog(struct soap*, struct _tds__GetSystemLog *tds__GetSystemLog, struct _tds__GetSystemLogResponse *tds__GetSystemLogResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetSystemSupportInformation' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemSupportInformation(struct soap*, struct _tds__GetSystemSupportInformation *tds__GetSystemSupportInformation, struct _tds__GetSystemSupportInformationResponse *tds__GetSystemSupportInformationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemSupportInformation(struct soap*, struct _tds__GetSystemSupportInformation *tds__GetSystemSupportInformation, struct _tds__GetSystemSupportInformationResponse *tds__GetSystemSupportInformationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetScopes' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetScopes(struct soap*, struct _tds__GetScopes *tds__GetScopes, struct _tds__GetScopesResponse *tds__GetScopesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetScopes(struct soap*, struct _tds__GetScopes *tds__GetScopes, struct _tds__GetScopesResponse *tds__GetScopesResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetScopes' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetScopes(struct soap*, struct _tds__SetScopes *tds__SetScopes, struct _tds__SetScopesResponse *tds__SetScopesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetScopes(struct soap*, struct _tds__SetScopes *tds__SetScopes, struct _tds__SetScopesResponse *tds__SetScopesResponse)
+	{return 0;}    
     /** Web service operation '__tds__AddScopes' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__AddScopes(struct soap*, struct _tds__AddScopes *tds__AddScopes, struct _tds__AddScopesResponse *tds__AddScopesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__AddScopes(struct soap*, struct _tds__AddScopes *tds__AddScopes, struct _tds__AddScopesResponse *tds__AddScopesResponse)
+	{return 0;}    
     /** Web service operation '__tds__RemoveScopes' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__RemoveScopes(struct soap*, struct _tds__RemoveScopes *tds__RemoveScopes, struct _tds__RemoveScopesResponse *tds__RemoveScopesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__RemoveScopes(struct soap*, struct _tds__RemoveScopes *tds__RemoveScopes, struct _tds__RemoveScopesResponse *tds__RemoveScopesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDiscoveryMode' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDiscoveryMode(struct soap*, struct _tds__GetDiscoveryMode *tds__GetDiscoveryMode, struct _tds__GetDiscoveryModeResponse *tds__GetDiscoveryModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDiscoveryMode(struct soap*, struct _tds__GetDiscoveryMode *tds__GetDiscoveryMode, struct _tds__GetDiscoveryModeResponse *tds__GetDiscoveryModeResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetDiscoveryMode' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDiscoveryMode(struct soap*, struct _tds__SetDiscoveryMode *tds__SetDiscoveryMode, struct _tds__SetDiscoveryModeResponse *tds__SetDiscoveryModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDiscoveryMode(struct soap*, struct _tds__SetDiscoveryMode *tds__SetDiscoveryMode, struct _tds__SetDiscoveryModeResponse *tds__SetDiscoveryModeResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetRemoteDiscoveryMode' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetRemoteDiscoveryMode(struct soap*, struct _tds__GetRemoteDiscoveryMode *tds__GetRemoteDiscoveryMode, struct _tds__GetRemoteDiscoveryModeResponse *tds__GetRemoteDiscoveryModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetRemoteDiscoveryMode(struct soap*, struct _tds__GetRemoteDiscoveryMode *tds__GetRemoteDiscoveryMode, struct _tds__GetRemoteDiscoveryModeResponse *tds__GetRemoteDiscoveryModeResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetRemoteDiscoveryMode' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRemoteDiscoveryMode(struct soap*, struct _tds__SetRemoteDiscoveryMode *tds__SetRemoteDiscoveryMode, struct _tds__SetRemoteDiscoveryModeResponse *tds__SetRemoteDiscoveryModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRemoteDiscoveryMode(struct soap*, struct _tds__SetRemoteDiscoveryMode *tds__SetRemoteDiscoveryMode, struct _tds__SetRemoteDiscoveryModeResponse *tds__SetRemoteDiscoveryModeResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDPAddresses' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDPAddresses(struct soap*, struct _tds__GetDPAddresses *tds__GetDPAddresses, struct _tds__GetDPAddressesResponse *tds__GetDPAddressesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDPAddresses(struct soap*, struct _tds__GetDPAddresses *tds__GetDPAddresses, struct _tds__GetDPAddressesResponse *tds__GetDPAddressesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetEndpointReference' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetEndpointReference(struct soap*, struct _tds__GetEndpointReference *tds__GetEndpointReference, struct _tds__GetEndpointReferenceResponse *tds__GetEndpointReferenceResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetEndpointReference(struct soap*, struct _tds__GetEndpointReference *tds__GetEndpointReference, struct _tds__GetEndpointReferenceResponse *tds__GetEndpointReferenceResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetRemoteUser' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetRemoteUser(struct soap*, struct _tds__GetRemoteUser *tds__GetRemoteUser, struct _tds__GetRemoteUserResponse *tds__GetRemoteUserResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetRemoteUser(struct soap*, struct _tds__GetRemoteUser *tds__GetRemoteUser, struct _tds__GetRemoteUserResponse *tds__GetRemoteUserResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetRemoteUser' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRemoteUser(struct soap*, struct _tds__SetRemoteUser *tds__SetRemoteUser, struct _tds__SetRemoteUserResponse *tds__SetRemoteUserResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRemoteUser(struct soap*, struct _tds__SetRemoteUser *tds__SetRemoteUser, struct _tds__SetRemoteUserResponse *tds__SetRemoteUserResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetUsers' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetUsers(struct soap*, struct _tds__GetUsers *tds__GetUsers, struct _tds__GetUsersResponse *tds__GetUsersResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetUsers(struct soap*, struct _tds__GetUsers *tds__GetUsers, struct _tds__GetUsersResponse *tds__GetUsersResponse)
+	{return 0;}    
     /** Web service operation '__tds__CreateUsers' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateUsers(struct soap*, struct _tds__CreateUsers *tds__CreateUsers, struct _tds__CreateUsersResponse *tds__CreateUsersResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateUsers(struct soap*, struct _tds__CreateUsers *tds__CreateUsers, struct _tds__CreateUsersResponse *tds__CreateUsersResponse)
+	{return 0;}    
     /** Web service operation '__tds__DeleteUsers' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteUsers(struct soap*, struct _tds__DeleteUsers *tds__DeleteUsers, struct _tds__DeleteUsersResponse *tds__DeleteUsersResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteUsers(struct soap*, struct _tds__DeleteUsers *tds__DeleteUsers, struct _tds__DeleteUsersResponse *tds__DeleteUsersResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetUser' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetUser(struct soap*, struct _tds__SetUser *tds__SetUser, struct _tds__SetUserResponse *tds__SetUserResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetUser(struct soap*, struct _tds__SetUser *tds__SetUser, struct _tds__SetUserResponse *tds__SetUserResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetWsdlUrl' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetWsdlUrl(struct soap*, struct _tds__GetWsdlUrl *tds__GetWsdlUrl, struct _tds__GetWsdlUrlResponse *tds__GetWsdlUrlResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetWsdlUrl(struct soap*, struct _tds__GetWsdlUrl *tds__GetWsdlUrl, struct _tds__GetWsdlUrlResponse *tds__GetWsdlUrlResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCapabilities(struct soap*, struct _tds__GetCapabilities *tds__GetCapabilities, struct _tds__GetCapabilitiesResponse *tds__GetCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCapabilities(struct soap*, struct _tds__GetCapabilities *tds__GetCapabilities, struct _tds__GetCapabilitiesResponse *tds__GetCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetDPAddresses' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDPAddresses(struct soap*, struct _tds__SetDPAddresses *tds__SetDPAddresses, struct _tds__SetDPAddressesResponse *tds__SetDPAddressesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDPAddresses(struct soap*, struct _tds__SetDPAddresses *tds__SetDPAddresses, struct _tds__SetDPAddressesResponse *tds__SetDPAddressesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetHostname' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetHostname(struct soap*, struct _tds__GetHostname *tds__GetHostname, struct _tds__GetHostnameResponse *tds__GetHostnameResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetHostname(struct soap*, struct _tds__GetHostname *tds__GetHostname, struct _tds__GetHostnameResponse *tds__GetHostnameResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetHostname' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetHostname(struct soap*, struct _tds__SetHostname *tds__SetHostname, struct _tds__SetHostnameResponse *tds__SetHostnameResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetHostname(struct soap*, struct _tds__SetHostname *tds__SetHostname, struct _tds__SetHostnameResponse *tds__SetHostnameResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetHostnameFromDHCP' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetHostnameFromDHCP(struct soap*, struct _tds__SetHostnameFromDHCP *tds__SetHostnameFromDHCP, struct _tds__SetHostnameFromDHCPResponse *tds__SetHostnameFromDHCPResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetHostnameFromDHCP(struct soap*, struct _tds__SetHostnameFromDHCP *tds__SetHostnameFromDHCP, struct _tds__SetHostnameFromDHCPResponse *tds__SetHostnameFromDHCPResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDNS' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDNS(struct soap*, struct _tds__GetDNS *tds__GetDNS, struct _tds__GetDNSResponse *tds__GetDNSResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDNS(struct soap*, struct _tds__GetDNS *tds__GetDNS, struct _tds__GetDNSResponse *tds__GetDNSResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetDNS' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDNS(struct soap*, struct _tds__SetDNS *tds__SetDNS, struct _tds__SetDNSResponse *tds__SetDNSResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDNS(struct soap*, struct _tds__SetDNS *tds__SetDNS, struct _tds__SetDNSResponse *tds__SetDNSResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetNTP' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNTP(struct soap*, struct _tds__GetNTP *tds__GetNTP, struct _tds__GetNTPResponse *tds__GetNTPResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNTP(struct soap*, struct _tds__GetNTP *tds__GetNTP, struct _tds__GetNTPResponse *tds__GetNTPResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetNTP' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNTP(struct soap*, struct _tds__SetNTP *tds__SetNTP, struct _tds__SetNTPResponse *tds__SetNTPResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNTP(struct soap*, struct _tds__SetNTP *tds__SetNTP, struct _tds__SetNTPResponse *tds__SetNTPResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDynamicDNS' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDynamicDNS(struct soap*, struct _tds__GetDynamicDNS *tds__GetDynamicDNS, struct _tds__GetDynamicDNSResponse *tds__GetDynamicDNSResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDynamicDNS(struct soap*, struct _tds__GetDynamicDNS *tds__GetDynamicDNS, struct _tds__GetDynamicDNSResponse *tds__GetDynamicDNSResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetDynamicDNS' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDynamicDNS(struct soap*, struct _tds__SetDynamicDNS *tds__SetDynamicDNS, struct _tds__SetDynamicDNSResponse *tds__SetDynamicDNSResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDynamicDNS(struct soap*, struct _tds__SetDynamicDNS *tds__SetDynamicDNS, struct _tds__SetDynamicDNSResponse *tds__SetDynamicDNSResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetNetworkInterfaces' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNetworkInterfaces(struct soap*, struct _tds__GetNetworkInterfaces *tds__GetNetworkInterfaces, struct _tds__GetNetworkInterfacesResponse *tds__GetNetworkInterfacesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNetworkInterfaces(struct soap*, struct _tds__GetNetworkInterfaces *tds__GetNetworkInterfaces, struct _tds__GetNetworkInterfacesResponse *tds__GetNetworkInterfacesResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetNetworkInterfaces' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNetworkInterfaces(struct soap*, struct _tds__SetNetworkInterfaces *tds__SetNetworkInterfaces, struct _tds__SetNetworkInterfacesResponse *tds__SetNetworkInterfacesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNetworkInterfaces(struct soap*, struct _tds__SetNetworkInterfaces *tds__SetNetworkInterfaces, struct _tds__SetNetworkInterfacesResponse *tds__SetNetworkInterfacesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetNetworkProtocols' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNetworkProtocols(struct soap*, struct _tds__GetNetworkProtocols *tds__GetNetworkProtocols, struct _tds__GetNetworkProtocolsResponse *tds__GetNetworkProtocolsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNetworkProtocols(struct soap*, struct _tds__GetNetworkProtocols *tds__GetNetworkProtocols, struct _tds__GetNetworkProtocolsResponse *tds__GetNetworkProtocolsResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetNetworkProtocols' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNetworkProtocols(struct soap*, struct _tds__SetNetworkProtocols *tds__SetNetworkProtocols, struct _tds__SetNetworkProtocolsResponse *tds__SetNetworkProtocolsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNetworkProtocols(struct soap*, struct _tds__SetNetworkProtocols *tds__SetNetworkProtocols, struct _tds__SetNetworkProtocolsResponse *tds__SetNetworkProtocolsResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetNetworkDefaultGateway' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNetworkDefaultGateway(struct soap*, struct _tds__GetNetworkDefaultGateway *tds__GetNetworkDefaultGateway, struct _tds__GetNetworkDefaultGatewayResponse *tds__GetNetworkDefaultGatewayResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNetworkDefaultGateway(struct soap*, struct _tds__GetNetworkDefaultGateway *tds__GetNetworkDefaultGateway, struct _tds__GetNetworkDefaultGatewayResponse *tds__GetNetworkDefaultGatewayResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetNetworkDefaultGateway' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNetworkDefaultGateway(struct soap*, struct _tds__SetNetworkDefaultGateway *tds__SetNetworkDefaultGateway, struct _tds__SetNetworkDefaultGatewayResponse *tds__SetNetworkDefaultGatewayResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNetworkDefaultGateway(struct soap*, struct _tds__SetNetworkDefaultGateway *tds__SetNetworkDefaultGateway, struct _tds__SetNetworkDefaultGatewayResponse *tds__SetNetworkDefaultGatewayResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetZeroConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetZeroConfiguration(struct soap*, struct _tds__GetZeroConfiguration *tds__GetZeroConfiguration, struct _tds__GetZeroConfigurationResponse *tds__GetZeroConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetZeroConfiguration(struct soap*, struct _tds__GetZeroConfiguration *tds__GetZeroConfiguration, struct _tds__GetZeroConfigurationResponse *tds__GetZeroConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetZeroConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetZeroConfiguration(struct soap*, struct _tds__SetZeroConfiguration *tds__SetZeroConfiguration, struct _tds__SetZeroConfigurationResponse *tds__SetZeroConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetZeroConfiguration(struct soap*, struct _tds__SetZeroConfiguration *tds__SetZeroConfiguration, struct _tds__SetZeroConfigurationResponse *tds__SetZeroConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetIPAddressFilter' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetIPAddressFilter(struct soap*, struct _tds__GetIPAddressFilter *tds__GetIPAddressFilter, struct _tds__GetIPAddressFilterResponse *tds__GetIPAddressFilterResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetIPAddressFilter(struct soap*, struct _tds__GetIPAddressFilter *tds__GetIPAddressFilter, struct _tds__GetIPAddressFilterResponse *tds__GetIPAddressFilterResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetIPAddressFilter' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetIPAddressFilter(struct soap*, struct _tds__SetIPAddressFilter *tds__SetIPAddressFilter, struct _tds__SetIPAddressFilterResponse *tds__SetIPAddressFilterResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetIPAddressFilter(struct soap*, struct _tds__SetIPAddressFilter *tds__SetIPAddressFilter, struct _tds__SetIPAddressFilterResponse *tds__SetIPAddressFilterResponse)
+	{return 0;}    
     /** Web service operation '__tds__AddIPAddressFilter' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__AddIPAddressFilter(struct soap*, struct _tds__AddIPAddressFilter *tds__AddIPAddressFilter, struct _tds__AddIPAddressFilterResponse *tds__AddIPAddressFilterResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__AddIPAddressFilter(struct soap*, struct _tds__AddIPAddressFilter *tds__AddIPAddressFilter, struct _tds__AddIPAddressFilterResponse *tds__AddIPAddressFilterResponse)
+	{return 0;}    
     /** Web service operation '__tds__RemoveIPAddressFilter' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__RemoveIPAddressFilter(struct soap*, struct _tds__RemoveIPAddressFilter *tds__RemoveIPAddressFilter, struct _tds__RemoveIPAddressFilterResponse *tds__RemoveIPAddressFilterResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__RemoveIPAddressFilter(struct soap*, struct _tds__RemoveIPAddressFilter *tds__RemoveIPAddressFilter, struct _tds__RemoveIPAddressFilterResponse *tds__RemoveIPAddressFilterResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetAccessPolicy' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetAccessPolicy(struct soap*, struct _tds__GetAccessPolicy *tds__GetAccessPolicy, struct _tds__GetAccessPolicyResponse *tds__GetAccessPolicyResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetAccessPolicy(struct soap*, struct _tds__GetAccessPolicy *tds__GetAccessPolicy, struct _tds__GetAccessPolicyResponse *tds__GetAccessPolicyResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetAccessPolicy' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetAccessPolicy(struct soap*, struct _tds__SetAccessPolicy *tds__SetAccessPolicy, struct _tds__SetAccessPolicyResponse *tds__SetAccessPolicyResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetAccessPolicy(struct soap*, struct _tds__SetAccessPolicy *tds__SetAccessPolicy, struct _tds__SetAccessPolicyResponse *tds__SetAccessPolicyResponse)
+	{return 0;}    
     /** Web service operation '__tds__CreateCertificate' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateCertificate(struct soap*, struct _tds__CreateCertificate *tds__CreateCertificate, struct _tds__CreateCertificateResponse *tds__CreateCertificateResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateCertificate(struct soap*, struct _tds__CreateCertificate *tds__CreateCertificate, struct _tds__CreateCertificateResponse *tds__CreateCertificateResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetCertificates' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCertificates(struct soap*, struct _tds__GetCertificates *tds__GetCertificates, struct _tds__GetCertificatesResponse *tds__GetCertificatesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCertificates(struct soap*, struct _tds__GetCertificates *tds__GetCertificates, struct _tds__GetCertificatesResponse *tds__GetCertificatesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetCertificatesStatus' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCertificatesStatus(struct soap*, struct _tds__GetCertificatesStatus *tds__GetCertificatesStatus, struct _tds__GetCertificatesStatusResponse *tds__GetCertificatesStatusResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCertificatesStatus(struct soap*, struct _tds__GetCertificatesStatus *tds__GetCertificatesStatus, struct _tds__GetCertificatesStatusResponse *tds__GetCertificatesStatusResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetCertificatesStatus' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetCertificatesStatus(struct soap*, struct _tds__SetCertificatesStatus *tds__SetCertificatesStatus, struct _tds__SetCertificatesStatusResponse *tds__SetCertificatesStatusResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetCertificatesStatus(struct soap*, struct _tds__SetCertificatesStatus *tds__SetCertificatesStatus, struct _tds__SetCertificatesStatusResponse *tds__SetCertificatesStatusResponse)
+	{return 0;}    
     /** Web service operation '__tds__DeleteCertificates' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteCertificates(struct soap*, struct _tds__DeleteCertificates *tds__DeleteCertificates, struct _tds__DeleteCertificatesResponse *tds__DeleteCertificatesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteCertificates(struct soap*, struct _tds__DeleteCertificates *tds__DeleteCertificates, struct _tds__DeleteCertificatesResponse *tds__DeleteCertificatesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetPkcs10Request' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetPkcs10Request(struct soap*, struct _tds__GetPkcs10Request *tds__GetPkcs10Request, struct _tds__GetPkcs10RequestResponse *tds__GetPkcs10RequestResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetPkcs10Request(struct soap*, struct _tds__GetPkcs10Request *tds__GetPkcs10Request, struct _tds__GetPkcs10RequestResponse *tds__GetPkcs10RequestResponse)
+	{return 0;}    
     /** Web service operation '__tds__LoadCertificates' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__LoadCertificates(struct soap*, struct _tds__LoadCertificates *tds__LoadCertificates, struct _tds__LoadCertificatesResponse *tds__LoadCertificatesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__LoadCertificates(struct soap*, struct _tds__LoadCertificates *tds__LoadCertificates, struct _tds__LoadCertificatesResponse *tds__LoadCertificatesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetClientCertificateMode' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetClientCertificateMode(struct soap*, struct _tds__GetClientCertificateMode *tds__GetClientCertificateMode, struct _tds__GetClientCertificateModeResponse *tds__GetClientCertificateModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetClientCertificateMode(struct soap*, struct _tds__GetClientCertificateMode *tds__GetClientCertificateMode, struct _tds__GetClientCertificateModeResponse *tds__GetClientCertificateModeResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetClientCertificateMode' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetClientCertificateMode(struct soap*, struct _tds__SetClientCertificateMode *tds__SetClientCertificateMode, struct _tds__SetClientCertificateModeResponse *tds__SetClientCertificateModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetClientCertificateMode(struct soap*, struct _tds__SetClientCertificateMode *tds__SetClientCertificateMode, struct _tds__SetClientCertificateModeResponse *tds__SetClientCertificateModeResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetRelayOutputs' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetRelayOutputs(struct soap*, struct _tds__GetRelayOutputs *tds__GetRelayOutputs, struct _tds__GetRelayOutputsResponse *tds__GetRelayOutputsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetRelayOutputs(struct soap*, struct _tds__GetRelayOutputs *tds__GetRelayOutputs, struct _tds__GetRelayOutputsResponse *tds__GetRelayOutputsResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetRelayOutputSettings' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRelayOutputSettings(struct soap*, struct _tds__SetRelayOutputSettings *tds__SetRelayOutputSettings, struct _tds__SetRelayOutputSettingsResponse *tds__SetRelayOutputSettingsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRelayOutputSettings(struct soap*, struct _tds__SetRelayOutputSettings *tds__SetRelayOutputSettings, struct _tds__SetRelayOutputSettingsResponse *tds__SetRelayOutputSettingsResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetRelayOutputState' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRelayOutputState(struct soap*, struct _tds__SetRelayOutputState *tds__SetRelayOutputState, struct _tds__SetRelayOutputStateResponse *tds__SetRelayOutputStateResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRelayOutputState(struct soap*, struct _tds__SetRelayOutputState *tds__SetRelayOutputState, struct _tds__SetRelayOutputStateResponse *tds__SetRelayOutputStateResponse)
+	{return 0;}    
     /** Web service operation '__tds__SendAuxiliaryCommand' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SendAuxiliaryCommand(struct soap*, struct _tds__SendAuxiliaryCommand *tds__SendAuxiliaryCommand, struct _tds__SendAuxiliaryCommandResponse *tds__SendAuxiliaryCommandResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SendAuxiliaryCommand(struct soap*, struct _tds__SendAuxiliaryCommand *tds__SendAuxiliaryCommand, struct _tds__SendAuxiliaryCommandResponse *tds__SendAuxiliaryCommandResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetCACertificates' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCACertificates(struct soap*, struct _tds__GetCACertificates *tds__GetCACertificates, struct _tds__GetCACertificatesResponse *tds__GetCACertificatesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCACertificates(struct soap*, struct _tds__GetCACertificates *tds__GetCACertificates, struct _tds__GetCACertificatesResponse *tds__GetCACertificatesResponse)
+	{return 0;}    
     /** Web service operation '__tds__LoadCertificateWithPrivateKey' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__LoadCertificateWithPrivateKey(struct soap*, struct _tds__LoadCertificateWithPrivateKey *tds__LoadCertificateWithPrivateKey, struct _tds__LoadCertificateWithPrivateKeyResponse *tds__LoadCertificateWithPrivateKeyResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__LoadCertificateWithPrivateKey(struct soap*, struct _tds__LoadCertificateWithPrivateKey *tds__LoadCertificateWithPrivateKey, struct _tds__LoadCertificateWithPrivateKeyResponse *tds__LoadCertificateWithPrivateKeyResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetCertificateInformation' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCertificateInformation(struct soap*, struct _tds__GetCertificateInformation *tds__GetCertificateInformation, struct _tds__GetCertificateInformationResponse *tds__GetCertificateInformationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCertificateInformation(struct soap*, struct _tds__GetCertificateInformation *tds__GetCertificateInformation, struct _tds__GetCertificateInformationResponse *tds__GetCertificateInformationResponse)
+	{return 0;}    
     /** Web service operation '__tds__LoadCACertificates' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__LoadCACertificates(struct soap*, struct _tds__LoadCACertificates *tds__LoadCACertificates, struct _tds__LoadCACertificatesResponse *tds__LoadCACertificatesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__LoadCACertificates(struct soap*, struct _tds__LoadCACertificates *tds__LoadCACertificates, struct _tds__LoadCACertificatesResponse *tds__LoadCACertificatesResponse)
+	{return 0;}    
     /** Web service operation '__tds__CreateDot1XConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateDot1XConfiguration(struct soap*, struct _tds__CreateDot1XConfiguration *tds__CreateDot1XConfiguration, struct _tds__CreateDot1XConfigurationResponse *tds__CreateDot1XConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateDot1XConfiguration(struct soap*, struct _tds__CreateDot1XConfiguration *tds__CreateDot1XConfiguration, struct _tds__CreateDot1XConfigurationResponse *tds__CreateDot1XConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetDot1XConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDot1XConfiguration(struct soap*, struct _tds__SetDot1XConfiguration *tds__SetDot1XConfiguration, struct _tds__SetDot1XConfigurationResponse *tds__SetDot1XConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDot1XConfiguration(struct soap*, struct _tds__SetDot1XConfiguration *tds__SetDot1XConfiguration, struct _tds__SetDot1XConfigurationResponse *tds__SetDot1XConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDot1XConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot1XConfiguration(struct soap*, struct _tds__GetDot1XConfiguration *tds__GetDot1XConfiguration, struct _tds__GetDot1XConfigurationResponse *tds__GetDot1XConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot1XConfiguration(struct soap*, struct _tds__GetDot1XConfiguration *tds__GetDot1XConfiguration, struct _tds__GetDot1XConfigurationResponse *tds__GetDot1XConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDot1XConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot1XConfigurations(struct soap*, struct _tds__GetDot1XConfigurations *tds__GetDot1XConfigurations, struct _tds__GetDot1XConfigurationsResponse *tds__GetDot1XConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot1XConfigurations(struct soap*, struct _tds__GetDot1XConfigurations *tds__GetDot1XConfigurations, struct _tds__GetDot1XConfigurationsResponse *tds__GetDot1XConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__tds__DeleteDot1XConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteDot1XConfiguration(struct soap*, struct _tds__DeleteDot1XConfiguration *tds__DeleteDot1XConfiguration, struct _tds__DeleteDot1XConfigurationResponse *tds__DeleteDot1XConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteDot1XConfiguration(struct soap*, struct _tds__DeleteDot1XConfiguration *tds__DeleteDot1XConfiguration, struct _tds__DeleteDot1XConfigurationResponse *tds__DeleteDot1XConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDot11Capabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot11Capabilities(struct soap*, struct _tds__GetDot11Capabilities *tds__GetDot11Capabilities, struct _tds__GetDot11CapabilitiesResponse *tds__GetDot11CapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot11Capabilities(struct soap*, struct _tds__GetDot11Capabilities *tds__GetDot11Capabilities, struct _tds__GetDot11CapabilitiesResponse *tds__GetDot11CapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDot11Status' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot11Status(struct soap*, struct _tds__GetDot11Status *tds__GetDot11Status, struct _tds__GetDot11StatusResponse *tds__GetDot11StatusResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot11Status(struct soap*, struct _tds__GetDot11Status *tds__GetDot11Status, struct _tds__GetDot11StatusResponse *tds__GetDot11StatusResponse)
+	{return 0;}    
     /** Web service operation '__tds__ScanAvailableDot11Networks' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__ScanAvailableDot11Networks(struct soap*, struct _tds__ScanAvailableDot11Networks *tds__ScanAvailableDot11Networks, struct _tds__ScanAvailableDot11NetworksResponse *tds__ScanAvailableDot11NetworksResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__ScanAvailableDot11Networks(struct soap*, struct _tds__ScanAvailableDot11Networks *tds__ScanAvailableDot11Networks, struct _tds__ScanAvailableDot11NetworksResponse *tds__ScanAvailableDot11NetworksResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetSystemUris' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemUris(struct soap*, struct _tds__GetSystemUris *tds__GetSystemUris, struct _tds__GetSystemUrisResponse *tds__GetSystemUrisResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemUris(struct soap*, struct _tds__GetSystemUris *tds__GetSystemUris, struct _tds__GetSystemUrisResponse *tds__GetSystemUrisResponse)
+	{return 0;}    
     /** Web service operation '__tds__StartFirmwareUpgrade' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__StartFirmwareUpgrade(struct soap*, struct _tds__StartFirmwareUpgrade *tds__StartFirmwareUpgrade, struct _tds__StartFirmwareUpgradeResponse *tds__StartFirmwareUpgradeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__StartFirmwareUpgrade(struct soap*, struct _tds__StartFirmwareUpgrade *tds__StartFirmwareUpgrade, struct _tds__StartFirmwareUpgradeResponse *tds__StartFirmwareUpgradeResponse)
+	{return 0;}    
     /** Web service operation '__tds__StartSystemRestore' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__StartSystemRestore(struct soap*, struct _tds__StartSystemRestore *tds__StartSystemRestore, struct _tds__StartSystemRestoreResponse *tds__StartSystemRestoreResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__StartSystemRestore(struct soap*, struct _tds__StartSystemRestore *tds__StartSystemRestore, struct _tds__StartSystemRestoreResponse *tds__StartSystemRestoreResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetStorageConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetStorageConfigurations(struct soap*, struct _tds__GetStorageConfigurations *tds__GetStorageConfigurations, struct _tds__GetStorageConfigurationsResponse *tds__GetStorageConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetStorageConfigurations(struct soap*, struct _tds__GetStorageConfigurations *tds__GetStorageConfigurations, struct _tds__GetStorageConfigurationsResponse *tds__GetStorageConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__tds__CreateStorageConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateStorageConfiguration(struct soap*, struct _tds__CreateStorageConfiguration *tds__CreateStorageConfiguration, struct _tds__CreateStorageConfigurationResponse *tds__CreateStorageConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateStorageConfiguration(struct soap*, struct _tds__CreateStorageConfiguration *tds__CreateStorageConfiguration, struct _tds__CreateStorageConfigurationResponse *tds__CreateStorageConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetStorageConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetStorageConfiguration(struct soap*, struct _tds__GetStorageConfiguration *tds__GetStorageConfiguration, struct _tds__GetStorageConfigurationResponse *tds__GetStorageConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetStorageConfiguration(struct soap*, struct _tds__GetStorageConfiguration *tds__GetStorageConfiguration, struct _tds__GetStorageConfigurationResponse *tds__GetStorageConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetStorageConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetStorageConfiguration(struct soap*, struct _tds__SetStorageConfiguration *tds__SetStorageConfiguration, struct _tds__SetStorageConfigurationResponse *tds__SetStorageConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetStorageConfiguration(struct soap*, struct _tds__SetStorageConfiguration *tds__SetStorageConfiguration, struct _tds__SetStorageConfigurationResponse *tds__SetStorageConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__DeleteStorageConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteStorageConfiguration(struct soap*, struct _tds__DeleteStorageConfiguration *tds__DeleteStorageConfiguration, struct _tds__DeleteStorageConfigurationResponse *tds__DeleteStorageConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteStorageConfiguration(struct soap*, struct _tds__DeleteStorageConfiguration *tds__DeleteStorageConfiguration, struct _tds__DeleteStorageConfigurationResponse *tds__DeleteStorageConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetGeoLocation' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetGeoLocation(struct soap*, struct _tds__GetGeoLocation *tds__GetGeoLocation, struct _tds__GetGeoLocationResponse *tds__GetGeoLocationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetGeoLocation(struct soap*, struct _tds__GetGeoLocation *tds__GetGeoLocation, struct _tds__GetGeoLocationResponse *tds__GetGeoLocationResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetGeoLocation' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetGeoLocation(struct soap*, struct _tds__SetGeoLocation *tds__SetGeoLocation, struct _tds__SetGeoLocationResponse *tds__SetGeoLocationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetGeoLocation(struct soap*, struct _tds__SetGeoLocation *tds__SetGeoLocation, struct _tds__SetGeoLocationResponse *tds__SetGeoLocationResponse)
+	{return 0;}    
     /** Web service operation '__tds__DeleteGeoLocation' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteGeoLocation(struct soap*, struct _tds__DeleteGeoLocation *tds__DeleteGeoLocation, struct _tds__DeleteGeoLocationResponse *tds__DeleteGeoLocationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteGeoLocation(struct soap*, struct _tds__DeleteGeoLocation *tds__DeleteGeoLocation, struct _tds__DeleteGeoLocationResponse *tds__DeleteGeoLocationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetServices_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetServices_(struct soap*, struct _tds__GetServices *tds__GetServices, struct _tds__GetServicesResponse *tds__GetServicesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetServices_(struct soap*, struct _tds__GetServices *tds__GetServices, struct _tds__GetServicesResponse *tds__GetServicesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetServiceCapabilities_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetServiceCapabilities_(struct soap*, struct _tds__GetServiceCapabilities *tds__GetServiceCapabilities, struct _tds__GetServiceCapabilitiesResponse *tds__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetServiceCapabilities_(struct soap*, struct _tds__GetServiceCapabilities *tds__GetServiceCapabilities, struct _tds__GetServiceCapabilitiesResponse *tds__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDeviceInformation_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDeviceInformation_(struct soap*, struct _tds__GetDeviceInformation *tds__GetDeviceInformation, struct _tds__GetDeviceInformationResponse *tds__GetDeviceInformationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDeviceInformation_(struct soap*, struct _tds__GetDeviceInformation *tds__GetDeviceInformation, struct _tds__GetDeviceInformationResponse *tds__GetDeviceInformationResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetSystemDateAndTime_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetSystemDateAndTime_(struct soap*, struct _tds__SetSystemDateAndTime *tds__SetSystemDateAndTime, struct _tds__SetSystemDateAndTimeResponse *tds__SetSystemDateAndTimeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetSystemDateAndTime_(struct soap*, struct _tds__SetSystemDateAndTime *tds__SetSystemDateAndTime, struct _tds__SetSystemDateAndTimeResponse *tds__SetSystemDateAndTimeResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetSystemDateAndTime_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemDateAndTime_(struct soap*, struct _tds__GetSystemDateAndTime *tds__GetSystemDateAndTime, struct _tds__GetSystemDateAndTimeResponse *tds__GetSystemDateAndTimeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemDateAndTime_(struct soap*, struct _tds__GetSystemDateAndTime *tds__GetSystemDateAndTime, struct _tds__GetSystemDateAndTimeResponse *tds__GetSystemDateAndTimeResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetSystemFactoryDefault_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetSystemFactoryDefault_(struct soap*, struct _tds__SetSystemFactoryDefault *tds__SetSystemFactoryDefault, struct _tds__SetSystemFactoryDefaultResponse *tds__SetSystemFactoryDefaultResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetSystemFactoryDefault_(struct soap*, struct _tds__SetSystemFactoryDefault *tds__SetSystemFactoryDefault, struct _tds__SetSystemFactoryDefaultResponse *tds__SetSystemFactoryDefaultResponse)
+	{return 0;}    
     /** Web service operation '__tds__UpgradeSystemFirmware_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__UpgradeSystemFirmware_(struct soap*, struct _tds__UpgradeSystemFirmware *tds__UpgradeSystemFirmware, struct _tds__UpgradeSystemFirmwareResponse *tds__UpgradeSystemFirmwareResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__UpgradeSystemFirmware_(struct soap*, struct _tds__UpgradeSystemFirmware *tds__UpgradeSystemFirmware, struct _tds__UpgradeSystemFirmwareResponse *tds__UpgradeSystemFirmwareResponse)
+	{return 0;}    
     /** Web service operation '__tds__SystemReboot_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SystemReboot_(struct soap*, struct _tds__SystemReboot *tds__SystemReboot, struct _tds__SystemRebootResponse *tds__SystemRebootResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SystemReboot_(struct soap*, struct _tds__SystemReboot *tds__SystemReboot, struct _tds__SystemRebootResponse *tds__SystemRebootResponse)
+	{return 0;}    
     /** Web service operation '__tds__RestoreSystem_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__RestoreSystem_(struct soap*, struct _tds__RestoreSystem *tds__RestoreSystem, struct _tds__RestoreSystemResponse *tds__RestoreSystemResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__RestoreSystem_(struct soap*, struct _tds__RestoreSystem *tds__RestoreSystem, struct _tds__RestoreSystemResponse *tds__RestoreSystemResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetSystemBackup_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemBackup_(struct soap*, struct _tds__GetSystemBackup *tds__GetSystemBackup, struct _tds__GetSystemBackupResponse *tds__GetSystemBackupResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemBackup_(struct soap*, struct _tds__GetSystemBackup *tds__GetSystemBackup, struct _tds__GetSystemBackupResponse *tds__GetSystemBackupResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetSystemLog_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemLog_(struct soap*, struct _tds__GetSystemLog *tds__GetSystemLog, struct _tds__GetSystemLogResponse *tds__GetSystemLogResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemLog_(struct soap*, struct _tds__GetSystemLog *tds__GetSystemLog, struct _tds__GetSystemLogResponse *tds__GetSystemLogResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetSystemSupportInformation_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemSupportInformation_(struct soap*, struct _tds__GetSystemSupportInformation *tds__GetSystemSupportInformation, struct _tds__GetSystemSupportInformationResponse *tds__GetSystemSupportInformationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemSupportInformation_(struct soap*, struct _tds__GetSystemSupportInformation *tds__GetSystemSupportInformation, struct _tds__GetSystemSupportInformationResponse *tds__GetSystemSupportInformationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetScopes_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetScopes_(struct soap*, struct _tds__GetScopes *tds__GetScopes, struct _tds__GetScopesResponse *tds__GetScopesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetScopes_(struct soap*, struct _tds__GetScopes *tds__GetScopes, struct _tds__GetScopesResponse *tds__GetScopesResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetScopes_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetScopes_(struct soap*, struct _tds__SetScopes *tds__SetScopes, struct _tds__SetScopesResponse *tds__SetScopesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetScopes_(struct soap*, struct _tds__SetScopes *tds__SetScopes, struct _tds__SetScopesResponse *tds__SetScopesResponse)
+	{return 0;}    
     /** Web service operation '__tds__AddScopes_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__AddScopes_(struct soap*, struct _tds__AddScopes *tds__AddScopes, struct _tds__AddScopesResponse *tds__AddScopesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__AddScopes_(struct soap*, struct _tds__AddScopes *tds__AddScopes, struct _tds__AddScopesResponse *tds__AddScopesResponse)
+	{return 0;}    
     /** Web service operation '__tds__RemoveScopes_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__RemoveScopes_(struct soap*, struct _tds__RemoveScopes *tds__RemoveScopes, struct _tds__RemoveScopesResponse *tds__RemoveScopesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__RemoveScopes_(struct soap*, struct _tds__RemoveScopes *tds__RemoveScopes, struct _tds__RemoveScopesResponse *tds__RemoveScopesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDiscoveryMode_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDiscoveryMode_(struct soap*, struct _tds__GetDiscoveryMode *tds__GetDiscoveryMode, struct _tds__GetDiscoveryModeResponse *tds__GetDiscoveryModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDiscoveryMode_(struct soap*, struct _tds__GetDiscoveryMode *tds__GetDiscoveryMode, struct _tds__GetDiscoveryModeResponse *tds__GetDiscoveryModeResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetDiscoveryMode_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDiscoveryMode_(struct soap*, struct _tds__SetDiscoveryMode *tds__SetDiscoveryMode, struct _tds__SetDiscoveryModeResponse *tds__SetDiscoveryModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDiscoveryMode_(struct soap*, struct _tds__SetDiscoveryMode *tds__SetDiscoveryMode, struct _tds__SetDiscoveryModeResponse *tds__SetDiscoveryModeResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetRemoteDiscoveryMode_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetRemoteDiscoveryMode_(struct soap*, struct _tds__GetRemoteDiscoveryMode *tds__GetRemoteDiscoveryMode, struct _tds__GetRemoteDiscoveryModeResponse *tds__GetRemoteDiscoveryModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetRemoteDiscoveryMode_(struct soap*, struct _tds__GetRemoteDiscoveryMode *tds__GetRemoteDiscoveryMode, struct _tds__GetRemoteDiscoveryModeResponse *tds__GetRemoteDiscoveryModeResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetRemoteDiscoveryMode_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRemoteDiscoveryMode_(struct soap*, struct _tds__SetRemoteDiscoveryMode *tds__SetRemoteDiscoveryMode, struct _tds__SetRemoteDiscoveryModeResponse *tds__SetRemoteDiscoveryModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRemoteDiscoveryMode_(struct soap*, struct _tds__SetRemoteDiscoveryMode *tds__SetRemoteDiscoveryMode, struct _tds__SetRemoteDiscoveryModeResponse *tds__SetRemoteDiscoveryModeResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDPAddresses_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDPAddresses_(struct soap*, struct _tds__GetDPAddresses *tds__GetDPAddresses, struct _tds__GetDPAddressesResponse *tds__GetDPAddressesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDPAddresses_(struct soap*, struct _tds__GetDPAddresses *tds__GetDPAddresses, struct _tds__GetDPAddressesResponse *tds__GetDPAddressesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetEndpointReference_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetEndpointReference_(struct soap*, struct _tds__GetEndpointReference *tds__GetEndpointReference, struct _tds__GetEndpointReferenceResponse *tds__GetEndpointReferenceResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetEndpointReference_(struct soap*, struct _tds__GetEndpointReference *tds__GetEndpointReference, struct _tds__GetEndpointReferenceResponse *tds__GetEndpointReferenceResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetRemoteUser_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetRemoteUser_(struct soap*, struct _tds__GetRemoteUser *tds__GetRemoteUser, struct _tds__GetRemoteUserResponse *tds__GetRemoteUserResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetRemoteUser_(struct soap*, struct _tds__GetRemoteUser *tds__GetRemoteUser, struct _tds__GetRemoteUserResponse *tds__GetRemoteUserResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetRemoteUser_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRemoteUser_(struct soap*, struct _tds__SetRemoteUser *tds__SetRemoteUser, struct _tds__SetRemoteUserResponse *tds__SetRemoteUserResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRemoteUser_(struct soap*, struct _tds__SetRemoteUser *tds__SetRemoteUser, struct _tds__SetRemoteUserResponse *tds__SetRemoteUserResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetUsers_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetUsers_(struct soap*, struct _tds__GetUsers *tds__GetUsers, struct _tds__GetUsersResponse *tds__GetUsersResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetUsers_(struct soap*, struct _tds__GetUsers *tds__GetUsers, struct _tds__GetUsersResponse *tds__GetUsersResponse)
+	{return 0;}    
     /** Web service operation '__tds__CreateUsers_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateUsers_(struct soap*, struct _tds__CreateUsers *tds__CreateUsers, struct _tds__CreateUsersResponse *tds__CreateUsersResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateUsers_(struct soap*, struct _tds__CreateUsers *tds__CreateUsers, struct _tds__CreateUsersResponse *tds__CreateUsersResponse)
+	{return 0;}    
     /** Web service operation '__tds__DeleteUsers_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteUsers_(struct soap*, struct _tds__DeleteUsers *tds__DeleteUsers, struct _tds__DeleteUsersResponse *tds__DeleteUsersResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteUsers_(struct soap*, struct _tds__DeleteUsers *tds__DeleteUsers, struct _tds__DeleteUsersResponse *tds__DeleteUsersResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetUser_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetUser_(struct soap*, struct _tds__SetUser *tds__SetUser, struct _tds__SetUserResponse *tds__SetUserResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetUser_(struct soap*, struct _tds__SetUser *tds__SetUser, struct _tds__SetUserResponse *tds__SetUserResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetWsdlUrl_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetWsdlUrl_(struct soap*, struct _tds__GetWsdlUrl *tds__GetWsdlUrl, struct _tds__GetWsdlUrlResponse *tds__GetWsdlUrlResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetWsdlUrl_(struct soap*, struct _tds__GetWsdlUrl *tds__GetWsdlUrl, struct _tds__GetWsdlUrlResponse *tds__GetWsdlUrlResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetCapabilities_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCapabilities_(struct soap*, struct _tds__GetCapabilities *tds__GetCapabilities, struct _tds__GetCapabilitiesResponse *tds__GetCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCapabilities_(struct soap*, struct _tds__GetCapabilities *tds__GetCapabilities, struct _tds__GetCapabilitiesResponse *tds__GetCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetDPAddresses_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDPAddresses_(struct soap*, struct _tds__SetDPAddresses *tds__SetDPAddresses, struct _tds__SetDPAddressesResponse *tds__SetDPAddressesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDPAddresses_(struct soap*, struct _tds__SetDPAddresses *tds__SetDPAddresses, struct _tds__SetDPAddressesResponse *tds__SetDPAddressesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetHostname_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetHostname_(struct soap*, struct _tds__GetHostname *tds__GetHostname, struct _tds__GetHostnameResponse *tds__GetHostnameResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetHostname_(struct soap*, struct _tds__GetHostname *tds__GetHostname, struct _tds__GetHostnameResponse *tds__GetHostnameResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetHostname_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetHostname_(struct soap*, struct _tds__SetHostname *tds__SetHostname, struct _tds__SetHostnameResponse *tds__SetHostnameResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetHostname_(struct soap*, struct _tds__SetHostname *tds__SetHostname, struct _tds__SetHostnameResponse *tds__SetHostnameResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetHostnameFromDHCP_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetHostnameFromDHCP_(struct soap*, struct _tds__SetHostnameFromDHCP *tds__SetHostnameFromDHCP, struct _tds__SetHostnameFromDHCPResponse *tds__SetHostnameFromDHCPResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetHostnameFromDHCP_(struct soap*, struct _tds__SetHostnameFromDHCP *tds__SetHostnameFromDHCP, struct _tds__SetHostnameFromDHCPResponse *tds__SetHostnameFromDHCPResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDNS_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDNS_(struct soap*, struct _tds__GetDNS *tds__GetDNS, struct _tds__GetDNSResponse *tds__GetDNSResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDNS_(struct soap*, struct _tds__GetDNS *tds__GetDNS, struct _tds__GetDNSResponse *tds__GetDNSResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetDNS_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDNS_(struct soap*, struct _tds__SetDNS *tds__SetDNS, struct _tds__SetDNSResponse *tds__SetDNSResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDNS_(struct soap*, struct _tds__SetDNS *tds__SetDNS, struct _tds__SetDNSResponse *tds__SetDNSResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetNTP_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNTP_(struct soap*, struct _tds__GetNTP *tds__GetNTP, struct _tds__GetNTPResponse *tds__GetNTPResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNTP_(struct soap*, struct _tds__GetNTP *tds__GetNTP, struct _tds__GetNTPResponse *tds__GetNTPResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetNTP_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNTP_(struct soap*, struct _tds__SetNTP *tds__SetNTP, struct _tds__SetNTPResponse *tds__SetNTPResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNTP_(struct soap*, struct _tds__SetNTP *tds__SetNTP, struct _tds__SetNTPResponse *tds__SetNTPResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDynamicDNS_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDynamicDNS_(struct soap*, struct _tds__GetDynamicDNS *tds__GetDynamicDNS, struct _tds__GetDynamicDNSResponse *tds__GetDynamicDNSResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDynamicDNS_(struct soap*, struct _tds__GetDynamicDNS *tds__GetDynamicDNS, struct _tds__GetDynamicDNSResponse *tds__GetDynamicDNSResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetDynamicDNS_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDynamicDNS_(struct soap*, struct _tds__SetDynamicDNS *tds__SetDynamicDNS, struct _tds__SetDynamicDNSResponse *tds__SetDynamicDNSResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDynamicDNS_(struct soap*, struct _tds__SetDynamicDNS *tds__SetDynamicDNS, struct _tds__SetDynamicDNSResponse *tds__SetDynamicDNSResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetNetworkInterfaces_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNetworkInterfaces_(struct soap*, struct _tds__GetNetworkInterfaces *tds__GetNetworkInterfaces, struct _tds__GetNetworkInterfacesResponse *tds__GetNetworkInterfacesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNetworkInterfaces_(struct soap*, struct _tds__GetNetworkInterfaces *tds__GetNetworkInterfaces, struct _tds__GetNetworkInterfacesResponse *tds__GetNetworkInterfacesResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetNetworkInterfaces_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNetworkInterfaces_(struct soap*, struct _tds__SetNetworkInterfaces *tds__SetNetworkInterfaces, struct _tds__SetNetworkInterfacesResponse *tds__SetNetworkInterfacesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNetworkInterfaces_(struct soap*, struct _tds__SetNetworkInterfaces *tds__SetNetworkInterfaces, struct _tds__SetNetworkInterfacesResponse *tds__SetNetworkInterfacesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetNetworkProtocols_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNetworkProtocols_(struct soap*, struct _tds__GetNetworkProtocols *tds__GetNetworkProtocols, struct _tds__GetNetworkProtocolsResponse *tds__GetNetworkProtocolsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNetworkProtocols_(struct soap*, struct _tds__GetNetworkProtocols *tds__GetNetworkProtocols, struct _tds__GetNetworkProtocolsResponse *tds__GetNetworkProtocolsResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetNetworkProtocols_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNetworkProtocols_(struct soap*, struct _tds__SetNetworkProtocols *tds__SetNetworkProtocols, struct _tds__SetNetworkProtocolsResponse *tds__SetNetworkProtocolsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNetworkProtocols_(struct soap*, struct _tds__SetNetworkProtocols *tds__SetNetworkProtocols, struct _tds__SetNetworkProtocolsResponse *tds__SetNetworkProtocolsResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetNetworkDefaultGateway_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNetworkDefaultGateway_(struct soap*, struct _tds__GetNetworkDefaultGateway *tds__GetNetworkDefaultGateway, struct _tds__GetNetworkDefaultGatewayResponse *tds__GetNetworkDefaultGatewayResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetNetworkDefaultGateway_(struct soap*, struct _tds__GetNetworkDefaultGateway *tds__GetNetworkDefaultGateway, struct _tds__GetNetworkDefaultGatewayResponse *tds__GetNetworkDefaultGatewayResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetNetworkDefaultGateway_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNetworkDefaultGateway_(struct soap*, struct _tds__SetNetworkDefaultGateway *tds__SetNetworkDefaultGateway, struct _tds__SetNetworkDefaultGatewayResponse *tds__SetNetworkDefaultGatewayResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetNetworkDefaultGateway_(struct soap*, struct _tds__SetNetworkDefaultGateway *tds__SetNetworkDefaultGateway, struct _tds__SetNetworkDefaultGatewayResponse *tds__SetNetworkDefaultGatewayResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetZeroConfiguration_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetZeroConfiguration_(struct soap*, struct _tds__GetZeroConfiguration *tds__GetZeroConfiguration, struct _tds__GetZeroConfigurationResponse *tds__GetZeroConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetZeroConfiguration_(struct soap*, struct _tds__GetZeroConfiguration *tds__GetZeroConfiguration, struct _tds__GetZeroConfigurationResponse *tds__GetZeroConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetZeroConfiguration_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetZeroConfiguration_(struct soap*, struct _tds__SetZeroConfiguration *tds__SetZeroConfiguration, struct _tds__SetZeroConfigurationResponse *tds__SetZeroConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetZeroConfiguration_(struct soap*, struct _tds__SetZeroConfiguration *tds__SetZeroConfiguration, struct _tds__SetZeroConfigurationResponse *tds__SetZeroConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetIPAddressFilter_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetIPAddressFilter_(struct soap*, struct _tds__GetIPAddressFilter *tds__GetIPAddressFilter, struct _tds__GetIPAddressFilterResponse *tds__GetIPAddressFilterResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetIPAddressFilter_(struct soap*, struct _tds__GetIPAddressFilter *tds__GetIPAddressFilter, struct _tds__GetIPAddressFilterResponse *tds__GetIPAddressFilterResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetIPAddressFilter_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetIPAddressFilter_(struct soap*, struct _tds__SetIPAddressFilter *tds__SetIPAddressFilter, struct _tds__SetIPAddressFilterResponse *tds__SetIPAddressFilterResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetIPAddressFilter_(struct soap*, struct _tds__SetIPAddressFilter *tds__SetIPAddressFilter, struct _tds__SetIPAddressFilterResponse *tds__SetIPAddressFilterResponse)
+	{return 0;}    
     /** Web service operation '__tds__AddIPAddressFilter_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__AddIPAddressFilter_(struct soap*, struct _tds__AddIPAddressFilter *tds__AddIPAddressFilter, struct _tds__AddIPAddressFilterResponse *tds__AddIPAddressFilterResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__AddIPAddressFilter_(struct soap*, struct _tds__AddIPAddressFilter *tds__AddIPAddressFilter, struct _tds__AddIPAddressFilterResponse *tds__AddIPAddressFilterResponse)
+	{return 0;}    
     /** Web service operation '__tds__RemoveIPAddressFilter_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__RemoveIPAddressFilter_(struct soap*, struct _tds__RemoveIPAddressFilter *tds__RemoveIPAddressFilter, struct _tds__RemoveIPAddressFilterResponse *tds__RemoveIPAddressFilterResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__RemoveIPAddressFilter_(struct soap*, struct _tds__RemoveIPAddressFilter *tds__RemoveIPAddressFilter, struct _tds__RemoveIPAddressFilterResponse *tds__RemoveIPAddressFilterResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetAccessPolicy_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetAccessPolicy_(struct soap*, struct _tds__GetAccessPolicy *tds__GetAccessPolicy, struct _tds__GetAccessPolicyResponse *tds__GetAccessPolicyResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetAccessPolicy_(struct soap*, struct _tds__GetAccessPolicy *tds__GetAccessPolicy, struct _tds__GetAccessPolicyResponse *tds__GetAccessPolicyResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetAccessPolicy_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetAccessPolicy_(struct soap*, struct _tds__SetAccessPolicy *tds__SetAccessPolicy, struct _tds__SetAccessPolicyResponse *tds__SetAccessPolicyResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetAccessPolicy_(struct soap*, struct _tds__SetAccessPolicy *tds__SetAccessPolicy, struct _tds__SetAccessPolicyResponse *tds__SetAccessPolicyResponse)
+	{return 0;}    
     /** Web service operation '__tds__CreateCertificate_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateCertificate_(struct soap*, struct _tds__CreateCertificate *tds__CreateCertificate, struct _tds__CreateCertificateResponse *tds__CreateCertificateResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateCertificate_(struct soap*, struct _tds__CreateCertificate *tds__CreateCertificate, struct _tds__CreateCertificateResponse *tds__CreateCertificateResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetCertificates_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCertificates_(struct soap*, struct _tds__GetCertificates *tds__GetCertificates, struct _tds__GetCertificatesResponse *tds__GetCertificatesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCertificates_(struct soap*, struct _tds__GetCertificates *tds__GetCertificates, struct _tds__GetCertificatesResponse *tds__GetCertificatesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetCertificatesStatus_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCertificatesStatus_(struct soap*, struct _tds__GetCertificatesStatus *tds__GetCertificatesStatus, struct _tds__GetCertificatesStatusResponse *tds__GetCertificatesStatusResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCertificatesStatus_(struct soap*, struct _tds__GetCertificatesStatus *tds__GetCertificatesStatus, struct _tds__GetCertificatesStatusResponse *tds__GetCertificatesStatusResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetCertificatesStatus_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetCertificatesStatus_(struct soap*, struct _tds__SetCertificatesStatus *tds__SetCertificatesStatus, struct _tds__SetCertificatesStatusResponse *tds__SetCertificatesStatusResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetCertificatesStatus_(struct soap*, struct _tds__SetCertificatesStatus *tds__SetCertificatesStatus, struct _tds__SetCertificatesStatusResponse *tds__SetCertificatesStatusResponse)
+	{return 0;}    
     /** Web service operation '__tds__DeleteCertificates_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteCertificates_(struct soap*, struct _tds__DeleteCertificates *tds__DeleteCertificates, struct _tds__DeleteCertificatesResponse *tds__DeleteCertificatesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteCertificates_(struct soap*, struct _tds__DeleteCertificates *tds__DeleteCertificates, struct _tds__DeleteCertificatesResponse *tds__DeleteCertificatesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetPkcs10Request_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetPkcs10Request_(struct soap*, struct _tds__GetPkcs10Request *tds__GetPkcs10Request, struct _tds__GetPkcs10RequestResponse *tds__GetPkcs10RequestResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetPkcs10Request_(struct soap*, struct _tds__GetPkcs10Request *tds__GetPkcs10Request, struct _tds__GetPkcs10RequestResponse *tds__GetPkcs10RequestResponse)
+	{return 0;}    
     /** Web service operation '__tds__LoadCertificates_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__LoadCertificates_(struct soap*, struct _tds__LoadCertificates *tds__LoadCertificates, struct _tds__LoadCertificatesResponse *tds__LoadCertificatesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__LoadCertificates_(struct soap*, struct _tds__LoadCertificates *tds__LoadCertificates, struct _tds__LoadCertificatesResponse *tds__LoadCertificatesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetClientCertificateMode_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetClientCertificateMode_(struct soap*, struct _tds__GetClientCertificateMode *tds__GetClientCertificateMode, struct _tds__GetClientCertificateModeResponse *tds__GetClientCertificateModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetClientCertificateMode_(struct soap*, struct _tds__GetClientCertificateMode *tds__GetClientCertificateMode, struct _tds__GetClientCertificateModeResponse *tds__GetClientCertificateModeResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetClientCertificateMode_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetClientCertificateMode_(struct soap*, struct _tds__SetClientCertificateMode *tds__SetClientCertificateMode, struct _tds__SetClientCertificateModeResponse *tds__SetClientCertificateModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetClientCertificateMode_(struct soap*, struct _tds__SetClientCertificateMode *tds__SetClientCertificateMode, struct _tds__SetClientCertificateModeResponse *tds__SetClientCertificateModeResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetRelayOutputs_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetRelayOutputs_(struct soap*, struct _tds__GetRelayOutputs *tds__GetRelayOutputs, struct _tds__GetRelayOutputsResponse *tds__GetRelayOutputsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetRelayOutputs_(struct soap*, struct _tds__GetRelayOutputs *tds__GetRelayOutputs, struct _tds__GetRelayOutputsResponse *tds__GetRelayOutputsResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetRelayOutputSettings_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRelayOutputSettings_(struct soap*, struct _tds__SetRelayOutputSettings *tds__SetRelayOutputSettings, struct _tds__SetRelayOutputSettingsResponse *tds__SetRelayOutputSettingsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRelayOutputSettings_(struct soap*, struct _tds__SetRelayOutputSettings *tds__SetRelayOutputSettings, struct _tds__SetRelayOutputSettingsResponse *tds__SetRelayOutputSettingsResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetRelayOutputState_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRelayOutputState_(struct soap*, struct _tds__SetRelayOutputState *tds__SetRelayOutputState, struct _tds__SetRelayOutputStateResponse *tds__SetRelayOutputStateResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetRelayOutputState_(struct soap*, struct _tds__SetRelayOutputState *tds__SetRelayOutputState, struct _tds__SetRelayOutputStateResponse *tds__SetRelayOutputStateResponse)
+	{return 0;}    
     /** Web service operation '__tds__SendAuxiliaryCommand_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SendAuxiliaryCommand_(struct soap*, struct _tds__SendAuxiliaryCommand *tds__SendAuxiliaryCommand, struct _tds__SendAuxiliaryCommandResponse *tds__SendAuxiliaryCommandResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SendAuxiliaryCommand_(struct soap*, struct _tds__SendAuxiliaryCommand *tds__SendAuxiliaryCommand, struct _tds__SendAuxiliaryCommandResponse *tds__SendAuxiliaryCommandResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetCACertificates_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCACertificates_(struct soap*, struct _tds__GetCACertificates *tds__GetCACertificates, struct _tds__GetCACertificatesResponse *tds__GetCACertificatesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCACertificates_(struct soap*, struct _tds__GetCACertificates *tds__GetCACertificates, struct _tds__GetCACertificatesResponse *tds__GetCACertificatesResponse)
+	{return 0;}    
     /** Web service operation '__tds__LoadCertificateWithPrivateKey_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__LoadCertificateWithPrivateKey_(struct soap*, struct _tds__LoadCertificateWithPrivateKey *tds__LoadCertificateWithPrivateKey, struct _tds__LoadCertificateWithPrivateKeyResponse *tds__LoadCertificateWithPrivateKeyResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__LoadCertificateWithPrivateKey_(struct soap*, struct _tds__LoadCertificateWithPrivateKey *tds__LoadCertificateWithPrivateKey, struct _tds__LoadCertificateWithPrivateKeyResponse *tds__LoadCertificateWithPrivateKeyResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetCertificateInformation_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCertificateInformation_(struct soap*, struct _tds__GetCertificateInformation *tds__GetCertificateInformation, struct _tds__GetCertificateInformationResponse *tds__GetCertificateInformationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetCertificateInformation_(struct soap*, struct _tds__GetCertificateInformation *tds__GetCertificateInformation, struct _tds__GetCertificateInformationResponse *tds__GetCertificateInformationResponse)
+	{return 0;}    
     /** Web service operation '__tds__LoadCACertificates_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__LoadCACertificates_(struct soap*, struct _tds__LoadCACertificates *tds__LoadCACertificates, struct _tds__LoadCACertificatesResponse *tds__LoadCACertificatesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__LoadCACertificates_(struct soap*, struct _tds__LoadCACertificates *tds__LoadCACertificates, struct _tds__LoadCACertificatesResponse *tds__LoadCACertificatesResponse)
+	{return 0;}    
     /** Web service operation '__tds__CreateDot1XConfiguration_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateDot1XConfiguration_(struct soap*, struct _tds__CreateDot1XConfiguration *tds__CreateDot1XConfiguration, struct _tds__CreateDot1XConfigurationResponse *tds__CreateDot1XConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateDot1XConfiguration_(struct soap*, struct _tds__CreateDot1XConfiguration *tds__CreateDot1XConfiguration, struct _tds__CreateDot1XConfigurationResponse *tds__CreateDot1XConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetDot1XConfiguration_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDot1XConfiguration_(struct soap*, struct _tds__SetDot1XConfiguration *tds__SetDot1XConfiguration, struct _tds__SetDot1XConfigurationResponse *tds__SetDot1XConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetDot1XConfiguration_(struct soap*, struct _tds__SetDot1XConfiguration *tds__SetDot1XConfiguration, struct _tds__SetDot1XConfigurationResponse *tds__SetDot1XConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDot1XConfiguration_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot1XConfiguration_(struct soap*, struct _tds__GetDot1XConfiguration *tds__GetDot1XConfiguration, struct _tds__GetDot1XConfigurationResponse *tds__GetDot1XConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot1XConfiguration_(struct soap*, struct _tds__GetDot1XConfiguration *tds__GetDot1XConfiguration, struct _tds__GetDot1XConfigurationResponse *tds__GetDot1XConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDot1XConfigurations_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot1XConfigurations_(struct soap*, struct _tds__GetDot1XConfigurations *tds__GetDot1XConfigurations, struct _tds__GetDot1XConfigurationsResponse *tds__GetDot1XConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot1XConfigurations_(struct soap*, struct _tds__GetDot1XConfigurations *tds__GetDot1XConfigurations, struct _tds__GetDot1XConfigurationsResponse *tds__GetDot1XConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__tds__DeleteDot1XConfiguration_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteDot1XConfiguration_(struct soap*, struct _tds__DeleteDot1XConfiguration *tds__DeleteDot1XConfiguration, struct _tds__DeleteDot1XConfigurationResponse *tds__DeleteDot1XConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteDot1XConfiguration_(struct soap*, struct _tds__DeleteDot1XConfiguration *tds__DeleteDot1XConfiguration, struct _tds__DeleteDot1XConfigurationResponse *tds__DeleteDot1XConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDot11Capabilities_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot11Capabilities_(struct soap*, struct _tds__GetDot11Capabilities *tds__GetDot11Capabilities, struct _tds__GetDot11CapabilitiesResponse *tds__GetDot11CapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot11Capabilities_(struct soap*, struct _tds__GetDot11Capabilities *tds__GetDot11Capabilities, struct _tds__GetDot11CapabilitiesResponse *tds__GetDot11CapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetDot11Status_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot11Status_(struct soap*, struct _tds__GetDot11Status *tds__GetDot11Status, struct _tds__GetDot11StatusResponse *tds__GetDot11StatusResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetDot11Status_(struct soap*, struct _tds__GetDot11Status *tds__GetDot11Status, struct _tds__GetDot11StatusResponse *tds__GetDot11StatusResponse)
+	{return 0;}    
     /** Web service operation '__tds__ScanAvailableDot11Networks_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__ScanAvailableDot11Networks_(struct soap*, struct _tds__ScanAvailableDot11Networks *tds__ScanAvailableDot11Networks, struct _tds__ScanAvailableDot11NetworksResponse *tds__ScanAvailableDot11NetworksResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__ScanAvailableDot11Networks_(struct soap*, struct _tds__ScanAvailableDot11Networks *tds__ScanAvailableDot11Networks, struct _tds__ScanAvailableDot11NetworksResponse *tds__ScanAvailableDot11NetworksResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetSystemUris_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemUris_(struct soap*, struct _tds__GetSystemUris *tds__GetSystemUris, struct _tds__GetSystemUrisResponse *tds__GetSystemUrisResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetSystemUris_(struct soap*, struct _tds__GetSystemUris *tds__GetSystemUris, struct _tds__GetSystemUrisResponse *tds__GetSystemUrisResponse)
+	{return 0;}    
     /** Web service operation '__tds__StartFirmwareUpgrade_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__StartFirmwareUpgrade_(struct soap*, struct _tds__StartFirmwareUpgrade *tds__StartFirmwareUpgrade, struct _tds__StartFirmwareUpgradeResponse *tds__StartFirmwareUpgradeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__StartFirmwareUpgrade_(struct soap*, struct _tds__StartFirmwareUpgrade *tds__StartFirmwareUpgrade, struct _tds__StartFirmwareUpgradeResponse *tds__StartFirmwareUpgradeResponse)
+	{return 0;}    
     /** Web service operation '__tds__StartSystemRestore_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__StartSystemRestore_(struct soap*, struct _tds__StartSystemRestore *tds__StartSystemRestore, struct _tds__StartSystemRestoreResponse *tds__StartSystemRestoreResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__StartSystemRestore_(struct soap*, struct _tds__StartSystemRestore *tds__StartSystemRestore, struct _tds__StartSystemRestoreResponse *tds__StartSystemRestoreResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetStorageConfigurations_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetStorageConfigurations_(struct soap*, struct _tds__GetStorageConfigurations *tds__GetStorageConfigurations, struct _tds__GetStorageConfigurationsResponse *tds__GetStorageConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetStorageConfigurations_(struct soap*, struct _tds__GetStorageConfigurations *tds__GetStorageConfigurations, struct _tds__GetStorageConfigurationsResponse *tds__GetStorageConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__tds__CreateStorageConfiguration_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateStorageConfiguration_(struct soap*, struct _tds__CreateStorageConfiguration *tds__CreateStorageConfiguration, struct _tds__CreateStorageConfigurationResponse *tds__CreateStorageConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__CreateStorageConfiguration_(struct soap*, struct _tds__CreateStorageConfiguration *tds__CreateStorageConfiguration, struct _tds__CreateStorageConfigurationResponse *tds__CreateStorageConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetStorageConfiguration_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetStorageConfiguration_(struct soap*, struct _tds__GetStorageConfiguration *tds__GetStorageConfiguration, struct _tds__GetStorageConfigurationResponse *tds__GetStorageConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetStorageConfiguration_(struct soap*, struct _tds__GetStorageConfiguration *tds__GetStorageConfiguration, struct _tds__GetStorageConfigurationResponse *tds__GetStorageConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetStorageConfiguration_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetStorageConfiguration_(struct soap*, struct _tds__SetStorageConfiguration *tds__SetStorageConfiguration, struct _tds__SetStorageConfigurationResponse *tds__SetStorageConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetStorageConfiguration_(struct soap*, struct _tds__SetStorageConfiguration *tds__SetStorageConfiguration, struct _tds__SetStorageConfigurationResponse *tds__SetStorageConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__DeleteStorageConfiguration_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteStorageConfiguration_(struct soap*, struct _tds__DeleteStorageConfiguration *tds__DeleteStorageConfiguration, struct _tds__DeleteStorageConfigurationResponse *tds__DeleteStorageConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteStorageConfiguration_(struct soap*, struct _tds__DeleteStorageConfiguration *tds__DeleteStorageConfiguration, struct _tds__DeleteStorageConfigurationResponse *tds__DeleteStorageConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tds__GetGeoLocation_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetGeoLocation_(struct soap*, struct _tds__GetGeoLocation *tds__GetGeoLocation, struct _tds__GetGeoLocationResponse *tds__GetGeoLocationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__GetGeoLocation_(struct soap*, struct _tds__GetGeoLocation *tds__GetGeoLocation, struct _tds__GetGeoLocationResponse *tds__GetGeoLocationResponse)
+	{return 0;}    
     /** Web service operation '__tds__SetGeoLocation_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetGeoLocation_(struct soap*, struct _tds__SetGeoLocation *tds__SetGeoLocation, struct _tds__SetGeoLocationResponse *tds__SetGeoLocationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__SetGeoLocation_(struct soap*, struct _tds__SetGeoLocation *tds__SetGeoLocation, struct _tds__SetGeoLocationResponse *tds__SetGeoLocationResponse)
+	{return 0;}    
     /** Web service operation '__tds__DeleteGeoLocation_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteGeoLocation_(struct soap*, struct _tds__DeleteGeoLocation *tds__DeleteGeoLocation, struct _tds__DeleteGeoLocationResponse *tds__DeleteGeoLocationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tds__DeleteGeoLocation_(struct soap*, struct _tds__DeleteGeoLocation *tds__DeleteGeoLocation, struct _tds__DeleteGeoLocationResponse *tds__DeleteGeoLocationResponse)
+	{return 0;}    
     /** Web service operation '__tev__PullMessages' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__PullMessages(struct soap*, struct _tev__PullMessages *tev__PullMessages, struct _tev__PullMessagesResponse *tev__PullMessagesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__PullMessages(struct soap*, struct _tev__PullMessages *tev__PullMessages, struct _tev__PullMessagesResponse *tev__PullMessagesResponse)
+	{return 0;}    
     /** Web service operation '__tev__Seek' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__Seek(struct soap*, struct _tev__Seek *tev__Seek, struct _tev__SeekResponse *tev__SeekResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__Seek(struct soap*, struct _tev__Seek *tev__Seek, struct _tev__SeekResponse *tev__SeekResponse)
+	{return 0;}    
     /** Web service operation '__tev__SetSynchronizationPoint' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__SetSynchronizationPoint(struct soap*, struct _tev__SetSynchronizationPoint *tev__SetSynchronizationPoint, struct _tev__SetSynchronizationPointResponse *tev__SetSynchronizationPointResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__SetSynchronizationPoint(struct soap*, struct _tev__SetSynchronizationPoint *tev__SetSynchronizationPoint, struct _tev__SetSynchronizationPointResponse *tev__SetSynchronizationPointResponse)
+	{return 0;}    
     /** Web service operation '__tev__Unsubscribe' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__Unsubscribe(struct soap*, struct _wsnt__Unsubscribe *wsnt__Unsubscribe, struct _wsnt__UnsubscribeResponse *wsnt__UnsubscribeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__Unsubscribe(struct soap*, struct _wsnt__Unsubscribe *wsnt__Unsubscribe, struct _wsnt__UnsubscribeResponse *wsnt__UnsubscribeResponse)
+	{return 0;}    
     /** Web service operation '__tev__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__GetServiceCapabilities(struct soap*, struct _tev__GetServiceCapabilities *tev__GetServiceCapabilities, struct _tev__GetServiceCapabilitiesResponse *tev__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__GetServiceCapabilities(struct soap*, struct _tev__GetServiceCapabilities *tev__GetServiceCapabilities, struct _tev__GetServiceCapabilitiesResponse *tev__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tev__CreatePullPointSubscription' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__CreatePullPointSubscription(struct soap*, struct _tev__CreatePullPointSubscription *tev__CreatePullPointSubscription, struct _tev__CreatePullPointSubscriptionResponse *tev__CreatePullPointSubscriptionResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__CreatePullPointSubscription(struct soap*, struct _tev__CreatePullPointSubscription *tev__CreatePullPointSubscription, struct _tev__CreatePullPointSubscriptionResponse *tev__CreatePullPointSubscriptionResponse)
+	{return 0;}    
     /** Web service operation '__tev__GetEventProperties' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__GetEventProperties(struct soap*, struct _tev__GetEventProperties *tev__GetEventProperties, struct _tev__GetEventPropertiesResponse *tev__GetEventPropertiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__GetEventProperties(struct soap*, struct _tev__GetEventProperties *tev__GetEventProperties, struct _tev__GetEventPropertiesResponse *tev__GetEventPropertiesResponse)
+	{return 0;}    
     /** Web service operation '__tev__Renew' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__Renew(struct soap*, struct _wsnt__Renew *wsnt__Renew, struct _wsnt__RenewResponse *wsnt__RenewResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__Renew(struct soap*, struct _wsnt__Renew *wsnt__Renew, struct _wsnt__RenewResponse *wsnt__RenewResponse)
+	{return 0;}    
     /** Web service operation '__tev__Unsubscribe_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__Unsubscribe_(struct soap*, struct _wsnt__Unsubscribe *wsnt__Unsubscribe, struct _wsnt__UnsubscribeResponse *wsnt__UnsubscribeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__Unsubscribe_(struct soap*, struct _wsnt__Unsubscribe *wsnt__Unsubscribe, struct _wsnt__UnsubscribeResponse *wsnt__UnsubscribeResponse)
+	{return 0;}    
     /** Web service operation '__tev__Subscribe' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__Subscribe(struct soap*, struct _wsnt__Subscribe *wsnt__Subscribe, struct _wsnt__SubscribeResponse *wsnt__SubscribeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__Subscribe(struct soap*, struct _wsnt__Subscribe *wsnt__Subscribe, struct _wsnt__SubscribeResponse *wsnt__SubscribeResponse)
+	{return 0;}    
     /** Web service operation '__tev__GetCurrentMessage' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__GetCurrentMessage(struct soap*, struct _wsnt__GetCurrentMessage *wsnt__GetCurrentMessage, struct _wsnt__GetCurrentMessageResponse *wsnt__GetCurrentMessageResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__GetCurrentMessage(struct soap*, struct _wsnt__GetCurrentMessage *wsnt__GetCurrentMessage, struct _wsnt__GetCurrentMessageResponse *wsnt__GetCurrentMessageResponse)
+	{return 0;}    
     /** Web service operation '__tev__Notify' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__Notify(struct soap*, struct _wsnt__Notify *wsnt__Notify);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__Notify(struct soap*, struct _wsnt__Notify *wsnt__Notify)
+	{return 0;}    
     /** Web service operation '__tev__GetMessages' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__GetMessages(struct soap*, struct _wsnt__GetMessages *wsnt__GetMessages, struct _wsnt__GetMessagesResponse *wsnt__GetMessagesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__GetMessages(struct soap*, struct _wsnt__GetMessages *wsnt__GetMessages, struct _wsnt__GetMessagesResponse *wsnt__GetMessagesResponse)
+	{return 0;}    
     /** Web service operation '__tev__DestroyPullPoint' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__DestroyPullPoint(struct soap*, struct _wsnt__DestroyPullPoint *wsnt__DestroyPullPoint, struct _wsnt__DestroyPullPointResponse *wsnt__DestroyPullPointResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__DestroyPullPoint(struct soap*, struct _wsnt__DestroyPullPoint *wsnt__DestroyPullPoint, struct _wsnt__DestroyPullPointResponse *wsnt__DestroyPullPointResponse)
+	{return 0;}    
     /** Web service operation '__tev__Notify_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__Notify_(struct soap*, struct _wsnt__Notify *wsnt__Notify);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__Notify_(struct soap*, struct _wsnt__Notify *wsnt__Notify)
+	{return 0;}    
     /** Web service operation '__tev__CreatePullPoint' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__CreatePullPoint(struct soap*, struct _wsnt__CreatePullPoint *wsnt__CreatePullPoint, struct _wsnt__CreatePullPointResponse *wsnt__CreatePullPointResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__CreatePullPoint(struct soap*, struct _wsnt__CreatePullPoint *wsnt__CreatePullPoint, struct _wsnt__CreatePullPointResponse *wsnt__CreatePullPointResponse)
+	{return 0;}    
     /** Web service operation '__tev__Renew_' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__Renew_(struct soap*, struct _wsnt__Renew *wsnt__Renew, struct _wsnt__RenewResponse *wsnt__RenewResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__Renew_(struct soap*, struct _wsnt__Renew *wsnt__Renew, struct _wsnt__RenewResponse *wsnt__RenewResponse)
+	{return 0;}    
     /** Web service operation '__tev__Unsubscribe__' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__Unsubscribe__(struct soap*, struct _wsnt__Unsubscribe *wsnt__Unsubscribe, struct _wsnt__UnsubscribeResponse *wsnt__UnsubscribeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__Unsubscribe__(struct soap*, struct _wsnt__Unsubscribe *wsnt__Unsubscribe, struct _wsnt__UnsubscribeResponse *wsnt__UnsubscribeResponse)
+	{return 0;}    
     /** Web service operation '__tev__PauseSubscription' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__PauseSubscription(struct soap*, struct _wsnt__PauseSubscription *wsnt__PauseSubscription, struct _wsnt__PauseSubscriptionResponse *wsnt__PauseSubscriptionResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__PauseSubscription(struct soap*, struct _wsnt__PauseSubscription *wsnt__PauseSubscription, struct _wsnt__PauseSubscriptionResponse *wsnt__PauseSubscriptionResponse)
+	{return 0;}    
     /** Web service operation '__tev__ResumeSubscription' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tev__ResumeSubscription(struct soap*, struct _wsnt__ResumeSubscription *wsnt__ResumeSubscription, struct _wsnt__ResumeSubscriptionResponse *wsnt__ResumeSubscriptionResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tev__ResumeSubscription(struct soap*, struct _wsnt__ResumeSubscription *wsnt__ResumeSubscription, struct _wsnt__ResumeSubscriptionResponse *wsnt__ResumeSubscriptionResponse)
+	{return 0;}    
     /** Web service operation '__timg__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetServiceCapabilities(struct soap*, struct _timg__GetServiceCapabilities *timg__GetServiceCapabilities, struct _timg__GetServiceCapabilitiesResponse *timg__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetServiceCapabilities(struct soap*, struct _timg__GetServiceCapabilities *timg__GetServiceCapabilities, struct _timg__GetServiceCapabilitiesResponse *timg__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__timg__GetImagingSettings' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetImagingSettings(struct soap*, struct _timg__GetImagingSettings *timg__GetImagingSettings, struct _timg__GetImagingSettingsResponse *timg__GetImagingSettingsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetImagingSettings(struct soap*, struct _timg__GetImagingSettings *timg__GetImagingSettings, struct _timg__GetImagingSettingsResponse *timg__GetImagingSettingsResponse)
+	{return 0;}    
     /** Web service operation '__timg__SetImagingSettings' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __timg__SetImagingSettings(struct soap*, struct _timg__SetImagingSettings *timg__SetImagingSettings, struct _timg__SetImagingSettingsResponse *timg__SetImagingSettingsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __timg__SetImagingSettings(struct soap*, struct _timg__SetImagingSettings *timg__SetImagingSettings, struct _timg__SetImagingSettingsResponse *timg__SetImagingSettingsResponse)
+	{return 0;}    
     /** Web service operation '__timg__GetOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetOptions(struct soap*, struct _timg__GetOptions *timg__GetOptions, struct _timg__GetOptionsResponse *timg__GetOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetOptions(struct soap*, struct _timg__GetOptions *timg__GetOptions, struct _timg__GetOptionsResponse *timg__GetOptionsResponse)
+	{return 0;}    
     /** Web service operation '__timg__Move' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __timg__Move(struct soap*, struct _timg__Move *timg__Move, struct _timg__MoveResponse *timg__MoveResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __timg__Move(struct soap*, struct _timg__Move *timg__Move, struct _timg__MoveResponse *timg__MoveResponse)
+	{return 0;}    
     /** Web service operation '__timg__Stop' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __timg__Stop(struct soap*, struct _timg__Stop *timg__Stop, struct _timg__StopResponse *timg__StopResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __timg__Stop(struct soap*, struct _timg__Stop *timg__Stop, struct _timg__StopResponse *timg__StopResponse)
+	{return 0;}    
     /** Web service operation '__timg__GetStatus' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetStatus(struct soap*, struct _timg__GetStatus *timg__GetStatus, struct _timg__GetStatusResponse *timg__GetStatusResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetStatus(struct soap*, struct _timg__GetStatus *timg__GetStatus, struct _timg__GetStatusResponse *timg__GetStatusResponse)
+	{return 0;}    
     /** Web service operation '__timg__GetMoveOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetMoveOptions(struct soap*, struct _timg__GetMoveOptions *timg__GetMoveOptions, struct _timg__GetMoveOptionsResponse *timg__GetMoveOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetMoveOptions(struct soap*, struct _timg__GetMoveOptions *timg__GetMoveOptions, struct _timg__GetMoveOptionsResponse *timg__GetMoveOptionsResponse)
+	{return 0;}    
     /** Web service operation '__timg__GetPresets' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetPresets(struct soap*, struct _timg__GetPresets *timg__GetPresets, struct _timg__GetPresetsResponse *timg__GetPresetsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetPresets(struct soap*, struct _timg__GetPresets *timg__GetPresets, struct _timg__GetPresetsResponse *timg__GetPresetsResponse)
+	{return 0;}    
     /** Web service operation '__timg__GetCurrentPreset' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetCurrentPreset(struct soap*, struct _timg__GetCurrentPreset *timg__GetCurrentPreset, struct _timg__GetCurrentPresetResponse *timg__GetCurrentPresetResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __timg__GetCurrentPreset(struct soap*, struct _timg__GetCurrentPreset *timg__GetCurrentPreset, struct _timg__GetCurrentPresetResponse *timg__GetCurrentPresetResponse)
+	{return 0;}    
     /** Web service operation '__timg__SetCurrentPreset' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __timg__SetCurrentPreset(struct soap*, struct _timg__SetCurrentPreset *timg__SetCurrentPreset, struct _timg__SetCurrentPresetResponse *timg__SetCurrentPresetResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __timg__SetCurrentPreset(struct soap*, struct _timg__SetCurrentPreset *timg__SetCurrentPreset, struct _timg__SetCurrentPresetResponse *timg__SetCurrentPresetResponse)
+	{return 0;}    
     /** Web service operation '__tls__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tls__GetServiceCapabilities(struct soap*, struct _tls__GetServiceCapabilities *tls__GetServiceCapabilities, struct _tls__GetServiceCapabilitiesResponse *tls__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tls__GetServiceCapabilities(struct soap*, struct _tls__GetServiceCapabilities *tls__GetServiceCapabilities, struct _tls__GetServiceCapabilitiesResponse *tls__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tls__GetLayout' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tls__GetLayout(struct soap*, struct _tls__GetLayout *tls__GetLayout, struct _tls__GetLayoutResponse *tls__GetLayoutResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tls__GetLayout(struct soap*, struct _tls__GetLayout *tls__GetLayout, struct _tls__GetLayoutResponse *tls__GetLayoutResponse)
+	{return 0;}    
     /** Web service operation '__tls__SetLayout' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tls__SetLayout(struct soap*, struct _tls__SetLayout *tls__SetLayout, struct _tls__SetLayoutResponse *tls__SetLayoutResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tls__SetLayout(struct soap*, struct _tls__SetLayout *tls__SetLayout, struct _tls__SetLayoutResponse *tls__SetLayoutResponse)
+	{return 0;}    
     /** Web service operation '__tls__GetDisplayOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tls__GetDisplayOptions(struct soap*, struct _tls__GetDisplayOptions *tls__GetDisplayOptions, struct _tls__GetDisplayOptionsResponse *tls__GetDisplayOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tls__GetDisplayOptions(struct soap*, struct _tls__GetDisplayOptions *tls__GetDisplayOptions, struct _tls__GetDisplayOptionsResponse *tls__GetDisplayOptionsResponse)
+	{return 0;}    
     /** Web service operation '__tls__GetPaneConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tls__GetPaneConfigurations(struct soap*, struct _tls__GetPaneConfigurations *tls__GetPaneConfigurations, struct _tls__GetPaneConfigurationsResponse *tls__GetPaneConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tls__GetPaneConfigurations(struct soap*, struct _tls__GetPaneConfigurations *tls__GetPaneConfigurations, struct _tls__GetPaneConfigurationsResponse *tls__GetPaneConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__tls__GetPaneConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tls__GetPaneConfiguration(struct soap*, struct _tls__GetPaneConfiguration *tls__GetPaneConfiguration, struct _tls__GetPaneConfigurationResponse *tls__GetPaneConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tls__GetPaneConfiguration(struct soap*, struct _tls__GetPaneConfiguration *tls__GetPaneConfiguration, struct _tls__GetPaneConfigurationResponse *tls__GetPaneConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tls__SetPaneConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tls__SetPaneConfigurations(struct soap*, struct _tls__SetPaneConfigurations *tls__SetPaneConfigurations, struct _tls__SetPaneConfigurationsResponse *tls__SetPaneConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tls__SetPaneConfigurations(struct soap*, struct _tls__SetPaneConfigurations *tls__SetPaneConfigurations, struct _tls__SetPaneConfigurationsResponse *tls__SetPaneConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__tls__SetPaneConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tls__SetPaneConfiguration(struct soap*, struct _tls__SetPaneConfiguration *tls__SetPaneConfiguration, struct _tls__SetPaneConfigurationResponse *tls__SetPaneConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tls__SetPaneConfiguration(struct soap*, struct _tls__SetPaneConfiguration *tls__SetPaneConfiguration, struct _tls__SetPaneConfigurationResponse *tls__SetPaneConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tls__CreatePaneConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tls__CreatePaneConfiguration(struct soap*, struct _tls__CreatePaneConfiguration *tls__CreatePaneConfiguration, struct _tls__CreatePaneConfigurationResponse *tls__CreatePaneConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tls__CreatePaneConfiguration(struct soap*, struct _tls__CreatePaneConfiguration *tls__CreatePaneConfiguration, struct _tls__CreatePaneConfigurationResponse *tls__CreatePaneConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tls__DeletePaneConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tls__DeletePaneConfiguration(struct soap*, struct _tls__DeletePaneConfiguration *tls__DeletePaneConfiguration, struct _tls__DeletePaneConfigurationResponse *tls__DeletePaneConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tls__DeletePaneConfiguration(struct soap*, struct _tls__DeletePaneConfiguration *tls__DeletePaneConfiguration, struct _tls__DeletePaneConfigurationResponse *tls__DeletePaneConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetServiceCapabilities(struct soap*, struct _tmd__GetServiceCapabilities *tmd__GetServiceCapabilities, struct _tmd__GetServiceCapabilitiesResponse *tmd__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetServiceCapabilities(struct soap*, struct _tmd__GetServiceCapabilities *tmd__GetServiceCapabilities, struct _tmd__GetServiceCapabilitiesResponse *tmd__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetRelayOutputOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetRelayOutputOptions(struct soap*, struct _tmd__GetRelayOutputOptions *tmd__GetRelayOutputOptions, struct _tmd__GetRelayOutputOptionsResponse *tmd__GetRelayOutputOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetRelayOutputOptions(struct soap*, struct _tmd__GetRelayOutputOptions *tmd__GetRelayOutputOptions, struct _tmd__GetRelayOutputOptionsResponse *tmd__GetRelayOutputOptionsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetAudioSources' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetAudioSources(struct soap*, struct tmd__Get *tmd__GetAudioSources, struct tmd__GetResponse *tmd__GetAudioSourcesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetAudioSources(struct soap*, struct tmd__Get *tmd__GetAudioSources, struct tmd__GetResponse *tmd__GetAudioSourcesResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetAudioOutputs' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetAudioOutputs(struct soap*, struct tmd__Get *tmd__GetAudioOutputs, struct tmd__GetResponse *tmd__GetAudioOutputsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetAudioOutputs(struct soap*, struct tmd__Get *tmd__GetAudioOutputs, struct tmd__GetResponse *tmd__GetAudioOutputsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetVideoSources' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetVideoSources(struct soap*, struct tmd__Get *tmd__GetVideoSources, struct tmd__GetResponse *tmd__GetVideoSourcesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetVideoSources(struct soap*, struct tmd__Get *tmd__GetVideoSources, struct tmd__GetResponse *tmd__GetVideoSourcesResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetVideoOutputs' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetVideoOutputs(struct soap*, struct _tmd__GetVideoOutputs *tmd__GetVideoOutputs, struct _tmd__GetVideoOutputsResponse *tmd__GetVideoOutputsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetVideoOutputs(struct soap*, struct _tmd__GetVideoOutputs *tmd__GetVideoOutputs, struct _tmd__GetVideoOutputsResponse *tmd__GetVideoOutputsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetVideoSourceConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetVideoSourceConfiguration(struct soap*, struct _tmd__GetVideoSourceConfiguration *tmd__GetVideoSourceConfiguration, struct _tmd__GetVideoSourceConfigurationResponse *tmd__GetVideoSourceConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetVideoSourceConfiguration(struct soap*, struct _tmd__GetVideoSourceConfiguration *tmd__GetVideoSourceConfiguration, struct _tmd__GetVideoSourceConfigurationResponse *tmd__GetVideoSourceConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetVideoOutputConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetVideoOutputConfiguration(struct soap*, struct _tmd__GetVideoOutputConfiguration *tmd__GetVideoOutputConfiguration, struct _tmd__GetVideoOutputConfigurationResponse *tmd__GetVideoOutputConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetVideoOutputConfiguration(struct soap*, struct _tmd__GetVideoOutputConfiguration *tmd__GetVideoOutputConfiguration, struct _tmd__GetVideoOutputConfigurationResponse *tmd__GetVideoOutputConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetAudioSourceConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetAudioSourceConfiguration(struct soap*, struct _tmd__GetAudioSourceConfiguration *tmd__GetAudioSourceConfiguration, struct _tmd__GetAudioSourceConfigurationResponse *tmd__GetAudioSourceConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetAudioSourceConfiguration(struct soap*, struct _tmd__GetAudioSourceConfiguration *tmd__GetAudioSourceConfiguration, struct _tmd__GetAudioSourceConfigurationResponse *tmd__GetAudioSourceConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetAudioOutputConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetAudioOutputConfiguration(struct soap*, struct _tmd__GetAudioOutputConfiguration *tmd__GetAudioOutputConfiguration, struct _tmd__GetAudioOutputConfigurationResponse *tmd__GetAudioOutputConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetAudioOutputConfiguration(struct soap*, struct _tmd__GetAudioOutputConfiguration *tmd__GetAudioOutputConfiguration, struct _tmd__GetAudioOutputConfigurationResponse *tmd__GetAudioOutputConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tmd__SetVideoSourceConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetVideoSourceConfiguration(struct soap*, struct _tmd__SetVideoSourceConfiguration *tmd__SetVideoSourceConfiguration, struct _tmd__SetVideoSourceConfigurationResponse *tmd__SetVideoSourceConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetVideoSourceConfiguration(struct soap*, struct _tmd__SetVideoSourceConfiguration *tmd__SetVideoSourceConfiguration, struct _tmd__SetVideoSourceConfigurationResponse *tmd__SetVideoSourceConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tmd__SetVideoOutputConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetVideoOutputConfiguration(struct soap*, struct _tmd__SetVideoOutputConfiguration *tmd__SetVideoOutputConfiguration, struct _tmd__SetVideoOutputConfigurationResponse *tmd__SetVideoOutputConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetVideoOutputConfiguration(struct soap*, struct _tmd__SetVideoOutputConfiguration *tmd__SetVideoOutputConfiguration, struct _tmd__SetVideoOutputConfigurationResponse *tmd__SetVideoOutputConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tmd__SetAudioSourceConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetAudioSourceConfiguration(struct soap*, struct _tmd__SetAudioSourceConfiguration *tmd__SetAudioSourceConfiguration, struct _tmd__SetAudioSourceConfigurationResponse *tmd__SetAudioSourceConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetAudioSourceConfiguration(struct soap*, struct _tmd__SetAudioSourceConfiguration *tmd__SetAudioSourceConfiguration, struct _tmd__SetAudioSourceConfigurationResponse *tmd__SetAudioSourceConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tmd__SetAudioOutputConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetAudioOutputConfiguration(struct soap*, struct _tmd__SetAudioOutputConfiguration *tmd__SetAudioOutputConfiguration, struct _tmd__SetAudioOutputConfigurationResponse *tmd__SetAudioOutputConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetAudioOutputConfiguration(struct soap*, struct _tmd__SetAudioOutputConfiguration *tmd__SetAudioOutputConfiguration, struct _tmd__SetAudioOutputConfigurationResponse *tmd__SetAudioOutputConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetVideoSourceConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetVideoSourceConfigurationOptions(struct soap*, struct _tmd__GetVideoSourceConfigurationOptions *tmd__GetVideoSourceConfigurationOptions, struct _tmd__GetVideoSourceConfigurationOptionsResponse *tmd__GetVideoSourceConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetVideoSourceConfigurationOptions(struct soap*, struct _tmd__GetVideoSourceConfigurationOptions *tmd__GetVideoSourceConfigurationOptions, struct _tmd__GetVideoSourceConfigurationOptionsResponse *tmd__GetVideoSourceConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetVideoOutputConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetVideoOutputConfigurationOptions(struct soap*, struct _tmd__GetVideoOutputConfigurationOptions *tmd__GetVideoOutputConfigurationOptions, struct _tmd__GetVideoOutputConfigurationOptionsResponse *tmd__GetVideoOutputConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetVideoOutputConfigurationOptions(struct soap*, struct _tmd__GetVideoOutputConfigurationOptions *tmd__GetVideoOutputConfigurationOptions, struct _tmd__GetVideoOutputConfigurationOptionsResponse *tmd__GetVideoOutputConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetAudioSourceConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetAudioSourceConfigurationOptions(struct soap*, struct _tmd__GetAudioSourceConfigurationOptions *tmd__GetAudioSourceConfigurationOptions, struct _tmd__GetAudioSourceConfigurationOptionsResponse *tmd__GetAudioSourceConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetAudioSourceConfigurationOptions(struct soap*, struct _tmd__GetAudioSourceConfigurationOptions *tmd__GetAudioSourceConfigurationOptions, struct _tmd__GetAudioSourceConfigurationOptionsResponse *tmd__GetAudioSourceConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetAudioOutputConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetAudioOutputConfigurationOptions(struct soap*, struct _tmd__GetAudioOutputConfigurationOptions *tmd__GetAudioOutputConfigurationOptions, struct _tmd__GetAudioOutputConfigurationOptionsResponse *tmd__GetAudioOutputConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetAudioOutputConfigurationOptions(struct soap*, struct _tmd__GetAudioOutputConfigurationOptions *tmd__GetAudioOutputConfigurationOptions, struct _tmd__GetAudioOutputConfigurationOptionsResponse *tmd__GetAudioOutputConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetRelayOutputs' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetRelayOutputs(struct soap*, struct _tds__GetRelayOutputs *tds__GetRelayOutputs, struct _tds__GetRelayOutputsResponse *tds__GetRelayOutputsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetRelayOutputs(struct soap*, struct _tds__GetRelayOutputs *tds__GetRelayOutputs, struct _tds__GetRelayOutputsResponse *tds__GetRelayOutputsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__SetRelayOutputSettings' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetRelayOutputSettings(struct soap*, struct _tmd__SetRelayOutputSettings *tmd__SetRelayOutputSettings, struct _tmd__SetRelayOutputSettingsResponse *tmd__SetRelayOutputSettingsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetRelayOutputSettings(struct soap*, struct _tmd__SetRelayOutputSettings *tmd__SetRelayOutputSettings, struct _tmd__SetRelayOutputSettingsResponse *tmd__SetRelayOutputSettingsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__SetRelayOutputState' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetRelayOutputState(struct soap*, struct _tds__SetRelayOutputState *tds__SetRelayOutputState, struct _tds__SetRelayOutputStateResponse *tds__SetRelayOutputStateResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetRelayOutputState(struct soap*, struct _tds__SetRelayOutputState *tds__SetRelayOutputState, struct _tds__SetRelayOutputStateResponse *tds__SetRelayOutputStateResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetDigitalInputs' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetDigitalInputs(struct soap*, struct _tmd__GetDigitalInputs *tmd__GetDigitalInputs, struct _tmd__GetDigitalInputsResponse *tmd__GetDigitalInputsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetDigitalInputs(struct soap*, struct _tmd__GetDigitalInputs *tmd__GetDigitalInputs, struct _tmd__GetDigitalInputsResponse *tmd__GetDigitalInputsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetDigitalInputConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetDigitalInputConfigurationOptions(struct soap*, struct _tmd__GetDigitalInputConfigurationOptions *tmd__GetDigitalInputConfigurationOptions, struct _tmd__GetDigitalInputConfigurationOptionsResponse *tmd__GetDigitalInputConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetDigitalInputConfigurationOptions(struct soap*, struct _tmd__GetDigitalInputConfigurationOptions *tmd__GetDigitalInputConfigurationOptions, struct _tmd__GetDigitalInputConfigurationOptionsResponse *tmd__GetDigitalInputConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__SetDigitalInputConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetDigitalInputConfigurations(struct soap*, struct _tmd__SetDigitalInputConfigurations *tmd__SetDigitalInputConfigurations, struct _tmd__SetDigitalInputConfigurationsResponse *tmd__SetDigitalInputConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetDigitalInputConfigurations(struct soap*, struct _tmd__SetDigitalInputConfigurations *tmd__SetDigitalInputConfigurations, struct _tmd__SetDigitalInputConfigurationsResponse *tmd__SetDigitalInputConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetSerialPorts' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetSerialPorts(struct soap*, struct _tmd__GetSerialPorts *tmd__GetSerialPorts, struct _tmd__GetSerialPortsResponse *tmd__GetSerialPortsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetSerialPorts(struct soap*, struct _tmd__GetSerialPorts *tmd__GetSerialPorts, struct _tmd__GetSerialPortsResponse *tmd__GetSerialPortsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetSerialPortConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetSerialPortConfiguration(struct soap*, struct _tmd__GetSerialPortConfiguration *tmd__GetSerialPortConfiguration, struct _tmd__GetSerialPortConfigurationResponse *tmd__GetSerialPortConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetSerialPortConfiguration(struct soap*, struct _tmd__GetSerialPortConfiguration *tmd__GetSerialPortConfiguration, struct _tmd__GetSerialPortConfigurationResponse *tmd__GetSerialPortConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tmd__SetSerialPortConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetSerialPortConfiguration(struct soap*, struct _tmd__SetSerialPortConfiguration *tmd__SetSerialPortConfiguration, struct _tmd__SetSerialPortConfigurationResponse *tmd__SetSerialPortConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SetSerialPortConfiguration(struct soap*, struct _tmd__SetSerialPortConfiguration *tmd__SetSerialPortConfiguration, struct _tmd__SetSerialPortConfigurationResponse *tmd__SetSerialPortConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tmd__GetSerialPortConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetSerialPortConfigurationOptions(struct soap*, struct _tmd__GetSerialPortConfigurationOptions *tmd__GetSerialPortConfigurationOptions, struct _tmd__GetSerialPortConfigurationOptionsResponse *tmd__GetSerialPortConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__GetSerialPortConfigurationOptions(struct soap*, struct _tmd__GetSerialPortConfigurationOptions *tmd__GetSerialPortConfigurationOptions, struct _tmd__GetSerialPortConfigurationOptionsResponse *tmd__GetSerialPortConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__tmd__SendReceiveSerialCommand' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SendReceiveSerialCommand(struct soap*, struct _tmd__SendReceiveSerialCommand *tmd__SendReceiveSerialCommand, struct _tmd__SendReceiveSerialCommandResponse *tmd__SendReceiveSerialCommandResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tmd__SendReceiveSerialCommand(struct soap*, struct _tmd__SendReceiveSerialCommand *tmd__SendReceiveSerialCommand, struct _tmd__SendReceiveSerialCommandResponse *tmd__SendReceiveSerialCommandResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetServiceCapabilities(struct soap*, struct _tptz__GetServiceCapabilities *tptz__GetServiceCapabilities, struct _tptz__GetServiceCapabilitiesResponse *tptz__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetServiceCapabilities(struct soap*, struct _tptz__GetServiceCapabilities *tptz__GetServiceCapabilities, struct _tptz__GetServiceCapabilitiesResponse *tptz__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GetConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetConfigurations(struct soap*, struct _tptz__GetConfigurations *tptz__GetConfigurations, struct _tptz__GetConfigurationsResponse *tptz__GetConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetConfigurations(struct soap*, struct _tptz__GetConfigurations *tptz__GetConfigurations, struct _tptz__GetConfigurationsResponse *tptz__GetConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GetPresets' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetPresets(struct soap*, struct _tptz__GetPresets *tptz__GetPresets, struct _tptz__GetPresetsResponse *tptz__GetPresetsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetPresets(struct soap*, struct _tptz__GetPresets *tptz__GetPresets, struct _tptz__GetPresetsResponse *tptz__GetPresetsResponse)
+	{return 0;}    
     /** Web service operation '__tptz__SetPreset' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__SetPreset(struct soap*, struct _tptz__SetPreset *tptz__SetPreset, struct _tptz__SetPresetResponse *tptz__SetPresetResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__SetPreset(struct soap*, struct _tptz__SetPreset *tptz__SetPreset, struct _tptz__SetPresetResponse *tptz__SetPresetResponse)
+	{return 0;}    
     /** Web service operation '__tptz__RemovePreset' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__RemovePreset(struct soap*, struct _tptz__RemovePreset *tptz__RemovePreset, struct _tptz__RemovePresetResponse *tptz__RemovePresetResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__RemovePreset(struct soap*, struct _tptz__RemovePreset *tptz__RemovePreset, struct _tptz__RemovePresetResponse *tptz__RemovePresetResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GotoPreset' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GotoPreset(struct soap*, struct _tptz__GotoPreset *tptz__GotoPreset, struct _tptz__GotoPresetResponse *tptz__GotoPresetResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GotoPreset(struct soap*, struct _tptz__GotoPreset *tptz__GotoPreset, struct _tptz__GotoPresetResponse *tptz__GotoPresetResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GetStatus' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetStatus(struct soap*, struct _tptz__GetStatus *tptz__GetStatus, struct _tptz__GetStatusResponse *tptz__GetStatusResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetStatus(struct soap*, struct _tptz__GetStatus *tptz__GetStatus, struct _tptz__GetStatusResponse *tptz__GetStatusResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GetConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetConfiguration(struct soap*, struct _tptz__GetConfiguration *tptz__GetConfiguration, struct _tptz__GetConfigurationResponse *tptz__GetConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetConfiguration(struct soap*, struct _tptz__GetConfiguration *tptz__GetConfiguration, struct _tptz__GetConfigurationResponse *tptz__GetConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GetNodes' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetNodes(struct soap*, struct _tptz__GetNodes *tptz__GetNodes, struct _tptz__GetNodesResponse *tptz__GetNodesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetNodes(struct soap*, struct _tptz__GetNodes *tptz__GetNodes, struct _tptz__GetNodesResponse *tptz__GetNodesResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GetNode' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetNode(struct soap*, struct _tptz__GetNode *tptz__GetNode, struct _tptz__GetNodeResponse *tptz__GetNodeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetNode(struct soap*, struct _tptz__GetNode *tptz__GetNode, struct _tptz__GetNodeResponse *tptz__GetNodeResponse)
+	{return 0;}    
     /** Web service operation '__tptz__SetConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__SetConfiguration(struct soap*, struct _tptz__SetConfiguration *tptz__SetConfiguration, struct _tptz__SetConfigurationResponse *tptz__SetConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__SetConfiguration(struct soap*, struct _tptz__SetConfiguration *tptz__SetConfiguration, struct _tptz__SetConfigurationResponse *tptz__SetConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GetConfigurationOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetConfigurationOptions(struct soap*, struct _tptz__GetConfigurationOptions *tptz__GetConfigurationOptions, struct _tptz__GetConfigurationOptionsResponse *tptz__GetConfigurationOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetConfigurationOptions(struct soap*, struct _tptz__GetConfigurationOptions *tptz__GetConfigurationOptions, struct _tptz__GetConfigurationOptionsResponse *tptz__GetConfigurationOptionsResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GotoHomePosition' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GotoHomePosition(struct soap*, struct _tptz__GotoHomePosition *tptz__GotoHomePosition, struct _tptz__GotoHomePositionResponse *tptz__GotoHomePositionResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GotoHomePosition(struct soap*, struct _tptz__GotoHomePosition *tptz__GotoHomePosition, struct _tptz__GotoHomePositionResponse *tptz__GotoHomePositionResponse)
+	{return 0;}    
     /** Web service operation '__tptz__SetHomePosition' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__SetHomePosition(struct soap*, struct _tptz__SetHomePosition *tptz__SetHomePosition, struct _tptz__SetHomePositionResponse *tptz__SetHomePositionResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__SetHomePosition(struct soap*, struct _tptz__SetHomePosition *tptz__SetHomePosition, struct _tptz__SetHomePositionResponse *tptz__SetHomePositionResponse)
+	{return 0;}    
     /** Web service operation '__tptz__ContinuousMove' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__ContinuousMove(struct soap*, struct _tptz__ContinuousMove *tptz__ContinuousMove, struct _tptz__ContinuousMoveResponse *tptz__ContinuousMoveResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__ContinuousMove(struct soap*, struct _tptz__ContinuousMove *tptz__ContinuousMove, struct _tptz__ContinuousMoveResponse *tptz__ContinuousMoveResponse)
+	{return 0;}    
     /** Web service operation '__tptz__RelativeMove' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__RelativeMove(struct soap*, struct _tptz__RelativeMove *tptz__RelativeMove, struct _tptz__RelativeMoveResponse *tptz__RelativeMoveResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__RelativeMove(struct soap*, struct _tptz__RelativeMove *tptz__RelativeMove, struct _tptz__RelativeMoveResponse *tptz__RelativeMoveResponse)
+	{return 0;}    
     /** Web service operation '__tptz__SendAuxiliaryCommand' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__SendAuxiliaryCommand(struct soap*, struct _tptz__SendAuxiliaryCommand *tptz__SendAuxiliaryCommand, struct _tptz__SendAuxiliaryCommandResponse *tptz__SendAuxiliaryCommandResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__SendAuxiliaryCommand(struct soap*, struct _tptz__SendAuxiliaryCommand *tptz__SendAuxiliaryCommand, struct _tptz__SendAuxiliaryCommandResponse *tptz__SendAuxiliaryCommandResponse)
+	{return 0;}    
     /** Web service operation '__tptz__AbsoluteMove' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__AbsoluteMove(struct soap*, struct _tptz__AbsoluteMove *tptz__AbsoluteMove, struct _tptz__AbsoluteMoveResponse *tptz__AbsoluteMoveResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__AbsoluteMove(struct soap*, struct _tptz__AbsoluteMove *tptz__AbsoluteMove, struct _tptz__AbsoluteMoveResponse *tptz__AbsoluteMoveResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GeoMove' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GeoMove(struct soap*, struct _tptz__GeoMove *tptz__GeoMove, struct _tptz__GeoMoveResponse *tptz__GeoMoveResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GeoMove(struct soap*, struct _tptz__GeoMove *tptz__GeoMove, struct _tptz__GeoMoveResponse *tptz__GeoMoveResponse)
+	{return 0;}    
     /** Web service operation '__tptz__Stop' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__Stop(struct soap*, struct _tptz__Stop *tptz__Stop, struct _tptz__StopResponse *tptz__StopResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__Stop(struct soap*, struct _tptz__Stop *tptz__Stop, struct _tptz__StopResponse *tptz__StopResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GetPresetTours' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetPresetTours(struct soap*, struct _tptz__GetPresetTours *tptz__GetPresetTours, struct _tptz__GetPresetToursResponse *tptz__GetPresetToursResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetPresetTours(struct soap*, struct _tptz__GetPresetTours *tptz__GetPresetTours, struct _tptz__GetPresetToursResponse *tptz__GetPresetToursResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GetPresetTour' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetPresetTour(struct soap*, struct _tptz__GetPresetTour *tptz__GetPresetTour, struct _tptz__GetPresetTourResponse *tptz__GetPresetTourResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetPresetTour(struct soap*, struct _tptz__GetPresetTour *tptz__GetPresetTour, struct _tptz__GetPresetTourResponse *tptz__GetPresetTourResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GetPresetTourOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetPresetTourOptions(struct soap*, struct _tptz__GetPresetTourOptions *tptz__GetPresetTourOptions, struct _tptz__GetPresetTourOptionsResponse *tptz__GetPresetTourOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetPresetTourOptions(struct soap*, struct _tptz__GetPresetTourOptions *tptz__GetPresetTourOptions, struct _tptz__GetPresetTourOptionsResponse *tptz__GetPresetTourOptionsResponse)
+	{return 0;}    
     /** Web service operation '__tptz__CreatePresetTour' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__CreatePresetTour(struct soap*, struct _tptz__CreatePresetTour *tptz__CreatePresetTour, struct _tptz__CreatePresetTourResponse *tptz__CreatePresetTourResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__CreatePresetTour(struct soap*, struct _tptz__CreatePresetTour *tptz__CreatePresetTour, struct _tptz__CreatePresetTourResponse *tptz__CreatePresetTourResponse)
+	{return 0;}    
     /** Web service operation '__tptz__ModifyPresetTour' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__ModifyPresetTour(struct soap*, struct _tptz__ModifyPresetTour *tptz__ModifyPresetTour, struct _tptz__ModifyPresetTourResponse *tptz__ModifyPresetTourResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__ModifyPresetTour(struct soap*, struct _tptz__ModifyPresetTour *tptz__ModifyPresetTour, struct _tptz__ModifyPresetTourResponse *tptz__ModifyPresetTourResponse)
+	{return 0;}    
     /** Web service operation '__tptz__OperatePresetTour' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__OperatePresetTour(struct soap*, struct _tptz__OperatePresetTour *tptz__OperatePresetTour, struct _tptz__OperatePresetTourResponse *tptz__OperatePresetTourResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__OperatePresetTour(struct soap*, struct _tptz__OperatePresetTour *tptz__OperatePresetTour, struct _tptz__OperatePresetTourResponse *tptz__OperatePresetTourResponse)
+	{return 0;}    
     /** Web service operation '__tptz__RemovePresetTour' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__RemovePresetTour(struct soap*, struct _tptz__RemovePresetTour *tptz__RemovePresetTour, struct _tptz__RemovePresetTourResponse *tptz__RemovePresetTourResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__RemovePresetTour(struct soap*, struct _tptz__RemovePresetTour *tptz__RemovePresetTour, struct _tptz__RemovePresetTourResponse *tptz__RemovePresetTourResponse)
+	{return 0;}    
     /** Web service operation '__tptz__GetCompatibleConfigurations' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetCompatibleConfigurations(struct soap*, struct _tptz__GetCompatibleConfigurations *tptz__GetCompatibleConfigurations, struct _tptz__GetCompatibleConfigurationsResponse *tptz__GetCompatibleConfigurationsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __tptz__GetCompatibleConfigurations(struct soap*, struct _tptz__GetCompatibleConfigurations *tptz__GetCompatibleConfigurations, struct _tptz__GetCompatibleConfigurationsResponse *tptz__GetCompatibleConfigurationsResponse)
+	{return 0;}    
     /** Web service operation '__trc__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetServiceCapabilities(struct soap*, struct _trc__GetServiceCapabilities *trc__GetServiceCapabilities, struct _trc__GetServiceCapabilitiesResponse *trc__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetServiceCapabilities(struct soap*, struct _trc__GetServiceCapabilities *trc__GetServiceCapabilities, struct _trc__GetServiceCapabilitiesResponse *trc__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__trc__CreateRecording' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__CreateRecording(struct soap*, struct _trc__CreateRecording *trc__CreateRecording, struct _trc__CreateRecordingResponse *trc__CreateRecordingResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__CreateRecording(struct soap*, struct _trc__CreateRecording *trc__CreateRecording, struct _trc__CreateRecordingResponse *trc__CreateRecordingResponse)
+	{return 0;}    
     /** Web service operation '__trc__DeleteRecording' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__DeleteRecording(struct soap*, struct _trc__DeleteRecording *trc__DeleteRecording, struct _trc__DeleteRecordingResponse *trc__DeleteRecordingResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__DeleteRecording(struct soap*, struct _trc__DeleteRecording *trc__DeleteRecording, struct _trc__DeleteRecordingResponse *trc__DeleteRecordingResponse)
+	{return 0;}    
     /** Web service operation '__trc__GetRecordings' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetRecordings(struct soap*, struct _trc__GetRecordings *trc__GetRecordings, struct _trc__GetRecordingsResponse *trc__GetRecordingsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetRecordings(struct soap*, struct _trc__GetRecordings *trc__GetRecordings, struct _trc__GetRecordingsResponse *trc__GetRecordingsResponse)
+	{return 0;}    
     /** Web service operation '__trc__SetRecordingConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__SetRecordingConfiguration(struct soap*, struct _trc__SetRecordingConfiguration *trc__SetRecordingConfiguration, struct _trc__SetRecordingConfigurationResponse *trc__SetRecordingConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__SetRecordingConfiguration(struct soap*, struct _trc__SetRecordingConfiguration *trc__SetRecordingConfiguration, struct _trc__SetRecordingConfigurationResponse *trc__SetRecordingConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trc__GetRecordingConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetRecordingConfiguration(struct soap*, struct _trc__GetRecordingConfiguration *trc__GetRecordingConfiguration, struct _trc__GetRecordingConfigurationResponse *trc__GetRecordingConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetRecordingConfiguration(struct soap*, struct _trc__GetRecordingConfiguration *trc__GetRecordingConfiguration, struct _trc__GetRecordingConfigurationResponse *trc__GetRecordingConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trc__GetRecordingOptions' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetRecordingOptions(struct soap*, struct _trc__GetRecordingOptions *trc__GetRecordingOptions, struct _trc__GetRecordingOptionsResponse *trc__GetRecordingOptionsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetRecordingOptions(struct soap*, struct _trc__GetRecordingOptions *trc__GetRecordingOptions, struct _trc__GetRecordingOptionsResponse *trc__GetRecordingOptionsResponse)
+	{return 0;}    
     /** Web service operation '__trc__CreateTrack' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__CreateTrack(struct soap*, struct _trc__CreateTrack *trc__CreateTrack, struct _trc__CreateTrackResponse *trc__CreateTrackResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__CreateTrack(struct soap*, struct _trc__CreateTrack *trc__CreateTrack, struct _trc__CreateTrackResponse *trc__CreateTrackResponse)
+	{return 0;}    
     /** Web service operation '__trc__DeleteTrack' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__DeleteTrack(struct soap*, struct _trc__DeleteTrack *trc__DeleteTrack, struct _trc__DeleteTrackResponse *trc__DeleteTrackResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__DeleteTrack(struct soap*, struct _trc__DeleteTrack *trc__DeleteTrack, struct _trc__DeleteTrackResponse *trc__DeleteTrackResponse)
+	{return 0;}    
     /** Web service operation '__trc__GetTrackConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetTrackConfiguration(struct soap*, struct _trc__GetTrackConfiguration *trc__GetTrackConfiguration, struct _trc__GetTrackConfigurationResponse *trc__GetTrackConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetTrackConfiguration(struct soap*, struct _trc__GetTrackConfiguration *trc__GetTrackConfiguration, struct _trc__GetTrackConfigurationResponse *trc__GetTrackConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trc__SetTrackConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__SetTrackConfiguration(struct soap*, struct _trc__SetTrackConfiguration *trc__SetTrackConfiguration, struct _trc__SetTrackConfigurationResponse *trc__SetTrackConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__SetTrackConfiguration(struct soap*, struct _trc__SetTrackConfiguration *trc__SetTrackConfiguration, struct _trc__SetTrackConfigurationResponse *trc__SetTrackConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trc__CreateRecordingJob' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__CreateRecordingJob(struct soap*, struct _trc__CreateRecordingJob *trc__CreateRecordingJob, struct _trc__CreateRecordingJobResponse *trc__CreateRecordingJobResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__CreateRecordingJob(struct soap*, struct _trc__CreateRecordingJob *trc__CreateRecordingJob, struct _trc__CreateRecordingJobResponse *trc__CreateRecordingJobResponse)
+	{return 0;}    
     /** Web service operation '__trc__DeleteRecordingJob' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__DeleteRecordingJob(struct soap*, struct _trc__DeleteRecordingJob *trc__DeleteRecordingJob, struct _trc__DeleteRecordingJobResponse *trc__DeleteRecordingJobResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__DeleteRecordingJob(struct soap*, struct _trc__DeleteRecordingJob *trc__DeleteRecordingJob, struct _trc__DeleteRecordingJobResponse *trc__DeleteRecordingJobResponse)
+	{return 0;}    
     /** Web service operation '__trc__GetRecordingJobs' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetRecordingJobs(struct soap*, struct _trc__GetRecordingJobs *trc__GetRecordingJobs, struct _trc__GetRecordingJobsResponse *trc__GetRecordingJobsResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetRecordingJobs(struct soap*, struct _trc__GetRecordingJobs *trc__GetRecordingJobs, struct _trc__GetRecordingJobsResponse *trc__GetRecordingJobsResponse)
+	{return 0;}    
     /** Web service operation '__trc__SetRecordingJobConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__SetRecordingJobConfiguration(struct soap*, struct _trc__SetRecordingJobConfiguration *trc__SetRecordingJobConfiguration, struct _trc__SetRecordingJobConfigurationResponse *trc__SetRecordingJobConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__SetRecordingJobConfiguration(struct soap*, struct _trc__SetRecordingJobConfiguration *trc__SetRecordingJobConfiguration, struct _trc__SetRecordingJobConfigurationResponse *trc__SetRecordingJobConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trc__GetRecordingJobConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetRecordingJobConfiguration(struct soap*, struct _trc__GetRecordingJobConfiguration *trc__GetRecordingJobConfiguration, struct _trc__GetRecordingJobConfigurationResponse *trc__GetRecordingJobConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetRecordingJobConfiguration(struct soap*, struct _trc__GetRecordingJobConfiguration *trc__GetRecordingJobConfiguration, struct _trc__GetRecordingJobConfigurationResponse *trc__GetRecordingJobConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trc__SetRecordingJobMode' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__SetRecordingJobMode(struct soap*, struct _trc__SetRecordingJobMode *trc__SetRecordingJobMode, struct _trc__SetRecordingJobModeResponse *trc__SetRecordingJobModeResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__SetRecordingJobMode(struct soap*, struct _trc__SetRecordingJobMode *trc__SetRecordingJobMode, struct _trc__SetRecordingJobModeResponse *trc__SetRecordingJobModeResponse)
+	{return 0;}    
     /** Web service operation '__trc__GetRecordingJobState' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetRecordingJobState(struct soap*, struct _trc__GetRecordingJobState *trc__GetRecordingJobState, struct _trc__GetRecordingJobStateResponse *trc__GetRecordingJobStateResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetRecordingJobState(struct soap*, struct _trc__GetRecordingJobState *trc__GetRecordingJobState, struct _trc__GetRecordingJobStateResponse *trc__GetRecordingJobStateResponse)
+	{return 0;}    
     /** Web service operation '__trc__ExportRecordedData' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__ExportRecordedData(struct soap*, struct _trc__ExportRecordedData *trc__ExportRecordedData, struct _trc__ExportRecordedDataResponse *trc__ExportRecordedDataResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__ExportRecordedData(struct soap*, struct _trc__ExportRecordedData *trc__ExportRecordedData, struct _trc__ExportRecordedDataResponse *trc__ExportRecordedDataResponse)
+	{return 0;}    
     /** Web service operation '__trc__StopExportRecordedData' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__StopExportRecordedData(struct soap*, struct _trc__StopExportRecordedData *trc__StopExportRecordedData, struct _trc__StopExportRecordedDataResponse *trc__StopExportRecordedDataResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__StopExportRecordedData(struct soap*, struct _trc__StopExportRecordedData *trc__StopExportRecordedData, struct _trc__StopExportRecordedDataResponse *trc__StopExportRecordedDataResponse)
+	{return 0;}    
     /** Web service operation '__trc__GetExportRecordedDataState' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetExportRecordedDataState(struct soap*, struct _trc__GetExportRecordedDataState *trc__GetExportRecordedDataState, struct _trc__GetExportRecordedDataStateResponse *trc__GetExportRecordedDataStateResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trc__GetExportRecordedDataState(struct soap*, struct _trc__GetExportRecordedDataState *trc__GetExportRecordedDataState, struct _trc__GetExportRecordedDataStateResponse *trc__GetExportRecordedDataStateResponse)
+	{return 0;}    
     /** Web service operation '__trp__GetServiceCapabilities' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trp__GetServiceCapabilities(struct soap*, struct _trp__GetServiceCapabilities *trp__GetServiceCapabilities, struct _trp__GetServiceCapabilitiesResponse *trp__GetServiceCapabilitiesResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trp__GetServiceCapabilities(struct soap*, struct _trp__GetServiceCapabilities *trp__GetServiceCapabilities, struct _trp__GetServiceCapabilitiesResponse *trp__GetServiceCapabilitiesResponse)
+	{return 0;}    
     /** Web service operation '__trp__GetReplayUri' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trp__GetReplayUri(struct soap*, struct _trp__GetReplayUri *trp__GetReplayUri, struct _trp__GetReplayUriResponse *trp__GetReplayUriResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trp__GetReplayUri(struct soap*, struct _trp__GetReplayUri *trp__GetReplayUri, struct _trp__GetReplayUriResponse *trp__GetReplayUriResponse)
+	{return 0;}    
     /** Web service operation '__trp__GetReplayConfiguration' (returns SOAP_OK or error code) */
-    SOAP_FMAC5 int SOAP_FMAC6 __trp__GetReplayConfiguration(struct soap*, struct _trp__GetReplayConfiguration *trp__GetReplayConfiguration, struct _trp__GetReplayConfigurationResponse *trp__GetReplayConfigurationResponse);
+    SOAP_FMAC5 int SOAP_FMAC6 __trp__GetReplayConfiguration(struct soap*, struct _trp__GetReplayConfiguration *trp__GetReplayConfiguration, struct _trp__GetReplayConfigurationResponse *trp__GetReplayConfigurationResponse)
+	{return 0;}    
     /** Web service operation '__trp__SetReplayConfiguration' (returns SOAP_OK or error code) */
     SOAP_FMAC5 int SOAP_FMAC6 __trp__SetReplayConfiguration(struct soap*, struct _trp__SetReplayConfiguration *trp__SetReplayConfiguration, struct _trp__SetReplayConfigurationResponse *trp__SetReplayConfigurationResponse)
 	{return 0;}    

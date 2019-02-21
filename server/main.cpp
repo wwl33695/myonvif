@@ -1,5 +1,24 @@
 #include "stdsoap2.h"
 
+#include "../schemas/ActionEngineBinding.nsmap"
+/*
+#include "../schemas/AnalyticsDeviceBinding.nsmap"
+#include "../schemas/DeviceBinding.nsmap"
+#include "../schemas/DeviceIOBinding.nsmap"
+#include "../schemas/DisplayBinding.nsmap"
+#include "../schemas/ImagingBinding.nsmap"
+#include "../schemas/MediaBinding.nsmap"
+#include "../schemas/PTZBinding.nsmap"
+#include "../schemas/PullPointSubscriptionBinding.nsmap"
+#include "../schemas/ReceiverBinding.nsmap"
+#include "../schemas/RecordingBinding.nsmap"
+#include "../schemas/RemoteDiscoveryBinding.nsmap"
+#include "../schemas/ReplayBinding.nsmap"
+#include "../schemas/RuleEngineBinding.nsmap"
+#include "../schemas/SearchBinding.nsmap"
+#include "../schemas/wsdd.nsmap"
+*/
+
 int main(int argc, char **argv)    
 {    
     int m, s;    
