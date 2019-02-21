@@ -6,10 +6,13 @@ CFLAGS = -fPIC -lpthread -w
 CPPFLAGS = -fPIC -g -w -std=c++11 -I/mingw64/include
 
 LINK_FLAGS = -w -g -D__STDC_CONSTANT_MACROS
-LIBS =  -L/mingw64/lib -lstdc++ -lpthread -lgsoap++ -lgsoapck++ -lgsoapssl++ -lws2_32
+LIBS =  -L/mingw64/lib -lstdc++ -lpthread -lgsoap++ -lgsoapck++ -lgsoapssl++
+ifeq ($(OS),Windows_NT)
+	LIBS += -lws2_32
+endif
 #########################################################
 
-PROGRAM = player
+PROGRAM = server
 
 OBJS = 
 
