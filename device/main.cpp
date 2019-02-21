@@ -1,4 +1,5 @@
 #include "stdsoap2.h"
+#include "soapStub.h"
 
 int main(int argc, char **argv)    
 {    
@@ -6,19 +7,19 @@ int main(int argc, char **argv)
 
     //soap_init(&add_soap);
     //soap_set_namespaces(&add_soap, namespaces);    
-    char * server_addr = "http://10.64.57.10:10000";
-/*
-    int iRet = soap_call_ns__add(&add_soap, server_addr, "" , num1,num2,&result);
-    if ( iRet == SOAP_ERR)
+    char * server_addr = "http://0.0.0.0:80";
+
+    wsdd__HelloType type;
+    int ret = soap_send___wsdd__Hello(&add_soap, server_addr, "", &type);
+    if ( ret == SOAP_ERR)
     {
-        printf("Error while calling the soap_call_ns__add");
+        printf("Error while calling the soap_send___wsdd__Hello");
     }
     else
     {
-        printf("Calling the soap_call_ns__add success。\n");
-        printf("%d + %d = %d\n",num1,num2,result);
+        printf("Calling the soap_send___wsdd__Hello success。\n");
     }
-*/
+
     soap_end(&add_soap);
     soap_done(&add_soap);
 
