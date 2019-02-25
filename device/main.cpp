@@ -1,4 +1,5 @@
 #include <iostream>
+#include "plugin/wsseapi.h"
 #include "soapH.h"
 using namespace std;
 
@@ -124,7 +125,7 @@ int getprofiles(char *url)
     struct _trt__GetProfilesResponse getProfilesResponse;
     struct _trt__GetStreamUriResponse getStreamUriResponse;
 
-//    soap_wsse_add_UsernameTokenDigest(soap,"user", ONVIF_USER, ONVIF_PASSWORD); 
+    soap_wsse_add_UsernameTokenDigest(soap,NULL, ONVIF_USER, ONVIF_PASSWORD); 
     int result = soap_call___trt__GetProfiles(soap, url, NULL, &getProfiles, &getProfilesResponse);
     if (result==-1){
         printf("soap error: %d, %s, %s\n", soap->error, *soap_faultcode(soap), *soap_faultstring(soap));
@@ -181,6 +182,10 @@ int getstreamuri(char *url, char* token)
     if (soap->error) {
         printf("soap error: %d, %s, %s\n", soap->error, *soap_faultcode(soap), *soap_faultstring(soap));
         return soap->error;
+    }
+    else
+    {
+       printf("==== [ Media Stream Uri Response ] ====\n > MediaUri :\n\t%s\n", getStreamUriResponse.MediaUri->Uri);        
     }
 
     soap_destroy(soap);

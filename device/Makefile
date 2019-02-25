@@ -2,8 +2,8 @@ CC  = gcc
 CPP = g++
 
 ########################################
-CFLAGS = -fPIC -lpthread -w
-CPPFLAGS = -fPIC -g -w -std=c++11 -I/mingw64/include
+CFLAGS = -fPIC -lpthread -w -I/mingw64/include -I./plugin -I.
+CPPFLAGS = -fPIC -g -w -std=c++11 -I/mingw64/include -I./plugin -I.
 
 LINK_FLAGS = -w -g -D__STDC_CONSTANT_MACROS
 LIBS =  -L/mingw64/lib -lstdc++ -lpthread -lgsoap++ -lgsoapck++ -lgsoapssl++
@@ -19,7 +19,7 @@ OBJS =
 # The directories in which source files reside.  
 # At least one path should be specified.  
 # SRCDIRS   := .        # current directory  
-SRCDIRS   :=  . 
+SRCDIRS   :=  . ./plugin
 # The source file types (headers excluded).  
 # At least one type should be specified.  
 # The valid suffixes are among of .c, .C, .cc, .cpp, .CPP, .c++, .cp, or .cxx.  
