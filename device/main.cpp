@@ -21,7 +21,9 @@ int main(int argc, char **argv)
         printf("Calling the soap_send___wsdd__Hello success。\n");
     }
 
-    struct soap *soap;
+    struct soap *soap = soap_new();
+    soap_set_namespaces(soap, namespaces);    
+
     struct wsdd__ProbeType req;
     struct __wsdd__ProbeMatches resp;
     struct wsdd__ScopesType sScope;
