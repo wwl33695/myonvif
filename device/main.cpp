@@ -1,6 +1,4 @@
 #include <iostream>
-#include "stdsoap2.h"
-#include "soapStub.h"
 #include "soapH.h"
 using namespace std;
 
