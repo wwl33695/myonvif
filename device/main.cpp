@@ -46,6 +46,7 @@ int main(int argc, char **argv)
     req.Scopes = &sScope;
     req.Types = "";
 
+
     result = soap_send___wsdd__Probe(soap, "soap.udp://239.255.255.250:3702", NULL, &req);
 
     do{
