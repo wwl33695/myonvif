@@ -248,7 +248,7 @@ SOAP_FMAC1 int SOAP_FMAC2 soap_wsse_sender_fault_subcode(struct soap *soap, cons
 SOAP_FMAC1 int SOAP_FMAC2 soap_wsse_receiver_fault_subcode(struct soap *soap, const char *faultsubcode, const char *faultstring, const char *faultdetail);
 SOAP_FMAC1 int SOAP_FMAC2 soap_wsse_sender_fault(struct soap *soap, const char *faultstring, const char *faultdetail);
 SOAP_FMAC1 int SOAP_FMAC2 soap_wsse_receiver_fault(struct soap *soap, const char *faultstring, const char *faultdetail);
-SOAP_FMAC1 int SOAP_FMAC2 soap_wsse_fault(struct soap *soap, enum wsse__FaultcodeEnum fault, const char *detail);
+//SOAP_FMAC1 int SOAP_FMAC2 soap_wsse_fault(struct soap *soap, enum wsse__FaultcodeEnum fault, const char *detail);
 
 SOAP_FMAC1 int SOAP_FMAC2 soap_wsse(struct soap *soap, struct soap_plugin *p, void *arg);
 
@@ -265,7 +265,7 @@ SOAP_FMAC1 int SOAP_FMAC2 soap_wsse_verify_done(struct soap *soap);
 SOAP_FMAC1 size_t SOAP_FMAC2 soap_wsse_verify_element(struct soap *soap, const char *URI, const char *tag);
 SOAP_FMAC1 int SOAP_FMAC2 soap_wsse_verify_body(struct soap *soap);
 
-SOAP_FMAC1 int SOAP_FMAC2 soap_wsse_verify_with_signature(struct soap *soap, _ds__Signature *signature);
+//SOAP_FMAC1 int SOAP_FMAC2 soap_wsse_verify_with_signature(struct soap *soap, _ds__Signature *signature);
 
 SOAP_FMAC1 int SOAP_FMAC2 soap_wsse_set_security_token_handler(struct soap *soap, const void *(*callback)(struct soap*, int *alg, const char *keyname, const unsigned char *keyid, int keyidlen, int *keylen));
 SOAP_FMAC1 int SOAP_FMAC2 soap_wsse_set_wsu_id(struct soap *soap, const char *tags);
