@@ -2,11 +2,11 @@ CC  = gcc
 CPP = g++
 
 ########################################
-CFLAGS = -fPIC -lpthread -w -I/mingw64/include -I./plugin -I.
-CPPFLAGS = -fPIC -g -w -std=c++11 -I/mingw64/include -I./plugin -I.
+CFLAGS = -fPIC -lpthread -w -I/mingw64/include -I./gsoapgen -I./gsoap -I. -DWITH_OPENSSL
+CPPFLAGS = -fPIC -g -w -std=c++11 -I/mingw64/include -I./gsoapgen -I./gsoap -I. -DWITH_OPENSSL
 
-LINK_FLAGS = -w -g -D__STDC_CONSTANT_MACROS
-LIBS =  -L/mingw64/lib -lstdc++ -lpthread -lgsoap++ -lgsoapck++ -lgsoapssl++
+LINK_FLAGS = -w -g -D__STDC_CONSTANT_MACROS 
+LIBS =  -L/mingw64/lib -lstdc++ -lpthread -lssl -lcrypto 
 ifeq ($(OS),Windows_NT)
 	LIBS += -lws2_32
 endif
@@ -19,7 +19,7 @@ OBJS =
 # The directories in which source files reside.  
 # At least one path should be specified.  
 # SRCDIRS   := .        # current directory  
-SRCDIRS   :=  . #./plugin
+SRCDIRS   :=  . ./gsoap ./gsoapgen
 # The source file types (headers excluded).  
 # At least one type should be specified.  
 # The valid suffixes are among of .c, .C, .cc, .cpp, .CPP, .c++, .cp, or .cxx.  

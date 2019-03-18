@@ -273,6 +273,7 @@ mutable struct SOAP_ENV__Header
                  struct chan__ChannelInstanceType *chan__ChannelInstance 0;
 };
 
+/*
 // Added
 //gsoap SOAP_ENV service method-action: Fault http://www.w3.org/2005/08/addressing/soap/fault
 int SOAP_ENV__Fault
@@ -287,5 +288,5 @@ int SOAP_ENV__Fault
         struct SOAP_ENV__Detail	*SOAP_ENV__Detail,	// SOAP 1.2
 	void
 );
-
+*/
 /* End of wsa5.h */
