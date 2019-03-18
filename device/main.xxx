@@ -230,7 +230,7 @@ static struct soap* ONVIF_Initsoap(struct SOAP_ENV__Header *header, const char *
  
         header->wsse__Security->UsernameToken->Nonce = (char*)malloc(64);
         memset(header->wsse__Security->UsernameToken->Nonce, '\0', 64);
-        strcpy(header->wsse__Security->UsernameToken->Nonce,"LKqI6G/AikKCQrN0zqZFlg=="); //注意这里
+        strcpy((char*)header->wsse__Security->UsernameToken->Nonce,"LKqI6G/AikKCQrN0zqZFlg=="); //注意这里
  
         header->wsse__Security->UsernameToken->wsu__Created = (char*)malloc(64);
         memset(header->wsse__Security->UsernameToken->wsu__Created, '\0', 64);

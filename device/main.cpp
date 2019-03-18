@@ -3,6 +3,10 @@
 #include "soapH.h"
 using namespace std;
 
+#define ONVIF_USER "admin"
+#define ONVIF_PASSWORD "dilu1234"
+//#define ONVIF_PASSWORD "abcd1234"
+
 int probe()
 {
     struct soap *soap = soap_new();
@@ -47,7 +51,7 @@ int probe()
  
             cout<<"Match size:"<<resp.wsdd__ProbeMatches->__sizeProbeMatch<<endl;
             cout<<"xsd-unsignedInt:"<<resp.wsdd__ProbeMatches->ProbeMatch->MetadataVersion<<endl;
-            cout<<"scopes item:"<<resp.wsdd__ProbeMatches->ProbeMatch->Scopes->__item<<endl;
+//            cout<<"scopes item:"<<resp.wsdd__ProbeMatches->ProbeMatch->Scopes->__item<<endl;
             //cout<<"scopes matchby:"<<resp.wsdd__ProbeMatches->ProbeMatch->Scopes->MatchBy<<endl;
             cout<<"QName:"<<resp.wsdd__ProbeMatches->ProbeMatch->Types<<endl;
             cout<<"xsd:string:"<<resp.wsdd__ProbeMatches->ProbeMatch->wsa__EndpointReference.Address<<endl;
@@ -76,17 +80,14 @@ int getcapblities(char *url)
     soap_default_SOAP_ENV__Header(soap, &header);
 
     struct _tds__GetCapabilities capa_req;
-    struct _trt__GetProfilesResponse getProfilesResponse;
-    struct _trt__GetStreamUriResponse getStreamUriResponse;
+    struct _tds__GetCapabilitiesResponse capa_resp;
+
     capa_req.Category = (enum tt__CapabilityCategory *)soap_malloc(soap, sizeof(int));
     capa_req.__sizeCategory = 1;
     *(capa_req.Category) = (enum tt__CapabilityCategory)(tt__CapabilityCategory__Media);
-    const char *soap_action = "http://www.onvif.org/ver10/device/wsdl/GetCapabilities";
-    struct _tds__GetCapabilitiesResponse capa_resp;
 
     int result = soap_call___tds__GetCapabilities(soap, url, NULL, &capa_req, &capa_resp);
-//int result = soap_call___tds__GetCapabilities(soap, "http://192.168.1.51/onvif/device_service", NULL, &capa_req, capa_resp);
-    if (soap->error)
+    if (SOAP_OK != soap->error)
     {
         printf("[%d]--->>> soap error: %d, %s, %s\n", __LINE__, soap->error, *soap_faultcode(soap), *soap_faultstring(soap));
         int retval = soap->error;
@@ -111,9 +112,7 @@ int getcapblities(char *url)
     return 0;
 }
 
-#define ONVIF_USER "aaaa"
-#define ONVIF_PASSWORD "test"
-int getprofiles(char *url)
+int getprofiles(char *url, int timeout)
 {
     struct soap *soap = soap_new();
     soap_set_namespaces(soap, namespaces);    
@@ -121,27 +120,29 @@ int getprofiles(char *url)
     struct SOAP_ENV__Header header;
     soap_default_SOAP_ENV__Header(soap, &header);
 
+    soap_wsse_add_UsernameTokenDigest(soap,NULL, ONVIF_USER, ONVIF_PASSWORD); 
+
     struct _trt__GetProfiles getProfiles;
     struct _trt__GetProfilesResponse getProfilesResponse;
-    struct _trt__GetStreamUriResponse getStreamUriResponse;
 
-    soap_wsse_add_UsernameTokenDigest(soap,NULL, ONVIF_USER, ONVIF_PASSWORD); 
     int result = soap_call___trt__GetProfiles(soap, url, NULL, &getProfiles, &getProfilesResponse);
-    if (result==-1){
+    if ( SOAP_OK != result || SOAP_OK != soap->error)
+    {
         printf("soap error: %d, %s, %s\n", soap->error, *soap_faultcode(soap), *soap_faultstring(soap));
         result = soap->error;
         return -1;
     }else{
-        if(getProfilesResponse.Profiles!=NULL){
-            if(getProfilesResponse.Profiles->Name!=NULL){
-                printf("Profiles Name:%s  \n",getProfilesResponse.Profiles->Name);
+        if (getProfilesResponse.__sizeProfiles > 0) 
+        {           
+            for( int i = 0; i < getProfilesResponse.__sizeProfiles; i++) {                                   // 提取所有配置文件信息（我们所关心的）
+                struct tt__Profile *ttProfile = &getProfilesResponse.Profiles[i];
+                if(ttProfile->Name!=NULL){
+                    printf("Profiles Name:%s  \n",ttProfile->Name);
+                }
+                if(ttProfile->token!=NULL){
+                    printf("Profiles Taken:%s\n",ttProfile->token);
+                }
             }
-            if(getProfilesResponse.Profiles->token!=NULL){
-                printf("Profiles Taken:%s\n",getProfilesResponse.Profiles->token);
-            }
-        //            return(UserGetUri(&getStreamUriResponse,getProfilesResponse,capa_resp));
-        }else{
-            printf("Profiles Get inner Error\n");
         }
     }
 
@@ -177,7 +178,7 @@ int getstreamuri(char *url, char* token)
     strcpy(getStreamUri.ProfileToken, token);//trt__GetProfilesResponse->Profiles->token);
 
     // getStreamUri.ProfileToken = trt__GetProfilesResponse->Profiles->token ; 
-    //soap_wsse_add_UsernameTokenDigest(soap,"user", ONVIF_USER, ONVIF_PASSWORD); 
+    soap_wsse_add_UsernameTokenDigest(soap,"user", ONVIF_USER, ONVIF_PASSWORD);
     soap_call___trt__GetStreamUri(soap, url, NULL, &getStreamUri, &getStreamUriResponse);
     if (soap->error) {
         printf("soap error: %d, %s, %s\n", soap->error, *soap_faultcode(soap), *soap_faultstring(soap));
@@ -193,6 +194,41 @@ int getstreamuri(char *url, char* token)
     soap_free(soap);
 
     return 0;
+}
+
+int make_uri_withauth(char *src_uri, char *username, char *password, char *dest_uri, unsigned int size_dest_uri)
+{
+    int result = 0;
+    unsigned int needBufSize = 0;
+
+    memset(dest_uri, 0x00, size_dest_uri);
+
+    needBufSize = strlen(src_uri) + strlen(username) + strlen(password) + 3;    // 检查缓存是否足够，包括‘:’和‘@’和字符串结束符
+    if (size_dest_uri < needBufSize) {
+        printf("dest uri buf size is not enough.\n");
+        result = -1;
+        goto EXIT;
+    }
+
+    if (0 == strlen(username) && 0 == strlen(password)) {                       // 生成新的uri地址
+        strcpy(dest_uri, src_uri);
+    } else {
+        char *p = strstr(src_uri, "//");
+        if (NULL == p) {
+            printf("can't found '//', src uri is: %s.\n", src_uri);
+            result = -1;
+            goto EXIT;
+        }
+        p += 2;
+
+        memcpy(dest_uri, src_uri, p - src_uri);
+        sprintf(dest_uri + strlen(dest_uri), "%s:%s@", username, password);
+        strcat(dest_uri, p);
+    }
+
+EXIT:
+
+    return result;
 }
 
 int main(int argc, char **argv)    
@@ -218,13 +254,23 @@ int main(int argc, char **argv)
     soap_done(&add_soap);
 */
 
+//    printf("probe========================== \n");
 //    probe();
 
-    char *url = "http://10.0.1.242/onvif/device_service";
-//    getcapblities(url);
+    printf("getcapblities========================== \n");
+//    char *url = "http://192.168.99.1:10002/onvif/device_service";
+    char *url = "http://10.0.1.251/onvif/device_service";
+    getcapblities(url);
 
-    char *profileurl = "http://10.0.1.242/onvif/media_service";
-    getprofiles(profileurl);
+    printf("getprofiles=============================== \n");
+//    char *profileurl = "http://192.168.99.1:10002/onvif/media_service";
+    char *profileurl = "http://10.0.1.251/onvif/media_service";
+    getprofiles(profileurl, 3);
+
+    printf("getstreamuri=============================== \n");
+//    char *streamuri = "http://192.168.99.1:10002/onvif/media_service";
+    char *streamuri = "http://10.0.1.251/onvif/media_service";
+    getstreamuri(streamuri, "Profile_1");
 
     return 0;
 }   
